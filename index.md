@@ -6,7 +6,8 @@
 <li><a href="#about">About</a></li>
 </ul>
 <p>Working on a refresh...</p>
-<p><a href="/pages/Biopython_notes.html">Biopython Notes</a></p>
-<p><a href="/pages/Linux_notes.html">Linux Notes</a></p>
+<p><a href="/pages/notes_biopython">Biopython Notes</a></p>
+<p><a href="/pages/notes_linux">Linux Notes</a></p>
+<p><a href="/pages/notes_windows">Windows Notes</a></p>
 </body>
 </html>
