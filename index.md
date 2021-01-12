@@ -10,6 +10,6 @@
 <p><a href="/pages/notes_linux">Linux Notes</a></p>
 <p><a href="/pages/notes_windows">Windows Notes</a></p>
 </body>
-</html>
 
--[Windows Notes](https://svalqui.github.io/pages/notes_windows)
+
+[Windows Notes](https://svalqui.github.io/pages/notes_windows)
