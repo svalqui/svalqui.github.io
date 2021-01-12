@@ -1,6 +1,6 @@
 Linux Notes
 
-## Managng files
+## Managing files
 Removing a directory
 ```
 $rm -r mydir
