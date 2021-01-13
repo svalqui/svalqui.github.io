@@ -28,7 +28,12 @@ sudo apt-get install freeipa-client freeipa-admintools
 sudo apt install git
 
 sudo apt-get install openssh-server
-sudo service ssh restart
 
+$ chmod 0600 .ssh/id_rsa
+$ ssh-add
+
+sudo service ssh restart
+```
+```
 smb://<username>@server.dom.com.au/Users/<username>
 ```
