@@ -9,15 +9,21 @@ $rm -r mydir
 
 ## VirtualBox
 Install
+```
 sudo apt-get install virtualbox
-
+```
 Remove
+```
 sudo apt-get remove virtualbox
+```
 
 Issues with kernel reinstall dpkg
+```
+# remove current version from pkgs
+# Download the latest version from their web site
 sudo dpkg-reconfigure --priority low virtualbox-dkms 
 sudo service virtualbox start
-
+```
 
 ### VB cli
 
