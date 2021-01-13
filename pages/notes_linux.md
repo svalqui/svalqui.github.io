@@ -7,6 +7,26 @@ $rm -r mydir
 ```
 
 
+## VirtualBox
+Install
+sudo apt-get install virtualbox
+
+Remove
+sudo apt-get remove virtualbox
+
+Issues with kernel reinstall dpkg
+sudo dpkg-reconfigure --priority low virtualbox-dkms 
+sudo service virtualbox start
+
+
+### VB cli
+
+ list running vms
+ $ VBoxManage list runningvms
+
+ power off a vm
+ VBoxManage controlvm "<vm-name-here>" poweroff --type headless
+
 ## Unclasified
 
 repair xorg
@@ -14,6 +34,7 @@ repair xorg
 sudo apt-get remove --purge xserver-xorg
 sudo apt-get install xserver-xorg
 sudo dpkg-reconfigure xserver-xorg
+
  ```
 ## preferred pkgs
 ```
@@ -37,3 +58,6 @@ sudo service ssh restart
 ```
 smb://<username>@server.dom.com.au/Users/<username>
 ```
+apt-get install -y keepassxc
+
+apt-get install -y owncloud-client
