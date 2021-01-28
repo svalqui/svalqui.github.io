@@ -32,6 +32,13 @@ sudo service virtualbox start
 
  power off a vm
  VBoxManage controlvm "<vm-name-here>" poweroff --type headless
+ 
+ ### SSH
+ Adding a public key to your computer so you can connect to a remote server; you need the remote server public key (Remote_Servers.pub)
+```
+$ chmod 0600 .ssh/Remote_Servers.pub
+$ ssh-add Remote_Servers.pub
+``` 
 
 ## Unclasified
 
@@ -67,11 +74,10 @@ ssh
 ```
 sudo apt-get install openssh-server
 ```
-ssh adding local key copied from another computer, whe using other computers you copy your key to the computer you will be using then and the key.
+ssh adding a local key copied from another computer (your previous), when using other computer's ssh_keys, you need to copy your key(id_rsa) to the new computer you will be using then add the key.
 ```
 $ chmod 0600 .ssh/id_rsa
-$ ssh-add
-
+$ ssh-add id_rsa 
 sudo service ssh restart
 ```
 Accessing fileshares from files(Nautilius)
