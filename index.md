@@ -9,7 +9,9 @@
 <p><a href="/pages/notes_biopython">Biopython Notes</a></p>
 <p><a href="/pages/notes_linux">Linux Notes</a></p>
 <p><a href="/pages/notes_windows">Windows Notes</a></p>
+<p><a href="/pages/notes_python">Windows Notes</a></p>
 </body>
 
-
+<!---
 [Windows Notes](https://svalqui.github.io/pages/notes_windows)
+-->
