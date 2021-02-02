@@ -9,7 +9,7 @@
 <p><a href="/pages/notes_biopython">Biopython Notes</a></p>
 <p><a href="/pages/notes_linux">Linux Notes</a></p>
 <p><a href="/pages/notes_windows">Windows Notes</a></p>
-<p><a href="/pages/notes_python">Windows Notes</a></p>
+<p><a href="/pages/notes_python">Python Notes</a></p>
 </body>
 
 <!---
