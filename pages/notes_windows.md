@@ -1,7 +1,7 @@
 Windows Notes
 
 Power shell
-
+```
 Get-LocalUser 
 
 Get-Process -IncludeUserName
@@ -14,3 +14,4 @@ Stop-Process -Name RuntimeBroker
 Stop-Process -Name Minecraft.Windows
 Stop-process -Id processId
 
+```
