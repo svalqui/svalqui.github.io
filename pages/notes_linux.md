@@ -33,12 +33,53 @@ sudo service virtualbox start
  power off a vm
  VBoxManage controlvm "<vm-name-here>" poweroff --type headless
  
- ### SSH
- Adding a public key to your computer so you can connect to a remote server; you need the remote server public key (Remote_Servers.pub)
+## SSH
+Adding a public key to your computer so you can connect to a remote server; you need the remote server public key (Remote_Servers.pub)
 ```
 $ chmod 0600 .ssh/Remote_Servers.pub
 $ ssh-add Remote_Servers.pub
 ``` 
+## Packages 
+Install a package
+```
+sudo dpkg -i DEB_PACKAGE
+# sudo apt --fix-broken install ./filename.deb # to install dependencies
+``` 
+remove a Package
+```
+sudo dpkg -r PACKAGE_NAME
+```
+check packages installed
+```
+dpkg -l
+dpkg -l | grep openssh-server
+```
+check package running
+```
+sudo service <service> status
+sudo service ssh status
+``` 
+remove a package
+```
+sudo apt-get --purge remove gnome-terminal
+``` 
+install a package including dependencies
+```
+sudo apt-get install gnome-terminal
+```
+search cache packages
+```
+apt-cache search pkg_name
+```
+environmental Variables
+```
+#printenv
+https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps
+~$ printenv PATH
+ 
+set
+export VARIABLE=value
+```
 
 ## Unclasified
 
