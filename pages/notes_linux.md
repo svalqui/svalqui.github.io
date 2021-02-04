@@ -5,8 +5,50 @@ Removing a directory
 ```
 $rm -r mydir
 ```
+## Logs
+```
+ls -l /var/log/
+/var/log/auth.log
+/var/log/sssd/*.log
+```
 
+## journalctl
+Only messages related to a given user
+```
+~$ id <username>
+~$ journalctl _UID=1388827084
+```
 
+Only kernel messages
+```
+sudo journalctl -k
+```
+
+By Unit
+Only Networkmanager messages
+```
+sudo journalctl -u NetworkManager.service
+```
+Only lightdm messages
+```
+sudo journalctl -u lightdm
+```
+By Process
+```
+sudo journalctl -t systemd 
+```
+Extended messages
+```
+sudo journalctl -xe
+```
+Keep only last 2 days
+```
+journalctl --vacuum-time=2d
+```
+16.04
+```
+sudo journalctl -t gnome-session
+```
 ## VirtualBox
 Install
 ```
