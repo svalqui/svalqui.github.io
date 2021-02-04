@@ -5,6 +5,12 @@ Removing a directory
 ```
 $rm -r mydir
 ```
+
+## sudo
+from a user, become root
+```
+sudo bash
+```
 ## Logs
 ```
 ls -l /var/log/
