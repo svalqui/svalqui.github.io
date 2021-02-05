@@ -1,5 +1,11 @@
 Windows Notes
 
+logoff
+```
+logoff
+```
+
+
 Power shell
 ```
 Get-LocalUser 
