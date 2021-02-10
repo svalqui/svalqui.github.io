@@ -185,3 +185,7 @@ zoom - video conferencing
 ```
 $ sudo apt --fix-broken install ./zoom_amd64.deb
 ```
+fail2ban
+```
+apt install fail2ban -y
+```
