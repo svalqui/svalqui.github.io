@@ -23,6 +23,7 @@ Stop-Process -Name Minecraft.Windows
 Stop-process -Id processId
 Stop-Process -Name Wind*
 Stop-Process -Name Windows10Universal
-
+Stop-Process -Name steam
+Stop-Process -Name steamwebhelper
 
 ```
