@@ -1,12 +1,38 @@
 Windows Notes
 
-logoff
+
+# Files/ Directories related
+
+## Copy files batch
+```
+ bkp-files.bat
+ set source=D:\SynergyData
+ set destination=N:\BkpSynergyData
+ xcopy %source% %destination% /E /C /F /D /Y
+```
+## Auto Map batch for XP
+```
+ net use X: \\Hostname\Share /savecred /p:yes
+ It will then prompt for a username and password, which will be saved and will not prompt even after a reboot.
+```
+or
+```
+ @echo off
+ net use x: /delete
+ net use x: \\server\share /USER:COMPUTER\User password
+ exit
+ 
+ Save this batch on the startup, 
+ https://superuser.com/questions/23646/how-can-i-map-a-network-drive-with-password-so-it-stays-mapped-after-a-reboot details
+```
+
+# logoff
 ```
 logoff
 ```
 
 
-Power shell
+# Power shell
 ```
 Get-LocalUser 
 
