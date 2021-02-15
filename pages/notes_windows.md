@@ -8,7 +8,7 @@ Windows Notes
  bkp-files.bat
  set source=D:\SynergyData
  set destination=N:\BkpSynergyData
- xcopy %source% %destination% /E /C /F /D /Y
+ xcopy %source% %destination% /X /H /E /C /F /D /Y /V
 ```
 ## Auto Map batch for XP
 ```
