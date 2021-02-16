@@ -9,6 +9,15 @@ Windows Notes
  set source=D:\SynergyData
  set destination=N:\BkpSynergyData
  xcopy %source% %destination% /X /H /E /C /F /D /Y /V
+ 
+ /X Copies audit settings
+ /H Copies hidden and system files
+ /E Copies directories and subdirectories including empty
+ /C Continue copying even if error occur
+ /F Display full files names while coping
+ /D Copies newer files than destination
+ /Y Supresses confirmation if you want to overwrite a file
+ /V Verifies the size of every new file
 ```
 ## Auto Map batch for XP
 ```
