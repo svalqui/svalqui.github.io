@@ -138,6 +138,23 @@ sudo apt-get install xserver-xorg
 sudo dpkg-reconfigure xserver-xorg
 
  ```
+ 
+## vi
+yy copy yank
+p paste
+
+/string 	search forward
+?string 	search backward 
+n 	move to next 
+N 	move to next in opposite direction
+
+^g line number
+
+0 move to the begining of line
+$ move to the end of line
+:0<Return> or 1G  move to the first line
+:$<Return> or G  move to the last line
+ 
 ## preferred pkgs
 
 vpn Cisco
