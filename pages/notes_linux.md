@@ -140,6 +140,7 @@ sudo dpkg-reconfigure xserver-xorg
  ```
  
 ## vi
+```
 yy copy yank
 p paste
 
@@ -154,7 +155,7 @@ N 	move to next in opposite direction
 $ move to the end of line
 :0<Return> or 1G  move to the first line
 :$<Return> or G  move to the last line
- 
+```
 ## preferred pkgs
 
 vpn Cisco
