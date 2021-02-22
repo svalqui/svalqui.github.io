@@ -87,6 +87,9 @@ Adding a public key to your computer so you can connect to a remote server; you 
 $ chmod 0600 .ssh/Remote_Servers.pub
 $ ssh-add Remote_Servers.pub
 ``` 
+use a public key
+ ssh -i .ssh\remote_server.pub <user>@mydomain.com.au
+
 ## Packages 
 Install a package
 ```
