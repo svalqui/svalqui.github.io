@@ -6,6 +6,24 @@ Removing a directory
 $rm -r mydir
 ```
 
+### find
+file containing
+```
+grep -rnw '/path/to/somewhere/' -e 'pattern'
+```
+
+file named
+```
+find /. -name 'toBeSearched.file' 2>/dev/null
+find / -type f -name "*.txt"
+```
+
+list files mounted on nautilius - Connect to Server
+```
+ls -al /run/user/$UID/gvfs 
+```
+
+
 ## sudo
 from a user, become root
 ```
