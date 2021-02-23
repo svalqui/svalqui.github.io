@@ -23,7 +23,6 @@ list files mounted on nautilius - Connect to Server
 ls -al /run/user/$UID/gvfs 
 ```
 
-
 ## sudo
 from a user, become root
 ```
@@ -77,6 +76,10 @@ sudo journalctl -t gnome-session
 ## network
 /etc/network/interfaces
 
+restart network
+```
+sudo service network-manager restart
+```
 ## VirtualBox
 Install
 ```
