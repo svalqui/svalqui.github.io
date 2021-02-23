@@ -73,6 +73,10 @@ journalctl --vacuum-time=2d
 ```
 sudo journalctl -t gnome-session
 ```
+
+## network
+/etc/network/interfaces
+
 ## VirtualBox
 Install
 ```
