@@ -31,6 +31,10 @@ du -hd 1 | sort -h
 All in /
 sudo du -smx /* | sort -n
 sudo du -hsx /* | sort -rh | head -n 40
+
+Top biggest
+find / -printf '%s %p\n'| sort -nr | head -10
+
 ```
 
 ## sudo
