@@ -23,6 +23,15 @@ list files mounted on nautilius - Connect to Server
 ls -al /run/user/$UID/gvfs 
 ```
 
+## Disk
+How much you user uses:
+```
+du -hd 1 | sort -h
+
+All in /
+sudo du -smx /* | sort -n
+```
+
 ## sudo
 from a user, become root
 ```
