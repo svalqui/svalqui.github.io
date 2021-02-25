@@ -50,6 +50,13 @@ ls -l /var/log/
 ```
 
 ## journalctl
+```
+The last 100
+journalctl -n 100
+The last in 1 hour
+journalctl --since "1 hour ago"
+```
+
 Only messages related to a given user
 ```
 ~$ id <username>
