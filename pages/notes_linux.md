@@ -94,6 +94,16 @@ restart network
 ```
 sudo service network-manager restart
 ```
+
+### nmap
+````
+Nmap:
+sudo nmap -v -sS -A -T4 <hostname>
+
+Check if a given port is open
+sudo nmap -p <port-number> <ip-add> 
+````
+
 ## VirtualBox
 Install
 ```
