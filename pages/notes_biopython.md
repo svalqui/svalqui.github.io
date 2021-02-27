@@ -31,4 +31,4 @@ your need your github token ready for this.
 git pull upstream master
 git push origin master
 ```
-In your web interface chack the your fork copy *This branch is even with biopython:master. * with that you are ready to create your new branches for contributions.
+In your web interface check that your fork copy *This branch is even with biopython:master. * with that you are ready to create your new branches for contributions.
