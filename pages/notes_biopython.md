@@ -8,14 +8,14 @@ Use your web interface to create a fork of https://github.com/biopython/biopytho
 
 ## Clone your fork and setup the upstream
 ```
-~/Projects$ git clone https://github.com/svalqui/biopython.git
+~/Projects$ git clone https://github.com/<your-user>/biopython.git
 ~/Projects/biopython$ git remote add upstream https://github.com/biopython/biopython.git
 ```
 ## check origin is your fork, not the main repo
 ```
 ~/Projects/biopython$ git remote -v
-origin	https://github.com/svalqui/biopython.git (fetch)
-origin	https://github.com/svalqui/biopython.git (push)
+origin	https://github.com/<your-user>/biopython.git (fetch)
+origin	https://github.com/<your-user>/biopython.git (push)
 upstream	https://github.com/biopython/biopython.git (fetch)
 upstream	https://github.com/biopython/biopython.git (push)
 ```
@@ -25,10 +25,10 @@ git config --list
 ```
 if not setup it up before any commits
 
-## update you local master and fork
+## update your local master and fork
 your need your github token ready for this.
 ```
 git pull upstream master
 git push origin master
 ```
-with that you are ready to create your new branches for contributions.
+In your web interface chack the your fork copy *This branch is even with biopython:master. * with that you are ready to create your new branches for contributions.
