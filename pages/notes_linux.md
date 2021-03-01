@@ -30,6 +30,17 @@ list files mounted on nautilius - Connect to Server
 ```
 ls -al /run/user/$UID/gvfs 
 ```
+### tail
+```
+shows the last 20 lines
+tail -n 20 <filename>
+
+Keeps showing you additions to the file, as it gets updated
+tail -f <my-file>
+
+Keeps showing you additions to the file that match grep, as it gets updated
+tail -f my_log.log | grep look_for_this
+```
 
 ## Disk
 How much you user uses:
