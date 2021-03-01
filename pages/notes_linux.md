@@ -68,6 +68,12 @@ ls -l /var/log/
 /var/log/sssd/*.log
 ```
 
+### Logs apache
+```
+/var/log/apache2/error.log
+/var/log/apache2/access.log
+```
+
 ## journalctl
 ```
 The last 100
