@@ -1,6 +1,8 @@
 # Biopython Notes
 
-## Install the pre commit hooks
+## Setting up your development environment
+
+### Install the pre commit hooks (pep. black)
 ```
 $ cd your-local-biopython-repositoty-branch
 # (check correct venv)
@@ -9,10 +11,14 @@ $ pip3 install pre-commit
 # Activate pre-commit for biopython
 $ pre-commit install
 ```
-
+### For commits to Documentation
+```
+$ pip3 install restructuredtext_lint
+$ rst-lint --level warning *.rst
+```
 More information here: https://github.com/biopython/biopython/blob/master/CONTRIBUTING.rst
 
-## Create a branch for your work/commits
+### Create a branch for your work/commits
 Later on when your work is completed, you will create a Pull Request from the web interface against this branch.
 
 ```
