@@ -292,3 +292,7 @@ fail2ban
 ```
 apt install fail2ban -y
 ```
+codecs
+```
+sudo apt-get install ubuntu-restricted-extras
+```
