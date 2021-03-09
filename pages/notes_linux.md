@@ -73,6 +73,10 @@ ls -l /var/log/
 /var/log/apache2/error.log
 /var/log/apache2/access.log
 ```
+### Users last login
+```
+last
+```
 
 ## journalctl
 ```
