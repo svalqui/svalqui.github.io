@@ -1,5 +1,17 @@
 # Biopython Notes
 
+# Install
+
+## Install/remove with pip
+Installing Biopython
+```
+pip3 install biopython
+pip3 install --upgrade biopython
+pip3 uninstall biopython
+```
+
+## Install from source
+
 ## Black format
 ```
 # Turn black code style off
@@ -48,6 +60,14 @@ sudo python3 setup.py build
 python3 setup.py test
 sudo python3 setup.py install
 ```
+
+### Checking where Bio defaults to
+within Python3, out of the source code,
+```
+import sys; print(sys.version)
+import platform; print(platform.python_implementation()); print(platform.platform())
+import Bio; print(Bio.__version__)
+```
 ## Setting up your development environment
 
 ### Install the pre commit hooks (pep. black)
@@ -78,7 +98,7 @@ git checkout -b issue_1
 
 ### Create a Fork from biopython repo
 
-Use your web interface to create a fork of https://github.com/biopython/biopython.git
+Use your web interface on Github to create a fork of https://github.com/biopython/biopython.git, this creates your own repository of the biopython project, takes a snapshot of it and adds it to your repositories, you will need to keep this updated, see below instructions on how to update your fork.
 
 ### Clone your fork and setup the upstream
 ```
