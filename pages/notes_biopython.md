@@ -11,6 +11,11 @@ pip3 uninstall biopython
 ```
 
 ## Install from source
+First setup your repository, what do you want to install? the master or the branch? checkout accordingly and install. Most of the time I install from master and run test against the files I updated on the branch, when they are minor changes that is fine; when is functional code, bugs or adding functionallity, is better to install from the branch.
+# On ~/Projects/biopython$
+sudo python3 setup.py build
+python3 setup.py test
+sudo python3 setup.py install
 
 ## Black format
 ```
@@ -150,3 +155,10 @@ flake8 --select E123,W503 path/to/code/
 flake8 --ignore E24,W504 path/to/code/
 python3 -m flake8 --ignore E225,E226,E231,E211,E111,E113,E112,E261,E128,E402,E227,W604,W504,E702,W503 NEWS.rst
 ```
+
+# Other
+Index of ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/
+Index of ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/proteomics_mapping/
+
+ISC002 implicitly concatenated string 
+A502 prefer assertIsNone() instead of comparing to None
