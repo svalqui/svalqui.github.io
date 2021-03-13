@@ -1,26 +1,53 @@
 # Biopython Notes
 
+## Black format
+```
+# Turn black code style off
+# fmt: off
+
+# This comment stops black style adding a blank line here, which causes flake8 D202.
+
+# fmt: on
+```
 ## Test
 run all test including online test, doctest.
 ```
-$ python setup.py test
+biopython$ python3 setup.py test
 
 Which is the same as 
-Tests\$ python run_tests.py
+biopython/Tests$ python3 run_tests.py
 ```
 Run individual test:
 ```
-$ python run_tests.py test_file1.py test_file2.py
+biopython/Tests$ python3 run_tests.py test_file1.py test_file2.py
 ```
 To run the docstring test use:
 ```
-$ python run_tests.py doctest
+biopython/Tests$ python3 run_tests.py doctest
 ```
 To skip online test:
 ```
-$ python run_tests.py --offline
+biopython/Tests$ python3 run_tests.py --offline
 ```
-
+Run doctest in the tutorials, within Test directory
+```
+biopython/Tests$ python3 run_tests.py test_Tutorial.py
+more examples here https://github.com/biopython/biopython/issues/531
+```
+### Clear installation and reinstall
+deleting the previous build directory
+```
+~/Projects/biopython$ sudo rm -R ~/Projects/biopython/build
+And remove all *.pyc files
+~/Projects/biopython$ find . -name "*.pyc" -exec rm -rf {} \;
+```
+Reinstall
+```
+# On ~/Projects/biopython$
+sudo python3 setup.py build
+python3 setup.py test
+sudo python3 setup.py install
+```
 ## Setting up your development environment
 
 ### Install the pre commit hooks (pep. black)
