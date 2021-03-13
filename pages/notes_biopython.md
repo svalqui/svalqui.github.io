@@ -12,11 +12,13 @@ pip3 uninstall biopython
 
 ## Install from source
 First setup your repository, what do you want to install? the master or the branch? checkout accordingly and install. Most of the time I install from master and run test against the files I updated on the branch, when they are minor changes that is fine; when is functional code, bugs or adding functionallity, is better to install from the branch.
-# On ~/Projects/biopython$
+
+On ~/Projects/biopython$
+```
 sudo python3 setup.py build
 python3 setup.py test
 sudo python3 setup.py install
-
+```
 ## Black format
 ```
 # Turn black code style off
