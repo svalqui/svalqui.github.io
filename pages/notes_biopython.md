@@ -126,3 +126,27 @@ git pull upstream master
 git push origin master
 ```
 In your web interface check that your fork copy **This branch is even with biopython:master.** with that you are ready to create your new branches for contributions.
+
+### pre-commit and commit
+#### Checks from cli
+black style
+```
+/usr/local/bin/black --diff ~/PythonProjects/biopython/Bio/new_files
+```
+doc8 check
+```
+doc8 NEWS.rst 
+```
+
+flake8
+```
+python3 -m flake8 PythonProjects/biopython/TBio/new_files
+```
+Options for flake8
+```
+~/PythonProjects/biopython$ python3 -m flake8 --version
+python3 -m flake8 PythonProjects/biopython/Tests
+flake8 --select E123,W503 path/to/code/
+flake8 --ignore E24,W504 path/to/code/
+python3 -m flake8 --ignore E225,E226,E231,E211,E111,E113,E112,E261,E128,E402,E227,W604,W504,E702,W503 NEWS.rst
+```
