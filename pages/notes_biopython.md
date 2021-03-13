@@ -1,22 +1,25 @@
 # Biopython Notes
 
 ## Test
-# run all test including online test, doctest.
+run all test including online test, doctest.
+```
 $ python setup.py test
 
 Which is the same as 
 Tests\$ python run_tests.py
-
+```
 Run individual test:
+```
 $ python run_tests.py test_file1.py test_file2.py
-
+```
 To run the docstring test use:
+```
 $ python run_tests.py doctest
-
+```
 To skip online test:
-
+```
 $ python run_tests.py --offline
-
+```
 
 ## Setting up your development environment
 
