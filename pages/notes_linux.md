@@ -41,7 +41,15 @@ tail -f <my-file>
 Keeps showing you additions to the file that match grep, as it gets updated
 tail -f my_log.log | grep look_for_this
 ```
-
+### file permissions
+```
+# change owner
+$ chown sergio .ssh/known_hosts
+# change group
+$ chown :sergio .ssh/known_hosts
+# or change both 
+$ chown sergio:sergio .ssh/known_hosts
+```
 ## Disk
 How much you user uses:
 ```
