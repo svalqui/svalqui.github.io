@@ -63,7 +63,24 @@ Top biggest
 find / -printf '%s %p\n'| sort -nr | head -10
 
 ```
+## Processes
+### Dealing with zombies
+```
+Find Zombies
+ps aux | egrep "Z|defunct"
 
+Using the PID of the defunct process find the parent PID
+ps -o ppid= -p <PID of the defunct here>
+ 
+Double check which is the parent PID
+ps -e | grep <parent PID here>
+
+Send the SIGCHLD signal to the parent process.
+kill -s SIGCHLD <parent PID>
+
+or try killing the parent process
+kill -SIGKILL 7636
+```
 ## sudo
 from a user, become root
 ```
