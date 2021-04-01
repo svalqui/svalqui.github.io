@@ -163,6 +163,10 @@ sudo nmap -v -sS -A -T4 <hostname>
 
 Check if a given port is open
 sudo nmap -p <port-number> <ip-add> 
+
+No probes
+sudo nmap -v -sS -A -T4 -Pn <ip-add>
+
 ````
 
 ## VirtualBox
