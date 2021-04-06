@@ -29,6 +29,11 @@ sudo python3 setup.py install
 # fmt: on
 ```
 ## Test
+You don't need to install to test, but it needs to be built before you test.
+```
+biopython$ python3 setup.py build
+```
+
 run all test including online test, doctest.
 ```
 biopython$ python3 setup.py test
@@ -53,19 +58,20 @@ Run doctest in the tutorials, within Test directory
 biopython/Tests$ python3 run_tests.py test_Tutorial.py
 more examples here https://github.com/biopython/biopython/issues/531
 ```
-### Clear installation and reinstall
+### Clear built and re-built
+when you update the code and need to re-test, remove the previous built, re-built then test.
+
 deleting the previous build directory
 ```
 ~/Projects/biopython$ sudo rm -R ~/Projects/biopython/build
 And remove all *.pyc files
 ~/Projects/biopython$ find . -name "*.pyc" -exec rm -rf {} \;
 ```
-Reinstall
+Re-built
 ```
 # On ~/Projects/biopython$
 sudo python3 setup.py build
 python3 setup.py test
-sudo python3 setup.py install
 ```
 
 ### Checking where Bio defaults to
