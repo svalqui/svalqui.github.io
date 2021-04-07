@@ -276,12 +276,15 @@ $ move to the end of line
 ```
 ## preferred pkgs
 
+Python development packages
+```
+sudo apt-get install python3-dev
+```
 vpn Cisco
 ```
 chmod 755 Downloads/anyconnect-linux64-4.8.03052-core-vpn-webdeploy-k9.sh 
 sudo Downloads/anyconnect-linux64-4.8.03052-core-vpn-webdeploy-k9.sh 
 ```
-
 Displaylink for the use of Docks
 ```
 chmod 777 displaylink-driver-5.3.1.34.run 
