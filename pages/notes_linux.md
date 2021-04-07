@@ -237,14 +237,24 @@ search cache packages
 ```
 apt-cache search pkg_name
 ```
-environmental Variables
+## environmental Variables
 ```
 #printenv
 https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps
-~$ printenv PATH
- 
-set
+
+#set
 export VARIABLE=value
+
+# PATH
+~$ printenv PATH
+or
+echo $PATH
+
+# Add a path
+# to the end
+export PATH=$PATH:/path/to/add
+# to the begining
+export PATH=/path/to/add:$PATH
 ```
 
 ## Unclasified
