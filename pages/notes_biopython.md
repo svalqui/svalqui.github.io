@@ -53,6 +53,10 @@ To skip online test:
 ```
 biopython/Tests$ python3 run_tests.py --offline
 ```
+Run the docstring test skipping online test
+```
+biopython/Tests$ python3 run_tests.py --offline doctest
+```
 Run doctest in the tutorials, within Test directory
 ```
 biopython/Tests$ python3 run_tests.py test_Tutorial.py
