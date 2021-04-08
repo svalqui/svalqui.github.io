@@ -205,6 +205,10 @@ use a public key
 ```
 ssh -i .ssh\remote_server.pub <user>@mydomain.com.au
 ```
+terminate a locked/frozen session
+```
+Enter ~ .
+```
 ## Packages 
 Install a package
 ```
