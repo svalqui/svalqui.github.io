@@ -346,3 +346,7 @@ codecs
 ```
 sudo apt-get install ubuntu-restricted-extras
 ```
+cifs support
+```
+sudo apt install cifs-utils
+```
