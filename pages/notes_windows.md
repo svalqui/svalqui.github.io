@@ -78,5 +78,13 @@ Stop-Process -Name Wind*
 Stop-Process -Name Windows10Universal
 Stop-Process -Name steam
 Stop-Process -Name steamwebhelper
+```
+## Power shell Messagebox to users
+```
+# Load assembly
+[System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms")
+# Message
+$oReturn=[System.Windows.Forms.MessageBox]::Show("Your Message here.","Title here",[System.Windows.Forms.MessageBoxButtons]::OK,[System.Windows.Forms.MessageBoxIcon]::Warning)
+
 
 ```
