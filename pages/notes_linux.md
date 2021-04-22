@@ -168,6 +168,21 @@ No probes
 sudo nmap -v -sS -A -T4 -Pn <ip-add>
 
 ````
+### ports listening
+```
+sudo lsof -nP -iTCP -sTCP:LISTEN
+```
+
+### DNS
+```
+systemd-resolve --status
+
+```
+Check DNS resolvers, this is a dynamic file do not change it directly, it would recreate when restarting system. changes via resolvconf, which doesn't install by default.
+```
+cat /etc/resolv.conf
+```
+
 
 ## VirtualBox
 Install
