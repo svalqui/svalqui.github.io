@@ -63,6 +63,17 @@ Top biggest
 find / -printf '%s %p\n'| sort -nr | head -10
 
 ```
+## Mountspermanent mount
+```
+edit and add on /etc/fstab
+
+//Share   /mnt/share-on-local cifs credentials=/etc/.credentials,fsc,ro,file_mode=0664,dir_mode=0775 0 0
+
+.credentials
+username=username
+password=pass
+domain=my-domain.rog
+```
 ## Processes
 ### Dealing with zombies
 ```
