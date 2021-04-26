@@ -63,7 +63,18 @@ Top biggest
 find / -printf '%s %p\n'| sort -nr | head -10
 
 ```
-## Mountspermanent mount
+Show Disks:
+```
+sudo fdisk -l
+````
+Show Partitions:
+````
+sudo lsblk
+or
+fdisk -l /dev/sda
+````
+## Mounts
+permanent mount
 ```
 edit and add on /etc/fstab
 
