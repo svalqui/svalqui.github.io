@@ -73,6 +73,7 @@ sudo lsblk
 or
 fdisk -l /dev/sda
 ````
+
 ## Mounts
 permanent mount
 ```
@@ -85,6 +86,39 @@ username=username
 password=pass
 domain=my-domain.rog
 ```
+
+## Home in another partition
+1. from your spare space create a new partition ext4 for your home directories
+```
+fdisk -l # list your disks/partitions
+gdisk /dev/sdx # Option n (new), 1 (partition 1), w (write)
+sudo mkfs.ext4 /dev/sdx1 # or sudo mkfs -t ext4 /dev/sdx1, formats the partition
+
+```
+2. mount the new partition
+```
+mount -t auto /dev/sbd1 /mt/sdb1
+```
+3. take note of the uuid of the new partition
+```
+blkid
+```
+4. copy your current /home to the new partition
+```
+sudo rsync -aXS /home/. /mnt/home/.
+```
+5. edit /etc/fstab to auto mount the new partition, use the uuid of the new partition
+```
+UUID=uuid-of-new-partition     /home     ext4     nodev,nosuid     0     2
+```
+6. rename your current home as old, and create a new home directory, called /home, to mount the home on the new partition
+```
+cd /
+sudo mv /home /home_old
+sudo mkdir /home
+```
+7. reboot
+8. check home is working on the new partition and delete the old home directory
 ## Processes
 ### Dealing with zombies
 ```
