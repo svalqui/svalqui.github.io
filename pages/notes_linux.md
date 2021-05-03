@@ -312,6 +312,10 @@ search cache packages
 ```
 apt-cache search pkg_name
 ```
+show the package an its dependencies
+```
+sudo apt-cache show <package-name>
+```
 ## environmental Variables
 ```
 #printenv
