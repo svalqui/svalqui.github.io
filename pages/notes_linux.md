@@ -300,10 +300,6 @@ check package running
 sudo service <service> status
 sudo service ssh status
 ``` 
-remove a package
-```
-sudo apt-get --purge remove gnome-terminal
-``` 
 install a package including dependencies
 ```
 sudo apt-get install gnome-terminal
@@ -315,6 +311,14 @@ apt-cache search pkg_name
 show the package an its dependencies
 ```
 sudo apt-cache show <package-name>
+```
+remove a package
+```
+sudo apt-get --purge remove gnome-terminal
+``` 
+remove rc , broken packages
+```
+sudo apt-get remove --purge <packge-name>
 ```
 ## environmental Variables
 ```
