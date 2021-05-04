@@ -391,6 +391,11 @@ Install xterm, gnome terminal doesn't work well
 ```
 sudo apt-get install -y xterm
 ```
+Remove ubuntu-desktop
+```
+sudo apt purge ubuntu-desktop -y && sudo apt autoremove -y && sudo apt autoclean
+sudo apt-get purge gnome*
+```
 ### Mate
 Seems reasonable but on x sessions might need to define the initial menus
 ```
