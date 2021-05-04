@@ -367,6 +367,63 @@ $ move to the end of line
 :0<Return> or 1G  move to the first line
 :$<Return> or G  move to the last line
 ```
+## Desktops 
+
+Check there is at least one desktop installed on the server
+```
+systemctl status <desktop-package-name>
+```
+### gnome
+
+is the default, on x sessions some apps do not work, such term, you might one to keep it because looks fine on the console, but better to install an additional one.
+```
+systemctl status gdm
+# if not started "gdm.service: Unit cannot be reloaded because it is inactive"
+#systemctl start gdm
+```
+Install
+```
+sudo apt install tasksel
+sudo tasksel install ubuntu-desktop 
+systemctl start gdm
+```
+Install xterm, gnome terminal doesn't work well
+```
+sudo apt-get install -y xterm
+```
+### Mate
+Seems reasonable but on x sessions might need to define the initial menus
+```
+sudo tasksel install ubuntu-mate-desktop
+```
+### lxde
+
+Also looks reasonable looks good on x sessions
+```
+sudo apt install lxde
+```
+### Desktop notes
+Which display you are using
+```
+systemctl status display-manager
+```
+Where the configurations sits:
+depending on the desktop
+```
+/etc/lightdm/lightdm.conf
+/etc/gdm3/custom.conf
+/etc/sddm.conf.d/autologin.conf
+```
+Login configuration for lightdm
+/etc/lightdm/lightdm.conf
+```
+[SeatDefaults]
+# some times fixes to a user, then set manual login
+greeter-show-manual-login=true
+#enable auto login
+autologin-user=<user_name>
+autologin-user-timeout=0
+```
 ## preferred pkgs
 
 Python development packages
