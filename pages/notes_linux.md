@@ -1,5 +1,12 @@
 Linux Notes
 
+## System
+Version of linux
+```
+cat /etc/os-release
+hostnamectl
+lsb_release -a
+```
 ## Managing files
 Removing a directory
 ```
