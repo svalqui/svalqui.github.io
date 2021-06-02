@@ -35,6 +35,12 @@ or
  https://superuser.com/questions/23646/how-can-i-map-a-network-drive-with-password-so-it-stays-mapped-after-a-reboot details
 ```
 
+## Edit a file on cmd
+```
+copy con filename
+# CTRL-Z to save
+```
+
 # logoff
 ```
 logoff
