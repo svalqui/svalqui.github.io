@@ -84,6 +84,7 @@ Stop-Process -Name Wind*
 Stop-Process -Name Windows10Universal
 Stop-Process -Name steam
 Stop-Process -Name steamwebhelper
+Stop-Process -Name TS4_x64
 ```
 ## Power shell Messagebox to users
 ```
