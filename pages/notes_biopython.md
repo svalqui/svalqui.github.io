@@ -170,6 +170,99 @@ flake8 --ignore E24,W504 path/to/code/
 python3 -m flake8 --ignore E225,E226,E231,E211,E111,E113,E112,E261,E128,E402,E227,W604,W504,E702,W503 NEWS.rst
 ```
 
+# Dependencies for some biopython modules
+
+## ReportLab
+
+test_ColorSpiral ... skipping. Error: Install reportlab if you want to use Bio.Graphics.
+test_GenomeDiagram ... skipping. Error: Install reportlab if you want to use Bio.Graphics.
+test_GraphicsBitmaps ... skipping. Error: Install ReportLab if you want to use Bio.Graphics.
+test_GraphicsChromosome ... skipping. Error: Install reportlab if you want to use Bio.Graphics.
+test_GraphicsDistribution ... skipping. Install reportlab if you want to use Bio.Graphics.
+test_GraphicsGeneral ... skipping. Install reportlab if you want to use Bio.Graphics.
+test_KGML_graphics ... skipping. Error: Please install ReportLab if you want to use Bio.Graphics.
+
+```
+pip3 install reportlab
+```
+## bwa
+test_BWA_tool ... skipping. Install bwa and correctly set the file path to the program if you want to use it from Biopython
+
+## Clustal
+test_ClustalOmega_tool ... skipping. Install clustalo if you want to use Clustal Omega from Biopython.
+test_Clustalw_tool ... skipping. Install clustalw or clustalw2 if you want to use it from Biopython.
+
+## DIALIGN2-2
+test_Dialign_tool ... skipping. Install DIALIGN2-2 if you want to use the Bio.Align.Applications wrapper.
+
+## Emboss
+test_Emboss ... skipping. Install EMBOSS if you want to use Bio.Emboss.
+test_EmbossPhylipNew ... skipping. Install the Emboss package 'PhylipNew' if you want to use the Bio.Emboss.Applications wrappers for phylogenetic tools.
+
+## FastTree
+test_Fasttree_tool ... skipping. Install FastTree and correctly set the file path to the program if you want to use it from Biopython.
+
+## msaprobs
+test_MSAProbs_tool ... skipping. Install msaprobs if you want to use MSAProbs from Biopython.
+
+## MAFFT
+test_Mafft_tool ... skipping. Install MAFFT if you want to use the Bio.Align.Applications wrapper.
+
+## MUSCLE
+test_Muscle_tool ... skipping. Install MUSCLE if you want to use the Bio.Align.Applications wrapper.
+
+## NCBI BLAST
+test_NCBI_BLAST_tools ... skipping. Install the NCBI BLAST+ command line tools if you want to use the Bio.Blast.Applications wrapper.
+
+## PAML
+test_PAML_tools ... skipping. Install PAML if you want to use the Bio.Phylo.PAML wrapper.
+
+## RDFlib
+test_Phylo_CDAO ... skipping. Install RDFlib if you want to use the CDAO tree format.
+
+## matplotlib
+test_Phylo_matplotlib ... skipping. Install matplotlib if you want to use Bio.Phylo._utils.
+
+## networkx
+test_Phylo_networkx ... skipping. Install networkx if you wish to use it with Bio.Phylo
+
+## GenePop
+test_PopGen_GenePop ... skipping. Install GenePop if you want to use Bio.PopGen.GenePop.
+test_PopGen_GenePop_EasyController ... skipping. Install GenePop if you want to use Bio.PopGen.GenePop.
+
+## PRANK
+test_Prank_tool ... skipping. Install PRANK if you want to use the Bio.Align.Applications wrapper.
+
+## PROBCONS
+test_Probcons_tool ... skipping. Install PROBCONS if you want to use the Bio.Align.Applications wrapper.
+
+## TCOFFEE
+test_TCoffee_tool ... skipping. Install TCOFFEE if you want to use the Bio.Align.Applications wrapper.
+
+## Wise2
+test_Wise ... skipping. Install Wise2 (dnal) if you want to use Bio.Wise.
+test_psw ... skipping. Install Wise2 (dnal) if you want to use Bio.Wise.
+
+## XXmotif
+test_XXmotif_tool ... skipping. Install XXmotif if you want to use XXmotif from Biopython.
+
+## mmtf
+test_mmtf ... skipping. Error: Install mmtf to use Bio.PDB.mmtf (e.g. pip install mmtf-python)
+test_mmtf_online ... skipping. Error: Install mmtf to use Bio.PDB.mmtf (e.g. pip install mmtf-python)
+
+## SciPy
+test_phenotype_fit ... skipping. Install SciPy if you want to use Bio.phenotype fit functionality.
+
+## PhyML 3.0
+test_phyml_tool ... skipping. Couldn't find the PhyML software. Install PhyML 3.0 or later if you want to use the Bio.Phylo.Applications wrapper.
+
+## RAxML
+test_raxml_tool ... skipping. Install RAxML (binary raxmlHPC) if you want to test the Bio.Phylo.Applications wrapper.
+
+## samtools
+test_samtools_tool ... skipping. Install samtools and correctly set the file path to the program
+
+
 # Other
 Index of ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/
 Index of ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/proteomics_mapping/
