@@ -76,6 +76,8 @@ Re-built
 # On ~/Projects/biopython$
 sudo python3 setup.py build
 python3 setup.py test
+# skip online test
+# python3 setup.py test--offline
 ```
 
 ### Checking where Bio defaults to
