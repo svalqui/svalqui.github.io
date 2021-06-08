@@ -16,5 +16,5 @@ git push
 Reset you projest as Master branch, lose all your local progress
 ```
 git fetch
-git reset --hard origin/maste
+git reset --hard origin/master
 ```
