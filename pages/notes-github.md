@@ -1,6 +1,13 @@
 == Token Scope requirement
 ![Scope-requirement](https://.png)
 
+Set your git
+```
+git config --list
+git config --global user.name "My Name"
+git config --global user.email my@email@users.noreply.github.com # for github project
+```
+
 Check my remotes
 ```
 git remote -v
