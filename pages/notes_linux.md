@@ -441,6 +441,10 @@ greeter-show-manual-login=true
 autologin-user=<user_name>
 autologin-user-timeout=0
 ```
+## fail2ban
+
+Fail2ban log /var/log/fail2ban.log
+
 ## preferred pkgs
 
 Python development packages
