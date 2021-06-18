@@ -443,7 +443,17 @@ autologin-user-timeout=0
 ```
 ## fail2ban
 
-Fail2ban log /var/log/fail2ban.log
+### Fail2ban log 
+
+/var/log/fail2ban.log
+
+### Jails list
+
+fail2ban-client status
+ 
+### unban ip
+ 
+fail2ban-client set <jail_name> unbanip <ip_address>
 
 ## preferred pkgs
 
