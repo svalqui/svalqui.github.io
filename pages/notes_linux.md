@@ -1,19 +1,19 @@
 Linux Notes
 
-## System
+# System
 Version of linux
 ```
 cat /etc/os-release
 hostnamectl
 lsb_release -a
 ```
-## Managing files
+# Managing files
 Removing a directory
 ```
 $rm -r mydir
 ```
 
-### find
+## find
 file containing
 ```
 recursevely
@@ -37,7 +37,7 @@ list files mounted on nautilius - Connect to Server
 ```
 ls -al /run/user/$UID/gvfs 
 ```
-### tail
+## tail
 ```
 shows the last 20 lines
 tail -n 20 <filename>
@@ -48,7 +48,7 @@ tail -f <my-file>
 Keeps showing you additions to the file that match grep, as it gets updated
 tail -f my_log.log | grep look_for_this
 ```
-### file permissions
+## file permissions
 ```
 # change owner
 $ chown sergio .ssh/known_hosts
@@ -57,7 +57,7 @@ $ chown :sergio .ssh/known_hosts
 # or change both 
 $ chown sergio:sergio .ssh/known_hosts
 ```
-## Disk
+# Disk
 How much you user uses:
 ```
 du -hd 1 | sort -h
@@ -80,13 +80,13 @@ sudo lsblk
 or
 fdisk -l /dev/sda
 ````
-### Clear Space
+## Clear Space
 ```
 dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y purge
 ```
 
 
-## Mounts
+# Mounts
 permanent mount
 ```
 edit and add on /etc/fstab
@@ -99,7 +99,7 @@ password=pass
 domain=my-domain.rog
 ```
 
-## Home in another partition
+# Home in another partition
 1. from your spare space create a new partition ext4 for your home directories
 ```
 fdisk -l # list your disks/partitions
@@ -131,8 +131,8 @@ sudo mkdir /home
 ```
 7. reboot
 8. check home is working on the new partition and delete the old home directory
-## Processes
-### Dealing with zombies
+# Processes
+## Dealing with zombies
 ```
 Find Zombies
 ps aux | egrep "Z|defunct"
@@ -149,29 +149,28 @@ kill -s SIGCHLD <parent PID>
 or try killing the parent process
 kill -SIGKILL 7636
 ```
-## sudo
+# sudo
 from a user, become root
 ```
 sudo bash
 ```
-## Logs
+# Logs
 ```
 ls -l /var/log/
 /var/log/auth.log
 /var/log/sssd/*.log
 ```
-
-### Logs apache
+## Logs apache
 ```
 /var/log/apache2/error.log
 /var/log/apache2/access.log
 ```
-### Users last login
+## Users last login
 ```
 last
 ```
 
-## journalctl
+# journalctl
 ```
 The last 100
 journalctl -n 100
@@ -216,7 +215,7 @@ journalctl --vacuum-time=2d
 sudo journalctl -t gnome-session
 ```
 
-## network
+# network
 /etc/network/interfaces
 
 restart network
@@ -224,7 +223,7 @@ restart network
 sudo service network-manager restart
 ```
 
-### nmap
+## nmap
 ````
 Nmap:
 sudo nmap -v -sS -A -T4 <hostname>
@@ -236,12 +235,12 @@ No probes
 sudo nmap -v -sS -A -T4 -Pn <ip-add>
 
 ````
-### ports listening
+## ports listening
 ```
 sudo lsof -nP -iTCP -sTCP:LISTEN
 ```
 
-### DNS
+## DNS
 ```
 systemd-resolve --status
 
@@ -250,35 +249,9 @@ Check DNS resolvers, this is a dynamic file do not change it directly, it would 
 ```
 cat /etc/resolv.conf
 ```
-
-
-## VirtualBox
-Install
-```
-sudo apt-get install virtualbox
-```
-Remove
-```
-sudo apt-get remove virtualbox
-```
-
-Issues with kernel reinstall dpkg
-```
-# remove current version from pkgs
-# Download the latest version from their web site
-sudo dpkg-reconfigure --priority low virtualbox-dkms 
-sudo service virtualbox start
-```
-
-### VB cli
-
- list running vms
- $ VBoxManage list runningvms
-
- power off a vm
- VBoxManage controlvm "<vm-name-here>" poweroff --type headless
  
-## SSH
+# SSH
+ 
 Adding a public key to your computer so you can connect to a remote server; you need the remote server public key (Remote_Servers.pub)
 ```
 $ chmod 0600 .ssh/Remote_Servers.pub
@@ -292,7 +265,9 @@ terminate a locked/frozen session
 ```
 Enter ~ .
 ```
-## Packages 
+
+# Packages 
+
 Install a package
 ```
 sudo dpkg -i DEB_PACKAGE
@@ -332,7 +307,54 @@ remove rc , broken packages
 ```
 sudo apt-get remove --purge <packge-name>
 ```
-## environmental Variables
+
+# Software
+
+## VirtualBox
+Install
+```
+sudo apt-get install virtualbox
+```
+Remove
+```
+sudo apt-get remove virtualbox
+```
+
+Issues with kernel reinstall dpkg
+```
+# remove current version from pkgs
+# Download the latest version from their web site
+sudo dpkg-reconfigure --priority low virtualbox-dkms 
+sudo service virtualbox start
+```
+
+### VB cli
+
+list running vms
+```
+$ VBoxManage list runningvms
+```
+power off a vm
+```
+VBoxManage controlvm "<vm-name-here>" poweroff --type headless
+```
+## fail2ban
+
+### Fail2ban log 
+
+/var/log/fail2ban.log
+
+### Jails list
+
+fail2ban-client status
+ 
+### unban ip
+ 
+fail2ban-client set <jail_name> unbanip <ip_address>
+
+
+
+# environmental Variables
 ```
 #printenv
 https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps
@@ -340,6 +362,7 @@ https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environment
 #set
 export VARIABLE=value
 
+ 
 # PATH
 ~$ printenv PATH
 or
@@ -352,7 +375,7 @@ export PATH=$PATH:/path/to/add
 export PATH=/path/to/add:$PATH
 ```
 
-## Unclasified
+# Unclasified
 
 repair xorg
 ```
@@ -362,7 +385,7 @@ sudo dpkg-reconfigure xserver-xorg
 
  ```
  
-## vi
+# vi
 ```
 yy copy yank
 p paste
@@ -379,13 +402,13 @@ $ move to the end of line
 :0<Return> or 1G  move to the first line
 :$<Return> or G  move to the last line
 ```
-## Desktops 
+# Desktops 
 
 Check there is at least one desktop installed on the server
 ```
 systemctl status <desktop-package-name>
 ```
-### gnome
+## gnome
 
 is the default, on x sessions some apps do not work, such term, you might one to keep it because looks fine on the console, but better to install an additional one.
 ```
@@ -408,18 +431,18 @@ Remove ubuntu-desktop
 sudo apt purge ubuntu-desktop -y && sudo apt autoremove -y && sudo apt autoclean
 sudo apt-get purge gnome*
 ```
-### Mate
+## Mate
 Seems reasonable but on x sessions might need to define the initial menus
 ```
 sudo tasksel install ubuntu-mate-desktop
 ```
-### lxde
+## lxde
 
 Also looks reasonable looks good on x sessions
 ```
 sudo apt install lxde
 ```
-### Desktop notes
+## Desktop notes
 Which display you are using
 ```
 systemctl status display-manager
@@ -441,21 +464,7 @@ greeter-show-manual-login=true
 autologin-user=<user_name>
 autologin-user-timeout=0
 ```
-## fail2ban
-
-### Fail2ban log 
-
-/var/log/fail2ban.log
-
-### Jails list
-
-fail2ban-client status
- 
-### unban ip
- 
-fail2ban-client set <jail_name> unbanip <ip_address>
-
-## preferred pkgs
+# preferred pkgs
 
 Python development packages
 ```
