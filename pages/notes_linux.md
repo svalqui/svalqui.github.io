@@ -352,9 +352,31 @@ fail2ban-client status
  
 fail2ban-client set <jail_name> unbanip <ip_address>
 
+## Puppet
 
-
-# environmental Variables
+Check puppet client has finished applying catalogue
+```
+journalctl -u puppet -f  # Shall show "Applied catalog"
+```
+test puppet agent
+```
+puppet agent --test
+```
+If is running
+```
+sudo cat `sudo puppet agent --configprint agent_disabled_lockfile`
+```
+Run Puppet agent
+```
+/opt/puppetlabs/bin/puppet agent -t 
+```
+Enable Puppet agent
+```
+echo "START=yes" > /etc/default/puppet 
+/opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true 
+/opt/puppetlabs/bin/puppet resource service pxp-agent ensure=running enable=true 
+```
+# Environmental Variables
 ```
 #printenv
 https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps
