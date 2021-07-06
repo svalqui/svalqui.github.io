@@ -111,6 +111,11 @@ or via /etc/auto.local
 ```
 <local-dir>	-fstype=nfs,nfsvers=3,exec	my-nfs.org.au:/<nfs-share-vol>
 ```
+## Via ssh
+```
+sshfs#root@sharing_svr.org.au:/mnt/shared/home /mnt/local_home fuse allow_other,default_permissions,IdentityFile=/root/.ssh/details 0 0
+```
+
 # Home in another partition
 1. from your spare space create a new partition ext4 for your home directories
 ```
