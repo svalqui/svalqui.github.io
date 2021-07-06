@@ -87,7 +87,10 @@ dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/"
 
 
 # Mounts
-permanent mount
+permanent mounts
+
+## Cifs
+
 ```
 edit and add on /etc/fstab
 
@@ -98,7 +101,12 @@ username=username
 password=pass
 domain=my-domain.rog
 ```
+## NFS
+```
+edit and add on /etc/fstab
 
+my-nfs.org.au:/<nfs-share-vol> /mnt/my-nfs/<local-name> nfs vers=3,fsc 0 0
+```
 # Home in another partition
 1. from your spare space create a new partition ext4 for your home directories
 ```
