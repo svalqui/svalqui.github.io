@@ -102,10 +102,14 @@ password=pass
 domain=my-domain.rog
 ```
 ## NFS
-```
-edit and add on /etc/fstab
 
+edit and add on /etc/fstab
+```
 my-nfs.org.au:/<nfs-share-vol> /mnt/my-nfs/<local-name> nfs vers=3,fsc 0 0
+```
+or via /etc/auto.local
+```
+<local-dir>	-fstype=nfs,nfsvers=3,exec	my-nfs.org.au:/<nfs-share-vol>
 ```
 # Home in another partition
 1. from your spare space create a new partition ext4 for your home directories
