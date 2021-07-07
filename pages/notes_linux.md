@@ -282,6 +282,11 @@ terminate a locked/frozen session
 ```
 Enter ~ .
 ```
+# Repositories
+list
+```
+grep ^[^#] /etc/apt/sources.list /etc/apt/sources.list.d/*
+```
 
 # Packages 
 
@@ -324,6 +329,14 @@ remove rc , broken packages
 ```
 sudo apt-get remove --purge <packge-name>
 ```
+source of package
+```
+dpkg -s <package>
+```
+which repo comes from
+```
+apt-cache showpkg <package>
+``` 
 
 # Software
 
