@@ -256,7 +256,15 @@ sudo nmap -v -sS -A -T4 -Pn <ip-add>
 ```
 sudo lsof -nP -iTCP -sTCP:LISTEN
 ```
-
+# ports open
+```
+sudo apt install net-tools
+$ netstat -tapn
+```
+or
+```
+sudo lsof -nP -iTCP -sTCP:ESTABLISHED
+```
 ## DNS
 ```
 systemd-resolve --status
