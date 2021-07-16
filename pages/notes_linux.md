@@ -86,10 +86,10 @@ dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/"
 ```
 
 
-# Mounts
-permanent mounts
+# Shares
 
-## Cifs
+
+## Cifs mount
 
 ```
 edit and add on /etc/fstab
@@ -101,7 +101,7 @@ username=username
 password=pass
 domain=my-domain.rog
 ```
-## NFS
+## NFS mount
 
 edit and add on /etc/fstab
 ```
@@ -111,9 +111,13 @@ or via /etc/auto.local
 ```
 <local-dir>	-fstype=nfs,nfsvers=3,exec	my-nfs.org.au:/<nfs-share-vol>
 ```
-## Via ssh
+## ssh mount
 ```
 sshfs#root@sharing_svr.org.au:/mnt/shared/home /mnt/local_home fuse allow_other,default_permissions,IdentityFile=/root/.ssh/details 0 0
+```
+## list smb shares
+```
+smbclient -L myserver.mydomain.org.au -U username@mydomain.org.au
 ```
 
 # Home in another partition
@@ -256,7 +260,7 @@ sudo nmap -v -sS -A -T4 -Pn <ip-add>
 ```
 sudo lsof -nP -iTCP -sTCP:LISTEN
 ```
-# ports open
+## ports open
 ```
 sudo apt install net-tools
 $ netstat -tapn
