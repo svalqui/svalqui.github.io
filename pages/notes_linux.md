@@ -243,7 +243,10 @@ restart network
 ```
 sudo service network-manager restart
 ```
-
+ping
+```
+ping server.org.au | while read pong; do echo "$(date): $pong"; done
+```
 ## nmap
 ````
 Nmap:
