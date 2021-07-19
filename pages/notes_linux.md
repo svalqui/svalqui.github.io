@@ -297,6 +297,17 @@ terminate a locked/frozen session
 ```
 Enter ~ .
 ```
+## ssh file copy scp
+[COMMAND] [OPTIONAL ARGUMENTS] [SOURCE] [DESTINATION]
+
+Copy a file
+```
+scp my-file <username>@<host-name>:/home/
+```
+Copy recursively
+```
+scp -r * <username>@<host-name>:/home/
+```
 # Repositories
 list
 ```
