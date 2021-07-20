@@ -281,7 +281,29 @@ Check DNS resolvers, this is a dynamic file do not change it directly, it would 
 ```
 cat /etc/resolv.conf
 ```
+
+## network monitor
+```
+ethtool <interface> 
+```
+$ sudo iptraf
+
+ip link show
+
+lspci | grep Ethernet
+
+ifconfig -a | grep Link
  
+netstat -i | column -t
+ 
+ip route | column -t
+ 
+netstat -r
+ 
+### show errors
+
+ifconfig -a
+
 # SSH
  
 Adding a public key to your computer so you can connect to a remote server; you need the remote server public key (Remote_Servers.pub)
