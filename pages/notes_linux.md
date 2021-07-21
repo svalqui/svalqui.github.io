@@ -387,9 +387,10 @@ apt-cache showpkg <package>
 ``` 
 extract a deb file
 ```
-dpkg -x file.deb dir-deb-files
+ar vx file.deb
+tar xvf control.tar.xz
+tar data.tar.xz
 ```
-
 
 # Software
 
