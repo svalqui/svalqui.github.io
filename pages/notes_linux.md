@@ -385,6 +385,11 @@ which repo comes from
 ```
 apt-cache showpkg <package>
 ``` 
+extract a deb file
+```
+dpkg -x file.deb dir-deb-files
+```
+
 
 # Software
 
