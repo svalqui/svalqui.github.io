@@ -76,6 +76,9 @@ Get-Process program.exe -IncludeUserName | Where UserName -match joe | Stop-Proc
 Get-Process *edge -IncludeUserName  | Where UserName -match
 Get-Process Wind* -IncludeUserName  | Where UserName -match
 
+Get-NetTCPConnection -AppliedSetting Internet
+Get-NetTCPConnection -State Established
+
 Stop-Process -Name msedge
 Stop-Process -Name RuntimeBroker
 Stop-Process -Name Minecraft.Windows
