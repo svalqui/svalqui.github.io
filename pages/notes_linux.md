@@ -84,6 +84,25 @@ Fix disk with errors, corrupted files
 ```
 fsck -yf /dev/<your-disk-partition-here>
 ```
+List the scsi device
+```
+# lsscsi
+ or
+ # cat /proc/scsi/scsi 
+```
+List Physical Volumes
+```
+ # pvdisplay
+```
+List Logical Volumes
+```
+ # lvdisplay
+```
+List disk space
+```
+ # df -h
+```
+
 ## Clear Space
 ```
 dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y purge
