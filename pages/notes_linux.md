@@ -258,7 +258,28 @@ journalctl --vacuum-time=2d
 ```
 sudo journalctl -t gnome-session
 ```
+# Authentication
 
+# Authentication failures
+```
+grep "Failed password" /var/log/auth.log
+```
+```
+egrep "Failed|failure" /var/log/auth.log
+```
+```
+grep "Failed password" /var/log/auth.log | awk '{print $11}' | uniq -c | sort -nr
+```
+```
+journalctl _SYSTEMD_UNIT=ssh.service | egrep "Failed|Failure"
+```
+```
+lastb -a | more
+```
+Bad login attempts
+```
+last -f /var/log/btmp
+```
 # network
 /etc/network/interfaces
 
