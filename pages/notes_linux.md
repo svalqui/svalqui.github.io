@@ -453,7 +453,11 @@ Remove
 ```
 sudo apt-get remove virtualbox
 ```
-
+Upgrade, there is no upgrade, remove and install the newest version
+```
+$ sudo apt-get remove virtualbox
+$ sudo dpkg -i virtualbox-6.1_6.1.26-145957~Ubuntu~eoan_amd64.deb
+```
 Issues with kernel reinstall dpkg
 ```
 # remove current version from pkgs
