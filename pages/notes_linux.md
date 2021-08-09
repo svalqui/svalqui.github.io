@@ -222,6 +222,8 @@ dmesg | tail -f /var/log/syslog
 sudo find /var/log -type f -mtime -1 -exec tail -Fn0 {} +
 https://www.hpe.com/us/en/insights/articles/the-first-5-things-to-do-when-your-linux-server-keels-over-1705.html
 ```
+
+
 # journalctl
 ```
 The last 100
@@ -298,6 +300,14 @@ Bad login attempts
 ```
 last -f /var/log/btmp
 ```
+
+## Authentication succes
+```
+egrep "New session" /var/log/auth.log
+egrep "session opened for user" /var/log/auth.log
+egrep "session opened for user|session closed for user|Removed session" /var/log/auth.log
+```
+
 # network
 /etc/network/interfaces
 
