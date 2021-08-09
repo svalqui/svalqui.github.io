@@ -262,9 +262,13 @@ Keep only last 2 days
 ```
 journalctl --vacuum-time=2d
 ```
-16.04
+16.04 session
 ```
 sudo journalctl -t gnome-session
+```
+Logs before last reboot
+```
+journalctl -b -1
 ```
 # Authentication
 ```
