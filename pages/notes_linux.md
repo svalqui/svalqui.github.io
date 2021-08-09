@@ -193,6 +193,12 @@ kill -s SIGCHLD <parent PID>
 or try killing the parent process
 kill -SIGKILL 7636
 ```
+# Memory
+## Memory issues
+```
+# egrep "of memory" /var/log/kern
+```
+
 # sudo
 from a user, become root
 ```
