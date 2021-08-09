@@ -497,6 +497,10 @@ VBoxManage controlvm "<vm-name-here>" poweroff --type headless
 ### Jails list
 
 fail2ban-client status
+
+### IPs in jail
+
+fail2ban-client status <JailName>
  
 ### unban ip
  
