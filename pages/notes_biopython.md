@@ -1,4 +1,4 @@
-# Biopython Notes
+Biopython Notes
 
 # Install
 
@@ -169,6 +169,11 @@ flake8 --select E123,W503 path/to/code/
 flake8 --ignore E24,W504 path/to/code/
 python3 -m flake8 --ignore E225,E226,E231,E211,E111,E113,E112,E261,E128,E402,E227,W604,W504,E702,W503 NEWS.rst
 ```
+
+# KEGG
+A subset of KEGG MEDICUS is freely available at the GenomeNet FTP site. 
+https://www.kegg.jp/kegg/download/
+
 
 # Dependencies for some biopython modules
 
