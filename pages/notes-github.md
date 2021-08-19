@@ -19,6 +19,10 @@ git config --list
 git config user.name "My Name"
 git config user.email my.email@for.this.project.org 
 ```
+# Clone a repository
+```
+/Projects$ git clone https://github.com/project-name-here.git
+```
 
 # Check my remotes
 ```
