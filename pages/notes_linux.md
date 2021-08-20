@@ -175,6 +175,7 @@ sudo mkdir /home
 ```
 7. reboot
 8. check home is working on the new partition and delete the old home directory
+
 # Processes
 ## Dealing with zombies
 ```
@@ -523,21 +524,21 @@ VBoxManage controlvm "<vm-name-here>" poweroff --type headless
 ## fail2ban
 
 ### Fail2ban log 
-
+```
 /var/log/fail2ban.log
-
+```
 ### Jails list
-
+```
 fail2ban-client status
-
+```
 ### IPs in jail
-
+```
 fail2ban-client status <JailName>
- 
+```
 ### unban ip
- 
+```
 fail2ban-client set <jail_name> unbanip <ip_address>
-
+```
 ## Puppet
 
 Check puppet client has finished applying catalogue
@@ -570,7 +571,6 @@ https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environment
 #set
 export VARIABLE=value
 
- 
 # PATH
 ~$ printenv PATH
 or
@@ -581,6 +581,12 @@ echo $PATH
 export PATH=$PATH:/path/to/add
 # to the begining
 export PATH=/path/to/add:$PATH
+```
+# Shutdown
+## force shutdown
+```
+echo 1 > /proc/sys/kernel/sysrq
+echo b > /proc/sysrq-trigger
 ```
 
 # Unclasified
