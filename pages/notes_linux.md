@@ -205,6 +205,10 @@ ps -ef | grep <UserName>
 ```
 # egrep "of memory" /var/log/kern
 ```
+## Memory use
+```
+free -mh
+```
 
 # sudo
 from a user, become root
