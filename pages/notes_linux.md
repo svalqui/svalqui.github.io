@@ -193,6 +193,13 @@ kill -s SIGCHLD <parent PID>
 or try killing the parent process
 kill -SIGKILL 7636
 ```
+## Processes of a user
+```
+top -U <UserName>
+ps -u <UserName>
+ps -ef | grep <UserName>
+```
+
 # Memory
 ## Memory issues
 ```
