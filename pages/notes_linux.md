@@ -211,6 +211,11 @@ from a user, become root
 ```
 sudo bash
 ```
+Who is sudo
+```
+grep '^sudo:.*$' /etc/group | cut -d: -f4
+```
+
 # Logs
 ```
 ls -l /var/log/
