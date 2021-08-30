@@ -589,17 +589,8 @@ echo 1 > /proc/sys/kernel/sysrq
 echo b > /proc/sysrq-trigger
 ```
 
-# Unclasified
-
-repair xorg
-```
-sudo apt-get remove --purge xserver-xorg
-sudo apt-get install xserver-xorg
-sudo dpkg-reconfigure xserver-xorg
-
- ```
- 
-# vi
+# Files edit, content
+## vi
 ```
 yy copy yank
 p paste
@@ -616,6 +607,22 @@ $ move to the end of line
 :0<Return> or 1G  move to the first line
 :$<Return> or G  move to the last line
 ```
+## diff
+```
+diff file1 file2
+diff -y file1 file2
+```
+
+# Unclasified
+
+repair xorg
+```
+sudo apt-get remove --purge xserver-xorg
+sudo apt-get install xserver-xorg
+sudo dpkg-reconfigure xserver-xorg
+
+ ```
+ 
 # Desktops 
 
 Check there is at least one desktop installed on the server
