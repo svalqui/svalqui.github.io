@@ -606,6 +606,16 @@ N 	move to next in opposite direction
 $ move to the end of line
 :0<Return> or 1G  move to the first line
 :$<Return> or G  move to the last line
+
+# Show line number
+:set number
+
+```
+### show line numbers
+```
+$ vi .vimrc
+# on the file append
+set number
 ```
 ## diff
 ```
