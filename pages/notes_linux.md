@@ -123,7 +123,12 @@ edit and add on /etc/fstab
 username=username
 password=pass
 domain=my-domain.rog
+
+
+Mounting using current ticket/credentials
+sudo mount -v -t cifs //srv1.org.au/sharedir/ /mnt -o user=$USER,cruid=$USER,sec=krb5
 ```
+
 ## NFS mount
 
 edit and add on /etc/fstab
