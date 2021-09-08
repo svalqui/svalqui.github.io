@@ -142,6 +142,8 @@ sshfs#root@sharing_svr.org.au:/mnt/shared/home /mnt/local_home fuse allow_other,
 Test
 ```
 sshfs root@svr1.your.domain.org:<directory/source> /mnt/test/
+or 
+sshfs -oIdentityFile=/root/.ssh/ssh-key-4svr1 root@jsrv1.org.au:/mnt/my-dir /mnt/svr1-mydir
 ```
 ## list smb shares
 ```
