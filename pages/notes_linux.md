@@ -138,6 +138,11 @@ or via /etc/auto.local
 ```
 sshfs#root@sharing_svr.org.au:/mnt/shared/home /mnt/local_home fuse allow_other,default_permissions,IdentityFile=/root/.ssh/details 0 0
 ```
+
+Test
+```
+sshfs root@svr1.your.domain.org:<directory/source> /mnt/test/
+```
 ## list smb shares
 ```
 smbclient -L myserver.mydomain.org.au -U username@mydomain.org.au
