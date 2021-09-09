@@ -141,14 +141,14 @@ or via /etc/auto.local
 ```
 ## ssh mount
 ```
-sshfs#root@sharing_svr.org.au:/mnt/shared/home /mnt/local_home fuse allow_other,default_permissions,IdentityFile=/root/.ssh/details 0 0
+sshfs#root@sharing_svr.org.au:/shared/dir /mnt/local_home fuse allow_other,default_permissions,IdentityFile=/root/.ssh/details 0 0
 ```
 
 Test
 ```
 sshfs root@svr1.your.domain.org:<directory/source> /mnt/test/
 or 
-sshfs -oIdentityFile=/root/.ssh/ssh-key-4svr1 root@jsrv1.org.au:/mnt/my-dir /mnt/svr1-mydir
+sshfs -o allow_other,default_permissions -o IdentityFile=/root/.ssh/ssh-key-4svr1 root@jsrv1.org.au:/mnt/my-dir /mnt/svr1-mydir
 ```
 ## list smb shares
 ```
