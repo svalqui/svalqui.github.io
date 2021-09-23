@@ -108,9 +108,7 @@ List disk space
 dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y purge
 ```
 
-
 # Shares
-
 
 ## Cifs mount
 
@@ -153,6 +151,11 @@ sshfs -o allow_other,default_permissions -o IdentityFile=/root/.ssh/ssh-key-4svr
 ## list smb shares
 ```
 smbclient -L myserver.mydomain.org.au -U username@mydomain.org.au
+```
+
+## mediaflux
+```
+smbclient //mediaflux.yourdomain.net/your-proj -m SMB2 -W <AD-domain> -U <username>
 ```
 
 # Home in another partition
