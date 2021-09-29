@@ -55,7 +55,7 @@ ls -tr /var/log/sa/sa[0-9][0-9] |
 while read safile
 do
   sar -r -f "$safile"
-done > reportfile
+done > reportfile-Mem
 ```
 
 Historical procesor
@@ -64,5 +64,5 @@ ls -tr /var/log/sa/sa[0-9][0-9] |
 while read safile
 do
   sar -u -f "$safile"
-done > reportfile
+done > reportfile-cpu
 ```
