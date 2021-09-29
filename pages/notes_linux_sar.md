@@ -46,10 +46,10 @@ Log files location
 ```
 # ls -l /var/log/sa/
 ```
-Reports
-
-Historical memory
+Reports historical
 https://www.unix.com/solaris/282143-getting-sar-report-past-one-month.html
+
+memory to a file
 ```
 ls -tr /var/log/sa/sa[0-9][0-9] | 
 while read safile
@@ -57,12 +57,27 @@ do
   sar -r -f "$safile"
 done > reportfile-Mem
 ```
-
-Historical procesor
+memory to screen
+```
+ls -tr /var/log/sa/sa[0-9][0-9] | 
+while read safile
+do
+  sar -r
+done
+```
+Procesor to a file
 ```
 ls -tr /var/log/sa/sa[0-9][0-9] | 
 while read safile
 do
   sar -u -f "$safile"
 done > reportfile-cpu
+```
+Processor to screen
+```
+ls -tr /var/log/sa/sa[0-9][0-9] | 
+while read safile
+do
+  sar -u
+done
 ```
