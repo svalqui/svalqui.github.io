@@ -270,6 +270,8 @@ The last 100
 journalctl -n 100
 The last in 1 hour
 journalctl --since "1 hour ago"
+The last day
+journalctl --since "1 day ago"
 ```
 
 Only messages related to a given user
