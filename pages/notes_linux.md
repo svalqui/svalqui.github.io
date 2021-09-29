@@ -250,6 +250,8 @@ ls -l /var/log/
 ## Users last login
 ```
 last
+
+last -w | sort
 ```
 ## Check Logs for system issues
 ```
