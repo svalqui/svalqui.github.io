@@ -251,7 +251,10 @@ ls -l /var/log/
 ```
 last
 
-last -w | sort
+last -w | 
+
+Unique
+last -w | sort -uk1,1
 ```
 ## Check Logs for system issues
 ```
