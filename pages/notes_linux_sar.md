@@ -48,6 +48,7 @@ Log files location
 ```
 Reports historical
 https://www.unix.com/solaris/282143-getting-sar-report-past-one-month.html
+https://www.howtoforge.com/install-and-configure-sar-and-ksar-for-daily-monitoring-on-linux-and-generate-pdf-reports/
 
 memory to a file
 ```
@@ -73,6 +74,13 @@ do
   sar -u -f "$safile"
 done > reportfile-cpu
 ```
+```
+ls -tr /var/log/sa/sa[0-9][0-9] | 
+while read sarfile
+do
+  LC_ALL=C sar -u -f "$sarfile" >> sar-cpu
+done
+```
 Processor to screen
 ```
 ls -tr /var/log/sa/sa[0-9][0-9] | 
@@ -81,3 +89,7 @@ do
   sar -u
 done
 ```
+
+
+
+
