@@ -373,6 +373,9 @@ sudo nmap -p <port-number> <ip-add>
 No probes
 sudo nmap -v -sS -A -T4 -Pn <ip-add>
 
+Subnet check
+nmap -sP 192.168.1.0/24 --scan-delay 1s
+
 ````
 ## ports listening
 ```
