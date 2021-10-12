@@ -57,6 +57,13 @@ $ chown :sergio .ssh/known_hosts
 # or change both 
 $ chown sergio:sergio .ssh/known_hosts
 ```
+## tar 
+
+### .tar.gz
+```
+tar xvzf my-file.tar.gz
+```
+
 ## Symbolic links (shortcut file)
 
 ln -s /full/path/of/existing/file.txt /home/my-link-name.txt
