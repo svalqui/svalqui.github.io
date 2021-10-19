@@ -2,6 +2,7 @@
 
 <body>
   <main> 
+    <header>
 <nav class="menu">
 <ul>
 <li><a href="#">Notes</a></li>
@@ -18,6 +19,7 @@
 <li><a href="#">About</a></li>
 </ul>
 </nav>
+    </header>
   </main>
 
 </body>
