@@ -1,14 +1,28 @@
 
-<nav>
+
+<body>
+  <main>
+    <h1>Menu</h1>
+    
+<nav class="menu">
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#notes">Notes</a></li>
+  <ul>
+    <li><a href="/pages/notes_biopython">Biopython Notes</a></li>
+    <li><a href="/pages/notes_linux">Linux Notes</a></li>
+  </ul>
 <li><a href="#news">News</a></li>
 <li><a href="#contact">Contact</a></li>
 <li><a href="#about">About</a></li>
 </ul>
 </nav>
+  </main>
 
+</body>
+  
+  
+  
 <p>Working on a refresh...</p>
 <p><a href="/pages/notes_biopython">Biopython Notes</a></p>
 <p><a href="/pages/notes_linux">Linux Notes</a></p>
