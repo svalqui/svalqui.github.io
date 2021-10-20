@@ -417,21 +417,14 @@ cat /etc/resolv.conf
 ## network monitor
 ```
 ethtool <interface> 
-```
 $ sudo iptraf
-
 ip link show
-
 lspci | grep Ethernet
-
 ifconfig -a | grep Link
- 
 netstat -i | column -t
- 
 ip route | column -t
- 
 netstat -r
- 
+```
 ### show errors
 
 ifconfig -a
