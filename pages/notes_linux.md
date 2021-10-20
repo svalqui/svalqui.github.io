@@ -79,7 +79,6 @@ sudo du -hsx /* | sort -rh | head -n 40
 
 Top biggest
 find / -printf '%s %p\n'| sort -nr | head -10
-
 ```
 Show Disks:
 ```
@@ -175,7 +174,6 @@ smbclient //mediaflux.yourdomain.net/your-proj -m SMB2 -W <AD-domain> -U <userna
 fdisk -l # list your disks/partitions
 gdisk /dev/sdx # Option n (new), 1 (partition 1), w (write)
 sudo mkfs.ext4 /dev/sdx1 # or sudo mkfs -t ext4 /dev/sdx1, formats the partition
-
 ```
 2. mount the new partition
 ```
@@ -361,7 +359,12 @@ egrep "New session" /var/log/auth.log
 egrep "session opened for user" /var/log/auth.log
 egrep "session opened for user|session closed for user|Removed session" /var/log/auth.log
 ```
-
+## Clearing sssd cache
+```
+systemctl stop sssd
+sudo sss_cache -E  # or rm -rf /var/lib/sss/db/*
+systemctl start sssd
+```
 # network
 /etc/network/interfaces
 
