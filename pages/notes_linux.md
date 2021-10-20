@@ -365,6 +365,17 @@ systemctl stop sssd
 sudo sss_cache -E  # or rm -rf /var/lib/sss/db/*
 systemctl start sssd
 ```
+## Fixing issues with sssd - reconfiguring
+https://askubuntu.com/questions/1288626/ubuntu-20-10-sssd-system-security-services-daemon-failure
+
+```
+sudo cp /usr/lib/x86_64-linux-gnu/sssd/conf/sssd.conf /etc/sssd/.
+sudo chmod 600 /etc/sssd/sssd.conf 
+sudo systemctl enable sssd
+sudo systemctl start sssd
+# Then add your configuration
+```
+
 # network
 /etc/network/interfaces
 
