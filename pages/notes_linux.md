@@ -538,6 +538,10 @@ Install
 ```
 sudo apt-get install virtualbox
 ```
+Install the extension pack
+```
+sudo apt install virtualbox-ext-pack
+```
 Remove
 ```
 sudo apt-get remove virtualbox
@@ -739,6 +743,9 @@ greeter-show-manual-login=true
 autologin-user=<user_name>
 autologin-user-timeout=0
 ```
+# configuring a yubikey
+https://gist.github.com/artizirk/d09ce3570021b0f65469cb450bee5e29
+
 # preferred pkgs
 
 Python development packages
