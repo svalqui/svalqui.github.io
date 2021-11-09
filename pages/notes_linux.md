@@ -64,6 +64,12 @@ $ chown sergio:sergio .ssh/known_hosts
 tar xvzf my-file.tar.gz
 ```
 
+## rsync
+
+```
+rsync -aAXvPh /media/usr/Data/bkp-laptop-scienceit/home/usr/Desktop/ /home/usr/Desktop/
+```
+
 ## Symbolic links (shortcut file)
 
 ln -s /full/path/of/existing/file.txt /home/my-link-name.txt
