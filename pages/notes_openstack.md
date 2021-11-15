@@ -53,6 +53,11 @@ Quota for a project
 openstack quota list --project PROJECT_NAME --compute
 openstack quota list --project PROJECT_NAME --volume
 ```
+or
+
+```
+openstack quota show PROJECT_NAME
+```
 
 ### maintenence
 
