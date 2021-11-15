@@ -49,8 +49,10 @@ User/role assignement for a project:
 
 Quota for a project
 
-```openstack quota list --projrct PROJECT_NAME```
-
+```
+openstack quota list --project PROJECT_NAME --compute
+openstack quota list --project PROJECT_NAME --volume
+```
 
 ### maintenence
 
