@@ -43,9 +43,14 @@ Projects and roles for a user:
 
 ```$ openstack role assignment list --user USER_NAME```
 
-Users role assignement for a project:
+User/role assignement for a project:
 
 ```openstack role assignment list --project PROJECT_NAME --names ```
+
+Quota for a project
+
+```openstack quota list --projrct PROJECT_NAME```
+
 
 ### maintenence
 
