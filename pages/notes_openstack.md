@@ -18,26 +18,37 @@ https://docs.openstack.org/keystone/latest/admin/cli-manage-projects-users-and-r
 ### Assign a user/role to a project
 
 Note the project ID
+
 ```$ openstack project list```
 
 Note the user ID
+
 ```$ openstack user list```
 
 Note the role ID
+
 ```$ openstack role list```
 
 Assign a new role:
+
 ```$ openstack role add --user USER_NAME --project PROJECT_NAME ROLE_NAME```
 
 Verify:
+
 ```$ openstack role assignment list --user USER_NAME --project PROJECT_NAME --names```
 
 ### Good to know
 
 Projects and roles for a user:
+
 ```$ openstack role assignment list --user USER_NAME```
+
+Users role assignement for a project:
+
+```openstack role assignment list --project PROJECT_NAME --names ```
 
 ### maintenence
 
 remove a role/user from a project:
+
 ```$ openstack role remove --user USER_NAME --project PROJECT_NAME ROLE_NAME```
