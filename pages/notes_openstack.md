@@ -47,6 +47,10 @@ User/role assignement for a project:
 
 ```openstack role assignment list --project PROJECT_NAME --names ```
 
+Projects with a given role:
+
+```openstack role assignment list --role <role-id-here> --names```
+
 Quota for a project
 
 ```
