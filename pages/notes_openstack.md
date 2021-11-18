@@ -45,26 +45,30 @@ Projects and roles for a user:
 
 User/role assignement for a project:
 
-```openstack role assignment list --project PROJECT_NAME --names ```
+```$ openstack role assignment list --project PROJECT_NAME --names ```
 
 Projects with a given role:
 
-```openstack role assignment list --role <role-id-here> --names```
+```$ openstack role assignment list --role <role-id-here> --names```
+
+List projects which name contains a string
+
+```$ openstack project list --sort name | grep <txt-to-look-for>```
 
 List servers for a project as admin
 
-```openstack server list --all-projects --project <project-name-here>```
+```$ openstack server list --all-projects --project <project-name-here>```
 
 Quota for a project
 
 ```
-openstack quota list --project PROJECT_NAME --compute
-openstack quota list --project PROJECT_NAME --volume
+$ openstack quota list --project PROJECT_NAME --compute
+$ openstack quota list --project PROJECT_NAME --volume
 ```
 or
 
 ```
-openstack quota show PROJECT_NAME
+$ openstack quota show PROJECT_NAME
 ```
 
 ### maintenence
