@@ -51,6 +51,10 @@ Projects with a given role:
 
 ```openstack role assignment list --role <role-id-here> --names```
 
+List servers for a project as admin
+
+```openstack server list --all-projects --project <project-name-here>```
+
 Quota for a project
 
 ```
