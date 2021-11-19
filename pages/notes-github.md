@@ -13,7 +13,7 @@ git config --global user.email my@email@users.noreply.github.com # for github pr
 ```
 ## Per Project 
 
-On your project directory on .git/config
+On your project directory, on file .git/config
 ```
 git config --list
 git config user.name "My Name"
