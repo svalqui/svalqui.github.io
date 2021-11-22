@@ -41,7 +41,7 @@ Verify:
 
 Projects and roles for a user:
 
-```$ openstack role assignment list --user USER_NAME```
+```$ openstack role assignment list --user USER_NAME --names```
 
 User/role assignement for a project:
 
@@ -60,7 +60,6 @@ List servers for a project as admin
 ```$ openstack server list --all-projects --project <project-name-here>```
 
 Quota for a project
-
 ```
 $ openstack quota list --project PROJECT_NAME --compute
 $ openstack quota list --project PROJECT_NAME --volume
@@ -70,6 +69,12 @@ or
 ```
 $ openstack quota show PROJECT_NAME
 ```
+
+Allocation for a project
+```
+$ openstack allocation show PROJECT_NAME
+```
+
 
 ### maintenence
 
