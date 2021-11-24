@@ -617,6 +617,11 @@ echo "START=yes" > /etc/default/puppet
 /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true 
 /opt/puppetlabs/bin/puppet resource service pxp-agent ensure=running enable=true 
 ```
+## Terminal
+
+### is your scroll bar gone?
+Try : ```tput rmcup```
+
 # Environmental Variables
 ```
 #printenv
@@ -749,6 +754,7 @@ greeter-show-manual-login=true
 autologin-user=<user_name>
 autologin-user-timeout=0
 ```
+
 # configuring a yubikey
 https://gist.github.com/artizirk/d09ce3570021b0f65469cb450bee5e29
 
