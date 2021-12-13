@@ -81,3 +81,22 @@ $ openstack allocation show PROJECT_NAME
 remove a role/user from a project:
 
 ```$ openstack role remove --user USER_NAME --project PROJECT_NAME ROLE_NAME```
+
+## Endpoints, services, catalog
+
+List the catalog of all services
+```
+$ openstack catalog list
+```
+List enpoints providing services
+```
+$ openstack endpoint list
+```
+List enpoint providing a given service
+```
+$ openstack endpoint list --service identity
+```
+List all services
+```
+$ openstack service list
+```
