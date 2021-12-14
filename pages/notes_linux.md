@@ -617,6 +617,15 @@ echo "START=yes" > /etc/default/puppet
 /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true 
 /opt/puppetlabs/bin/puppet resource service pxp-agent ensure=running enable=true 
 ```
+## zoom
+remove old version
+```
+sudo dpkg -r zoom
+```
+install zoom
+```
+sudo apt --fix-broken install ./Downloads/zoom_amd64.deb
+```
 ## Terminal
 
 ### is your scroll bar gone?
