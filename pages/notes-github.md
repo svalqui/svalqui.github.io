@@ -23,7 +23,10 @@ git config user.email my.email@for.this.project.org
 ```
 /Projects$ git clone https://github.com/project-name-here.git
 ```
-
+## issues cloning, debugging 
+```
+$ GIT_SSH_COMMAND="ssh -vvv" git clone ssh://user@yourdomain.org@server.org.au:<port-number>/project-directory
+```
 # Check my remotes
 ```
 git remote -v
