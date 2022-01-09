@@ -69,6 +69,10 @@ or
 ```
 $ openstack quota show PROJECT_NAME
 ```
+Quota network items for a project
+```
+$ openstack quota list --project PROJECT-NAME --network
+```
 
 Allocation for a project
 ```
@@ -99,4 +103,11 @@ $ openstack endpoint list --service identity
 List all services
 ```
 $ openstack service list
+```
+
+## Quotas updating
+
+Setting the number of security group rules for a project
+```
+$ openstack quota set --secgroup-rules <New-number-of-rules> PROJECT_NAME
 ```
