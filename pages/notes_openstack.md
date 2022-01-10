@@ -94,11 +94,11 @@ $ openstack quota set --secgroup-rules <New-number-of-rules> PROJECT_NAME
 ```
 
 ## Project Security
-Groups containg rules
+List Security Groups for a project, Security Groups containg rules
 ```
 $ openstack security group list --project PROJECT_NAME
 ```
-Rules specify which ports/subnets are allow /deny, to see the rules
+List Security Groups details, rules specify which ports/subnets are allow /deny, to see the rules show the group details
 ```
 $ openstack security group show <group-id>
 ```
