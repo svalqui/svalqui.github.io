@@ -86,6 +86,23 @@ remove a role/user from a project:
 
 ```$ openstack role remove --user USER_NAME --project PROJECT_NAME ROLE_NAME```
 
+## Project quotas updating
+
+Setting the number of security group rules for a project
+```
+$ openstack quota set --secgroup-rules <New-number-of-rules> PROJECT_NAME
+```
+
+## Project Security
+Groups containg rules
+```
+$ openstack security group list --project PROJECT_NAME
+```
+Rules specify which ports/subnets are allow /deny, to see the rules
+```
+$ openstack security group show <group-id>
+```
+
 ## Endpoints, services, catalog
 
 List the catalog of all services
@@ -105,9 +122,3 @@ List all services
 $ openstack service list
 ```
 
-## Quotas updating
-
-Setting the number of security group rules for a project
-```
-$ openstack quota set --secgroup-rules <New-number-of-rules> PROJECT_NAME
-```
