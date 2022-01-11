@@ -44,3 +44,31 @@ git push
 git fetch
 git reset --hard origin/master
 ```
+
+
+# Gerrit
+Install Git Review
+```
+$ pip install git-review
+```
+Initialize
+```
+$ git review -s
+```
+Configure git-review
+```
+$ git config --global gitreview.remote origin
+```
+Update master
+```
+$ git pull origin master
+```
+Create a branch
+```
+$ git checkout -b name_of_branch origin/master
+```
+Change to branch
+```
+$ git branch
+```
+
