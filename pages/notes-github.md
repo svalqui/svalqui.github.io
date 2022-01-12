@@ -71,4 +71,15 @@ Change to branch
 ```
 $ git branch
 ```
+Logging a git-review ("pull request")
+- create your new working branch: $ git checkout -b name_of_branch origin/master
+- edit/ create the files you need
+- add the files and commit: $ git commit -a -m "Change..." 
+- git review: $ git review
+
+Updating a git-review
+- edit the files needing change
+- add the files: git add files
+- amend: $ git commit --amend
+- git review: $ git review
 
