@@ -59,6 +59,18 @@ Configure git-review
 ```
 $ git config --global gitreview.remote origin
 ```
+Clone a project to work on
+```
+$ git clone ssh://gerrit-site/project01
+```
+Set the email for the project
+```
+/project01$ git config user.email <email-allowed-on-gerrit-project>
+```
+check email
+```
+$ git config user.email
+```
 Update master
 ```
 $ git pull origin master
