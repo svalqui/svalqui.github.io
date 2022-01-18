@@ -19,6 +19,12 @@ git config --list
 git config user.name "My Name"
 git config user.email my.email@for.this.project.org 
 ```
+
+## even better per repository, set one folder per repository
+
+https://gist.github.com/bgauduch/06a8c4ec2fec8fef6354afe94358c89e
+
+
 # Clone a repository
 ```
 /Projects$ git clone https://github.com/project-name-here.git
