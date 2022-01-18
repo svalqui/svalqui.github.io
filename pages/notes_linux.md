@@ -74,6 +74,12 @@ rsync -aAXvPh /media/usr/Data/bkp-laptop-scienceit/home/usr/Desktop/ /home/usr/D
 
 ln -s /full/path/of/existing/file.txt /home/my-link-name.txt
 
+# Open files
+
+Open fiels in a given directory
+```
+# lsof +D '/usr/local/'
+```
 # Disk
 How much you user uses:
 ```
