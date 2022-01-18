@@ -103,7 +103,7 @@ List Security Groups details, rules specify which ports/subnets are allow /deny,
 $ openstack security group show <group-id>
 ```
 
-## Endpoints, services, catalog
+## Services, catalog, endpoints
 
 List the catalog of all services
 ```
@@ -121,4 +121,12 @@ List all services
 ```
 $ openstack service list
 ```
-
+## Servers
+Show server details
+```
+$ openstack server show <server-id>
+```
+Show Server logs, for troubleshooting (ssh)
+```
+$ openstack console log show <server-id>
+```
