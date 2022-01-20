@@ -294,6 +294,8 @@ The last in 1 hour
 journalctl --since "1 hour ago"
 The last day
 journalctl --since "1 day ago"
+Reverse order
+journalctl -r
 ```
 
 Only messages related to a given user
@@ -319,6 +321,7 @@ sudo journalctl -u lightdm
 By Process
 ```
 sudo journalctl -t systemd 
+# sudo journalctl -t acvpnagent # Cisco Anyconect
 ```
 Extended messages
 ```
