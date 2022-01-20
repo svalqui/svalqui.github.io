@@ -130,3 +130,7 @@ Show Server logs, for troubleshooting (ssh)
 ```
 $ openstack console log show <server-id>
 ```
+Show which actions has taken on the server
+```
+nova instance-action-list <server-id>
+```
