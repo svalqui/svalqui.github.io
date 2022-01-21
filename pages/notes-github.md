@@ -33,24 +33,31 @@ https://gist.github.com/bgauduch/06a8c4ec2fec8fef6354afe94358c89e
 ```
 $ GIT_SSH_COMMAND="ssh -vvv" git clone ssh://user@yourdomain.org@server.org.au:<port-number>/project-directory
 ```
-# Check my remotes
+# Maintenance
+
+## Check my remotes
 ```
 git remote -v
 ```
 
-# Update your working branchon Github
+## Update your working branchon Github
 ```
 git checkout issue_1
 git commit -m “fixed issue 1”
 git push
 ```
 
-# Reset you projest as Master branch, lose all your local progress
+## Reset you projest as Master branch, lose all your local progress
 ```
 git fetch
 git reset --hard origin/master
 ```
 
+# History
+See your commit history
+```
+$  git log --pretty=format:"%h %s" --graph
+```
 
 # Gerrit
 Install Git Review
