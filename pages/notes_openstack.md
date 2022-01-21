@@ -9,6 +9,17 @@
 4. Set your source keystone (your Token, Service Catalog)   
 ```$ source your-prj-on-mycloud-openrc.sh```
 
+## Other modules dependencies
+
+python-novaclient
+python-cinderclient
+python-keystoneclient
+python-glanceclient
+python-quantumclient
+python-swiftclient
+
+sudo apt install python3-ceilometerclient
+
 # admin
 ## Projects users and roles
 "To assign a user to a project, you must assign the role to a user-project pair. To do this, you need the user, role, and project IDs."
