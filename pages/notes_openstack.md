@@ -149,3 +149,8 @@ Show which actions has taken on the server
 ```
 nova instance-action-list <server-id>
 ```
+## Designate
+Show recordsets on a zone
+```
+openstack recordset list --sort-column records <zone-id-or-name>
+```
