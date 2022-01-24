@@ -838,6 +838,10 @@ cifs support
 ```
 sudo apt install cifs-utils
 ```
+Network tools
+```
+$ sudo apt install net-tools
+```
 
 #Minecraft
 ```
