@@ -842,7 +842,12 @@ Network tools
 ```
 $ sudo apt install net-tools
 ```
-
+Virtal Machine Manger
+```
+sudo apt-get install virt-manager
+# and
+sudo apt-get install ssh-askpass-gnome
+```
 #Minecraft
 ```
 screen -S "Minecraft server"
