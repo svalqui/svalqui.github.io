@@ -154,3 +154,7 @@ Show recordsets on a zone
 ```
 openstack recordset list --sort-column records <zone-id-or-name>
 ```
+Show record
+```
+$ openstack recordset show <zone-id> <recordset-id>
+```
