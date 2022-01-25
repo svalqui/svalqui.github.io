@@ -58,6 +58,10 @@ See your commit history
 ```
 $  git log --pretty=format:"%h %s" --graph
 ```
+Search for commits containing
+```
+$ git log --all --grep='text-to-look-for'
+```
 See the changes made by a single commit
 ```
 git diff <commit-hash>~ <commit-hash>
