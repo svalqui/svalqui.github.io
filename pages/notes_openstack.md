@@ -158,3 +158,13 @@ Show record
 ```
 $ openstack recordset show <zone-id> <recordset-id>
 ```
+Create a record, the record name sometimes matches the record name, unless a more intuitive recorname is required.
+```
+openstack recordset create <zone-id> host-name.<zone-id> --type CNAME --record record-name.<zone-id>
+
+openstack recordset create <zone-id> host-name.<zone-id> --type A --record <ip>
+```
+Change a record
+```
+openstack recordset set <zone-id> existing-host-name.<zone-id> --type CNAME --record new-record-name.<zone-id>
+```
