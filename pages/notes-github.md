@@ -58,7 +58,20 @@ See your commit history
 ```
 $  git log --pretty=format:"%h %s" --graph
 ```
-
+See the changes made by a single commit
+```
+git diff <commit-hash>~ <commit-hash>
+or
+git show --color --pretty=format:%b <commit-hash>
+```
+See the only the files changed by a commit
+```
+git diff-tree -p <commit-hash>
+or
+git diff-tree --no-commit-id --name-only -r <commit-has>
+or
+git show --pretty="" --name-only <commit-hash>
+```
 # Gerrit
 Install Git Review
 ```
