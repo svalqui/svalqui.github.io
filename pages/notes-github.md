@@ -66,9 +66,9 @@ git show --color --pretty=format:%b <commit-hash>
 ```
 See the only the files changed by a commit
 ```
-git diff-tree -p <commit-hash>
-or
 git diff-tree --no-commit-id --name-only -r <commit-has>
+or
+git diff-tree -p <commit-hash>
 or
 git show --pretty="" --name-only <commit-hash>
 ```
