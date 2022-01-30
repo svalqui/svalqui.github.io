@@ -84,6 +84,10 @@ or
 ```
 $ openstack quota show PROJECT_NAME
 ```
+Quota for a project including details of the allocation
+```
+$ openstack allocation quota list PROJECT_NAME 
+```
 Quota network items for a project
 ```
 $ openstack quota list --project PROJECT-NAME --network
