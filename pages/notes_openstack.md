@@ -76,14 +76,14 @@ $ openstack server list --all-projects --project <project-name-here>
 
 Quota for a project
 ```
+$ openstack quota show PROJECT_NAME
+```
+or
+```
 $ openstack quota list --project PROJECT_NAME --compute
 $ openstack quota list --project PROJECT_NAME --volume
 ```
-or
 
-```
-$ openstack quota show PROJECT_NAME
-```
 Quota for a project including details of the allocation
 ```
 $ openstack allocation quota list PROJECT_NAME 
@@ -97,7 +97,10 @@ Allocation for a project
 ```
 $ openstack allocation show PROJECT_NAME
 ```
-
+ Project server usage
+ ```
+ $ nova usage --tenant PROJECT_ID
+ ```
 
 ### maintenence
 
