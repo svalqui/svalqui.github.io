@@ -69,9 +69,9 @@ List projects which name contains a string
 List servers for a project as admin
 
 ```
-$ openstack server list --all-projects --project <project-name-here>
+$ nova list --all --tenant <project-id> --fields name,status,networks,flavor,image
 or
-$ nova list --all --tenant <project-id>
+$ openstack server list --all-projects --project <project-name-here>
 ```
 
 Quota for a project
