@@ -156,6 +156,12 @@ Show which actions has taken on the server
 ```
 nova instance-action-list <server-id>
 ```
+Create
+```
+nova boot
+or 
+openstack server create
+```
 ## Designate
 Show recordsets on a zone
 ```
