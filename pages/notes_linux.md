@@ -662,6 +662,7 @@ export PATH=/path/to/add:$PATH
 # Bash Prompt
 ```
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]($ENV-VAR)\[\033[00m\]\$ '
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;33m\]($ENV-VAR)\[\033[00m\]\$ '
 ```
 # Shutdown
 ## force shutdown
