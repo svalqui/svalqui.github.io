@@ -16,8 +16,11 @@ $rm -r mydir
 ## find
 file containing
 ```
-recursevely
+recursevely - pattern
 grep -rnw '/path/to/somewhere/' -e 'pattern'
+
+recursevely - word
+# grep -nrs 'word-to-look-for' /<directory-path>
 
 grep this_word /var/log/on_this_file
 
