@@ -347,6 +347,20 @@ journalctl -b -1
 last <username>
 ```
 
+## Authentication Configuration
+
+### PAM AD
+Refer to /etc/ldap/ldap.conf and /etc/nsswitch.conf
+
+### IPA
+Refer to /etc/sssd/sssd.conf
+
+## Authentication restrictions
+Refer to cat /etc/security/access.conf 
+
+## Log
+refer to /var/log/auth.log to identify the type of authentication
+
 ## Authentication failures
 ```
 grep "Failed password" /var/log/auth.log
