@@ -143,6 +143,21 @@ List all services
 ```
 $ openstack service list
 ```
+# Nova Computer Service
+
+## Good to know
+
+list nodes running compute service
+```    
+nova service-list
+# or $ openstack compute service list
+# or $ openstack host list
+```
+list endpoints 
+```
+openstack endpoint list
+```
+
 ## Servers
 Show server details
 ```
@@ -162,7 +177,7 @@ nova boot
 or 
 openstack server create
 ```
-## Designate
+# Designate
 Show recordsets on a zone
 ```
 openstack recordset list --sort-column records <zone-id-or-name>
@@ -180,4 +195,12 @@ openstack recordset create <zone-id> host-name.<zone-id> --type A --record <ip>
 Change a record
 ```
 openstack recordset set <zone-id> existing-host-name.<zone-id> --type CNAME --record new-record-name.<zone-id>
+```
+# Neutron - Network
+
+## Good to know
+
+list nodes running neutron service
+```
+openstack network agent list
 ```
