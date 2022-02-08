@@ -1,3 +1,8 @@
+Moudules installed
+```
+>>> help("modules")
+```
+
 virtual environments
 ```
 $ source venv/bin/activate
