@@ -116,7 +116,8 @@ $ git branch
 Logging a git-review ("pull request")
 - create your new working branch: $ git checkout -b name_of_branch origin/master
 - edit/ create the files you need
-- add the files and commit: $ git commit -a -m "Change..." 
+- add the files: git add ...
+- commit: $ git commit -a -m "Change..." 
 - git review: $ git review
 
 Updating a git-review
