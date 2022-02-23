@@ -14,13 +14,14 @@ $rm -r mydir
 ```
 
 ## find
-file containing
-```
-recursevely - pattern
-grep -rnw '/path/to/somewhere/' -e 'pattern'
 
+file containing, use grep
+```
 recursevely - word
 # grep -nrs 'word-to-look-for' /<directory-path>
+
+recursevely - expression
+grep -rnw '/path/to/somewhere/' -e 'pattern'
 
 grep this_word /var/log/on_this_file
 
@@ -30,9 +31,10 @@ In which line was found
 grep -n this_word /var/log/on_this_file
 ```
 
-file named
+file by name, use find
 ```
-find /. -name 'toBeSearched.file' 2>/dev/null
+find . -name "*<str-here>*"
+find /. -name 'toBeSearched.file' 2>/dev/null # send error to null
 find / -type f -name "*.txt"
 ```
 
