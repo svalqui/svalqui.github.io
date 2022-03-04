@@ -159,6 +159,10 @@ openstack endpoint list
 ```
 
 ## Servers
+List Server with IP address
+```
+$ nova list --ip 192\.0\.0\.111 --all-tenants
+```
 Show server details
 ```
 $ openstack server show <server-id>
