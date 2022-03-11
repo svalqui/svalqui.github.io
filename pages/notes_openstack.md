@@ -162,6 +162,8 @@ openstack endpoint list
 List Server with IP address
 ```
 $ nova list --ip 192\.0\.0\.111 --all-tenants
+
+$ nova list --all --ip <ip of server> --fields name,tenant_id,status,networks
 ```
 Show server details
 ```
