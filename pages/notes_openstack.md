@@ -183,6 +183,14 @@ nova boot
 or 
 openstack server create
 ```
+### Server Cloning/replicating
+
+1. Get an image of the server
+$ nova image-create existing_vm_name new_vm_img
+
+2. 
+
+
 # Designate
 Show recordsets on a zone
 ```
