@@ -165,6 +165,10 @@ $ nova list --ip 192\.0\.0\.111 --all-tenants
 
 $ nova list --all --ip <ip of server> --fields name,tenant_id,status,networks
 ```
+Show servers in a given project
+```
+nova list --all-tenants --tenant <project-id>
+```
 Show server details
 ```
 $ openstack server show <server-id>
