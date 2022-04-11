@@ -97,6 +97,10 @@ Allocation for a project
 ```
 $ openstack allocation show PROJECT_NAME
 ```
+Allocation history/status for a project
+```
+$ openstack allocation history PROJECT-NAME
+```
  Project server usage
  ```
  $ nova usage --tenant PROJECT_ID
