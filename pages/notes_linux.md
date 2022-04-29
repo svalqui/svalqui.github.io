@@ -867,6 +867,7 @@ sudo apt-get install ubuntu-restricted-extras
 cifs support
 ```
 sudo apt install cifs-utils
+sudo apt-get install nfs-common
 ```
 Network tools
 ```
