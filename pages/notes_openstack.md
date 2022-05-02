@@ -198,6 +198,24 @@ $ nova image-create existing_vm_name new_vm_img
 
 2. 
 
+## Flavors
+
+Flavors for your Project
+```
+$ nova flavor-list
+```
+Flavors all, Admin
+```
+$ nova flavor-list --all
+```
+Flavor details
+```
+$ nova flavor-show <flavor-name>
+```
+Projects using the Flavor
+```
+$ nova flavor-access-list --flavor <flavor-name>
+```
 
 # Designate
 Show recordsets on a zone
