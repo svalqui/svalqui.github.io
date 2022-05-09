@@ -66,7 +66,7 @@ List projects which name contains a string
 
 ```$ openstack project list --sort name | grep <txt-to-look-for>```
 
-List servers for a project as admin
+**List servers for a project as admin**
 
 ```
 $ nova list --all --tenant <project-id> --fields name,status,networks,flavor:original_name
@@ -174,6 +174,12 @@ Show servers in a given project
 nova list --all-tenants --tenant <project-id>
 ```
 Show server details
+```
+Show servers in an availability zone
+```
+nova list --all --availability-zone <zone-name>
+or
+openstack server list --all-projects --availability-zone melbourne-qh2
 ```
 $ openstack server show <server-id>
 ```
