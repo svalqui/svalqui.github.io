@@ -816,6 +816,7 @@ vpn Cisco
 chmod 755 Downloads/anyconnect-linux64-4.8.03052-core-vpn-webdeploy-k9.sh 
 sudo Downloads/anyconnect-linux64-4.8.03052-core-vpn-webdeploy-k9.sh 
 # Configuration profile /opt/cisco/anyconnect/profile
+# Default host name ~/.anyconnect
 ```
 Displaylink for the use of Docks
 ```
