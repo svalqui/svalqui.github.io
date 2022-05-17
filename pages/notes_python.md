@@ -1,4 +1,6 @@
 Moudules installed
+
+`$ pip freeze` or from python:
 ```
 >>> help("modules")
 ```
