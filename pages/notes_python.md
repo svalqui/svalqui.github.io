@@ -1,11 +1,20 @@
-Moudules installed
+Collection of commands from https://stackoverflow.com
+
+# Modules
+
+## Modules installed
 
 `$ pip freeze` or from python:
 ```
 >>> help("modules")
 ```
 
-virtual environments
+## upgrade a module
+```
+sudo pip3 install <package-name> --upgrade
+```
+
+# virtual environments
 ```
 $ source venv/bin/activate
 $ deactivate
