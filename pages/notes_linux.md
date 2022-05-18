@@ -1,4 +1,5 @@
 Linux Notes
+some of this comes from https://stackoverflow.com
 
 # System
 Version of linux
@@ -546,6 +547,18 @@ show the package an its dependencies
 ```
 sudo apt-cache show <package-name>
 ```
+show the version available of the package
+```
+apt-cache showpkg <package-name>
+```
+show source of package
+```
+dpkg -s <package>
+```
+show which repo comes from
+```
+apt-cache showpkg <package>
+``` 
 remove a package
 ```
 sudo apt-get --purge remove gnome-terminal
@@ -554,14 +567,6 @@ remove rc , broken packages
 ```
 sudo apt-get remove --purge <packge-name>
 ```
-source of package
-```
-dpkg -s <package>
-```
-which repo comes from
-```
-apt-cache showpkg <package>
-``` 
 extract a deb file
 ```
 ar vx file.deb
