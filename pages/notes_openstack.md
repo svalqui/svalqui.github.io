@@ -163,25 +163,27 @@ openstack endpoint list
 ```
 
 ## Servers
+
 List Server with IP address
 ```
 $ nova list --ip 192\.0\.0\.111 --all-tenants
 
 $ nova list --all --ip <ip of server> --fields name,tenant_id,status,networks
 ```
+
 Show servers in a given project
 ```
 nova list --all-tenants --tenant <project-id>
 ```
 Show server details
 ```
+nova show <server-id>
+```
 Show servers in an availability zone
 ```
 nova list --all --availability-zone <zone-name>
 or
 openstack server list --all-projects --availability-zone melbourne-qh2
-```
-$ openstack server show <server-id>
 ```
 Show Server logs, for troubleshooting (ssh, etc)
 ```
@@ -194,11 +196,13 @@ Show which actions has taken on the server
 nova instance-action-list <server-id>
 ```
 Create
+    
 ```
 nova boot
 or 
 openstack server create
 ```
+ 
 ### Server Cloning/replicating
 
 1. Get an image of the server
@@ -206,7 +210,7 @@ $ nova image-create existing_vm_name new_vm_img
 
 2. 
 
-## Flavors
+### Flavors
 
 Flavors for your Project
 ```
@@ -223,6 +227,11 @@ $ nova flavor-show <flavor-name>
 Projects using the Flavor
 ```
 $ nova flavor-access-list --flavor <flavor-name>
+```
+# volumes
+List the volumes for a project
+```
+openstack volume list  --project <project-name>
 ```
 
 # Designate
