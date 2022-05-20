@@ -183,8 +183,10 @@ openstack server list --all-projects --availability-zone melbourne-qh2
 ```
 $ openstack server show <server-id>
 ```
-Show Server logs, for troubleshooting (ssh)
+Show Server logs, for troubleshooting (ssh, etc)
 ```
+$ nova console-log <server-id>
+or
 $ openstack console log show <server-id>
 ```
 Show which actions has taken on the server
