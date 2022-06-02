@@ -131,9 +131,12 @@ List disk space
  # df -h
 ```
 
-## Clear Space
+## Clear Space, root full
 ```
 dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y purge
+```
+```
+sudo apt-get clean
 ```
 
 # Shares
