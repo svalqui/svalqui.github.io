@@ -75,6 +75,17 @@ tar xvzf my-file.tar.gz
 ```
 rsync -aAXvPh /media/usr/Data/bkp-laptop-scienceit/home/usr/Desktop/ /home/usr/Desktop/
 ```
+dry run 
+```
+rsync -naAXvPh /source/* /dest/
+```
+### options
+-a archive mode; equals -rlptgoD (no -H,-A,-X)
+-A preserve acl
+-X extended attributes, preserve
+-v verbose
+-P progress
+-h human redable
 
 ## Symbolic links (shortcut file)
 
