@@ -206,9 +206,15 @@ openstack server create
 ### Server Cloning/replicating
 
 1. Get an image of the server
+```
 $ nova image-create existing_vm_name new_vm_img
-
-2. 
+```
+2. Get an snapshot of the server
+Note, snapshoot is of the sercer only, doesn't automatically take an snapshoot of the added volumes
+```
+$ openstack server image create --name new_vm_snapshot existing_vm_name
+# or using glance
+```
 
 ### Flavors
 
@@ -228,11 +234,19 @@ Projects using the Flavor
 ```
 $ nova flavor-access-list --flavor <flavor-name>
 ```
-# volumes
+# Cinder, volumes
 List the volumes for a project
 ```
 openstack volume list  --project <project-name>
 ```
+
+# Glance, images/snapshots
+
+Create an snapshoot
+```
+glance image-create --name <NAME> --instance-uuid <INSTANCE_UUID>
+```
+
 
 # Designate
 Show recordsets on a zone
