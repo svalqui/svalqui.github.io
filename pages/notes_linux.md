@@ -256,7 +256,10 @@ top -U <UserName>
 ps -u <UserName>
 ps -ef | grep <UserName>
 ```
-
+## run app as a user
+```
+# su -c "/usr/lib/bin/java" <username>
+```
 # Memory
 ## Memory issues
 ```
