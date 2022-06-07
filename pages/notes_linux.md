@@ -267,6 +267,12 @@ List services running
 systemctl list-units --type=service
 ```
 
+Stop start services
+```
+service sssd stop
+service sssd start
+```
+
 # Memory
 ## Memory issues
 ```
