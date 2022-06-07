@@ -260,6 +260,13 @@ ps -ef | grep <UserName>
 ```
 # su -c "/usr/lib/bin/java" <username>
 ```
+# Services
+
+List services running
+```
+systemctl list-units --type=service
+```
+
 # Memory
 ## Memory issues
 ```
