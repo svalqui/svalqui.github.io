@@ -53,6 +53,12 @@ git fetch
 git reset --hard origin/master
 ```
 
+## Check ssh connects to repo
+
+```
+ssh -vvvT -p <portnumber> <username>@<repo-domain>
+```
+
 # History
 See your commit history
 ```
