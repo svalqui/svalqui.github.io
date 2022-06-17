@@ -185,7 +185,7 @@ Show servers in an availability zone
 ```
 nova list --all --availability-zone <zone-name>
 or
-openstack server list --all-projects --availability-zone melbourne-qh2
+openstack server list --all-projects --availability-zone <zone-name>
 ```
 Show Server logs, for troubleshooting (ssh, etc)
 ```
