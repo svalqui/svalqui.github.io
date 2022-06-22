@@ -381,6 +381,7 @@ last <username>
 ```
 
 ## Authentication Configuration
+/etc/nsswitch.conf
 
 ### PAM AD
 Refer to /etc/ldap/ldap.conf and /etc/nsswitch.conf
@@ -388,6 +389,21 @@ Refer to /etc/ldap/ldap.conf and /etc/nsswitch.conf
 ### IPA
 Refer to /etc/sssd/sssd.conf
 
+### Kerberos
+/etc/krb5.conf
+
+### Samba
+chack /etc/samba/smb.conf
+
+### Winbind
+Look that is enabled here:
+```
+/etc/pam.d/login
+```
+And also
+```
+/etc/security/access.conf
+```
 ## Authentication restrictions
 Refer to cat /etc/security/access.conf 
 
