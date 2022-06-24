@@ -208,6 +208,22 @@ nova boot
 or 
 openstack server create
 ```
+Add volume to instance
+```
+nova volume-attach instance vol_id
+```
+Remove volume to instance
+```
+nova volume-detatch instance vol_id
+```
+Show console link
+```
+openstack console url show -f value -curl <instance-id>
+```
+Show console log
+```
+openstack console log show <instance-id>
+```
 ### Server Maintenence
 ```
 nova stop <svr-id>
@@ -251,6 +267,10 @@ $ nova flavor-access-list --flavor <flavor-name>
 List the volumes for a project
 ```
 openstack volume list  --project <project-name>
+```
+Add volumen to instance
+```
+nova volume-attach instance vol_id
 ```
 
 # Glance, images/snapshots
