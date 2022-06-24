@@ -208,6 +208,13 @@ nova boot
 or 
 openstack server create
 ```
+### Server Maintenence
+```
+nova stop <svr-id>
+nova start <svr-id>
+or 
+nova reboot <svr-id>
+```
  
 ### Server Cloning/replicating
 
