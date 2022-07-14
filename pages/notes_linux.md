@@ -359,6 +359,10 @@ By Process
 sudo journalctl -t systemd 
 # sudo journalctl -t acvpnagent # Cisco Anyconect
 ```
+Puppet related
+```
+journalctl -u puppet -f  # Shall show "Applied catalog"
+```
 Extended messages
 ```
 sudo journalctl -xe
