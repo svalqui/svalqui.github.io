@@ -319,6 +319,11 @@ neutron port-show <port-id>
 ```
 
 # Trove DB as a service
+Show details of a DB instance
 ```
 $ openstack database instance show <trove-id>
+```
+Show all DB instances for a project
+```
+$ openstack database instance list --all-projects --project-id <prj-id>
 ```
