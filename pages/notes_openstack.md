@@ -11,13 +11,13 @@
 
 ## Other modules dependencies
 
-- python-novaclient
-- python-cinderclient
-- python-keystoneclient
-- python-glanceclient
-- python-quantumclient
-- python-swiftclient
-- python-troveclient
+- sudo pip install python-novaclient
+- sudo pip install python-cinderclient
+- sudo pip install python-keystoneclient
+- sudo pip install python-glanceclient
+- sudo pip install python-quantumclient
+- sudo pip install python-swiftclient
+- sudo pip install python-troveclient
 
 - sudo apt install python3-ceilometerclient
 
@@ -316,4 +316,9 @@ neutron port-list --network_id <netwrok-id>
 show host-id for a port-id
 ```
 neutron port-show <port-id>
+```
+
+# Trove DB as a service
+```
+$ openstack database instance show <trove-id>
 ```
