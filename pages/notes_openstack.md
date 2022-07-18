@@ -11,14 +11,15 @@
 
 ## Other modules dependencies
 
-python-novaclient
-python-cinderclient
-python-keystoneclient
-python-glanceclient
-python-quantumclient
-python-swiftclient
+- python-novaclient
+- python-cinderclient
+- python-keystoneclient
+- python-glanceclient
+- python-quantumclient
+- python-swiftclient
+- python-troveclient
 
-sudo apt install python3-ceilometerclient
+- sudo apt install python3-ceilometerclient
 
 # admin
 ## Projects users and roles
