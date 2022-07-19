@@ -215,7 +215,7 @@ nova volume-attach instance vol_id
 ```
 Remove volume to instance
 ```
-nova volume-detach instance_id vol_d
+nova volume-detach instance_id vol_id
 ```
 Show console link
 ```
@@ -232,7 +232,11 @@ nova start <svr-id>
 or 
 nova reboot <svr-id>
 ```
- 
+
+```
+$ openstack server unpause 
+$ openstack server stop 
+```
 ### Server Cloning/replicating
 
 1. Get an image of the server
