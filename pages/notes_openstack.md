@@ -215,7 +215,7 @@ nova volume-attach instance vol_id
 ```
 Remove volume to instance
 ```
-nova volume-detatch instance vol_id
+nova volume-detach instance_id vol_d
 ```
 Show console link
 ```
