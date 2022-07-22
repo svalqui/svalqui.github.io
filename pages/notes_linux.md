@@ -558,6 +558,11 @@ Copy recursively
 ```
 scp -r * <username>@<host-name>:/home/
 ```
+Copy with ssh-key
+```
+scp -i my-ssh-pub-key /home/file-to-cp.txt  root@<ip>:/home/
+```
+
 # Repositories
 list
 ```
