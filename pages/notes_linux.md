@@ -1,6 +1,19 @@
 Linux Notes
 some of this comes from https://stackoverflow.com
 
+# Sudo
+Check user has sudo rights
+```
+sudo -l -U  <username>  
+```
+Adding a sudo user
+```
+usermod -aG sudo username
+```
+List the sudo users
+```
+$ grep '^sudo:.*$' /etc/group | cut -d: -f4
+```
 # System
 Version of linux
 ```
