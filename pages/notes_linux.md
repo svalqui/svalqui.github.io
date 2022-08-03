@@ -884,6 +884,10 @@ https://gist.github.com/artizirk/d09ce3570021b0f65469cb450bee5e29
 
 # preferred pkgs
 
+```
+DEBIAN_FRONTEND=noninteractive apt-get install -y python3-dev git
+```
+
 Python development packages
 ```
 sudo apt-get install python3-dev
