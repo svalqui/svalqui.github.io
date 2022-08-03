@@ -571,6 +571,10 @@ Copy recursively
 ```
 scp -r * <username>@<host-name>:/home/
 ```
+Copy directory
+```
+scp -r  <username>@<host-name>:/path/directory /local/loc-dir
+```
 Copy with ssh-key
 ```
 scp -i my-ssh-pub-key /home/file-to-cp.txt  root@<ip>:/home/
