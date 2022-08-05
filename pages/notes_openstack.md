@@ -331,3 +331,7 @@ Show all DB instances for a project
 ```
 $ openstack database instance list --all-projects --project-id <prj-id>
 ```
+Delete a DB instance
+```
+$ openstack database instance delete <trove-id>
+```
