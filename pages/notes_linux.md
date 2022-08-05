@@ -158,6 +158,10 @@ io statistics
 ```
 iostat -x
 ```
+Disk use and other siak stats and data
+```
+$ sudo smartctl -a /dev/nvme0n1p5
+```
 
 ## Clear Space, root full
 ```
@@ -889,7 +893,7 @@ https://gist.github.com/artizirk/d09ce3570021b0f65469cb450bee5e29
 # preferred pkgs
 
 ```
-DEBIAN_FRONTEND=noninteractive apt-get install -y python3-dev git sysstat net-tools nmap openssh-server keepassxc fail2ban
+DEBIAN_FRONTEND=noninteractive apt-get install -y python3-dev git sysstat net-tools nmap openssh-server keepassxc fail2ban smartmontools cifs-utils nfs-common
 ```
 vpn Cisco
 ```
@@ -928,11 +932,6 @@ $ sudo apt --fix-broken install ./zoom_amd64.deb
 codecs
 ```
 sudo apt-get install ubuntu-restricted-extras
-```
-cifs support
-```
-sudo apt install cifs-utils
-sudo apt-get install nfs-common
 ```
 Virtal Machine Manger
 ```
