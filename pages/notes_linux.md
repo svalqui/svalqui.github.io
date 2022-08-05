@@ -154,6 +154,10 @@ List disk space
 ```
  # df -h
 ```
+io statistics
+```
+iostat -x
+```
 
 ## Clear Space, root full
 ```
@@ -885,7 +889,7 @@ https://gist.github.com/artizirk/d09ce3570021b0f65469cb450bee5e29
 # preferred pkgs
 
 ```
-DEBIAN_FRONTEND=noninteractive apt-get install -y python3-dev git
+DEBIAN_FRONTEND=noninteractive apt-get install -y python3-dev git sysstat
 ```
 
 Python development packages
