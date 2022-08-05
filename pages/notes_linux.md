@@ -889,12 +889,7 @@ https://gist.github.com/artizirk/d09ce3570021b0f65469cb450bee5e29
 # preferred pkgs
 
 ```
-DEBIAN_FRONTEND=noninteractive apt-get install -y python3-dev git sysstat
-```
-
-Python development packages
-```
-sudo apt-get install python3-dev
+DEBIAN_FRONTEND=noninteractive apt-get install -y python3-dev git sysstat net-tools nmap openssh-server keepassxc fail2ban
 ```
 vpn Cisco
 ```
@@ -912,14 +907,6 @@ ipa client to connect to institutional account using IPA Server
 ```
 sudo apt-get install freeipa-client freeipa-admintools
 ```
-git - software collaboration
-```
-sudo apt install git
-```
-ssh
-```
-sudo apt-get install openssh-server
-```
 ssh adding a local key copied from another computer (your previous), when using other computer's ssh_keys, you need to copy your key(id_rsa) to the new computer you will be using then add the key.
 ```
 $ chmod 0600 .ssh/id_rsa
@@ -930,10 +917,6 @@ Accessing fileshares from files(Nautilius)
 ```
 smb://<username>@server.dom.com.au/Users/<username>
 ```
-Password DB 
-```
-apt-get install -y keepassxc
-```
 Accessing owncloud cloud storage
 ```
 apt-get install -y owncloud-client
@@ -941,10 +924,6 @@ apt-get install -y owncloud-client
 zoom - video conferencing
 ```
 $ sudo apt --fix-broken install ./zoom_amd64.deb
-```
-fail2ban
-```
-apt install fail2ban -y
 ```
 codecs
 ```
@@ -954,10 +933,6 @@ cifs support
 ```
 sudo apt install cifs-utils
 sudo apt-get install nfs-common
-```
-Network tools
-```
-$ sudo apt install net-tools
 ```
 Virtal Machine Manger
 ```
