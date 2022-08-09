@@ -432,6 +432,10 @@ And also
 ```
 /etc/security/access.conf
 ```
+### Authentication rules on pam
+```
+grep '^auth' /etc/pam.d/*
+```
 ## Authentication restrictions
 Refer to cat /etc/security/access.conf 
 
