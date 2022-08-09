@@ -277,6 +277,10 @@ top -U <UserName>
 ps -u <UserName>
 ps -ef | grep <UserName>
 ```
+Kill processes of a given user
+```
+# pkill -9 -u <username>
+```
 ## run app as a user
 ```
 # su -c "/usr/lib/bin/java" <username>
