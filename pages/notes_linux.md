@@ -720,6 +720,11 @@ fail2ban-client status <JailName>
 ### unban ip
 ```
 fail2ban-client set <jail_name> unbanip <ip_address>
+fail2ban-client set sshd unbanip <ip_address>
+```
+### banned ssh ip
+```
+fail2ban-client status sshd
 ```
 ## Puppet
 
