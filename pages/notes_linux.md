@@ -287,7 +287,10 @@ List services running
 ```
 systemctl list-units --type=service
 ```
-
+List services failed
+```
+systemctl list-units --state=failed
+```
 Stop start services
 ```
 service sssd stop
