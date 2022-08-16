@@ -830,6 +830,18 @@ diff file1 file2
 diff -y file1 file2
 ```
 
+## grep
+```
+# match to include System, Memory, Processor
+| grep -i -e System -e Memory -e Processor
+-e pattern
+-i ignore case
+
+# include x lines before and after match
+| grep -A 10 -i -e product
+| grep -A 10 -B 10 -i -e product
+```
+
 # Unclasified
 
 repair xorg
