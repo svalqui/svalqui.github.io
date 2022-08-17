@@ -750,6 +750,25 @@ echo "START=yes" > /etc/default/puppet
 /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true 
 /opt/puppetlabs/bin/puppet resource service pxp-agent ensure=running enable=true 
 ```
+Clear pupppet agent on host
+```
+delete /etc/puppetlabs/puppet/ssl.
+# run puppet agent to request a new cert
+```
+Puppet certs on ca server
+```
+# all certs
+sudo puppetserver ca list --all
+
+# needed signature
+sudo puppetserver ca list
+
+# sign cert
+sudo puppetserver ca sign  --certname <hostname>
+ 
+# delete cert
+sudo puppetserver ca clean --certname
+```
 ## zoom
 remove old version
 ```
