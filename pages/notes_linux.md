@@ -2,13 +2,19 @@ Linux Notes
 some of this comes from https://stackoverflow.com
 
 # Sudo
+from a user, become root
+```
+sudo bash
+```
 Check user has sudo rights
 ```
 sudo -l -U  <username>  
 ```
 Adding a sudo user
 ```
-usermod -aG sudo username
+useradd <username>
+passwd <username>
+usermod -aG sudo <username>
 ```
 List the sudo users
 ```
@@ -310,17 +316,6 @@ service sssd start
 ```
 free -mh
 ```
-
-# sudo
-from a user, become root
-```
-sudo bash
-```
-Who is sudo
-```
-grep '^sudo:.*$' /etc/group | cut -d: -f4
-```
-
 # Logs
 ```
 ls -l /var/log/
