@@ -226,7 +226,12 @@ smbclient -L myserver.mydomain.org.au -U username@mydomain.org.au
 ```
 smbclient //mediaflux.yourdomain.net/your-proj -m SMB2 -W <AD-domain> -U <username>
 ```
-
+```
+# sudo apt install krb5-user keyutils
+# id <username>
+# kinit <username>@YOURDOMAIN.ORG
+# sudo mount -t cifs -o cruid=$USER,sec=krb5,uid=$UID,gid=$(id -g),vers=2.0 //mediaflux.yourdomain.org/your-proj /mnt/testmount
+``` 
 # Home in another partition
 1. from your spare space create a new partition ext4 for your home directories
 ```
