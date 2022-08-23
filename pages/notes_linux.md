@@ -255,14 +255,18 @@ sudo rsync -aXS /home/. /mnt/home/.
 ```
 UUID=uuid-of-new-partition     /home     ext4     nodev,nosuid     0     2
 ```
-6. rename your current home as old, and create a new home directory, called /home, to mount the home on the new partition
+6. test fstab mounts
+```
+mount -a
+```
+7.rename your current home as old, and create a new home directory, called /home, to mount the home on the new partition
 ```
 cd /
 sudo mv /home /home_old
 sudo mkdir /home
 ```
-7. reboot
-8. check home is working on the new partition and delete the old home directory
+8.reboot
+9.check home is working on the new partition and delete the old home directory
 
 # Processes
 ## Dealing with zombies
