@@ -176,10 +176,26 @@ dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/"
 ```
 sudo apt-get clean
 ```
+## Disk format and partitionspartition and format 
+partion and format
+```
+fdisk -l # list your disks and partitions
+lsblk -f # list the filesystem type
+gdisk /dev/vdc # Option n (new), 1 (partition 1), w (write) # partition
+sudo mkfs.ext4 /dev/sdx1 # or sudo mkfs -t ext4 /dev/sdx1, formats the partition
+```
+or format full disk
+```
+# mkfs.ext4 /dev/vdc
+```
 ## mount new disk permanently
 list the file system type
 ```
 # lsblk -f
+```
+Format disk and/or partition
+```
+# mkfs.ext4 /dev/vdc
 ```
 Add an entry to /etc/fstab
 ```
