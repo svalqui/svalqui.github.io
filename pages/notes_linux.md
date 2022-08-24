@@ -176,7 +176,23 @@ dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/"
 ```
 sudo apt-get clean
 ```
-
+## mount new disk permanently
+list the file system type
+```
+# lsblk -f
+```
+Add an entry to /etc/fstab
+```
+/dev/vdc       /mnt/disk ext4    defaults        0       0
+```
+mount
+```
+$ sudo mount -a
+```
+check mount works
+```
+$ df -h
+```
 # Shares
 
 ## Cifs mount
