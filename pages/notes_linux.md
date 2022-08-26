@@ -540,6 +540,10 @@ ping
 ```
 ping server.org.au | while read pong; do echo "$(date): $pong"; done
 ```
+## nc
+```
+nc -zv <ip> <port>
+```
 ## nmap
 ````
 Nmap:
