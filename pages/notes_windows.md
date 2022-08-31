@@ -79,16 +79,16 @@ Get-Process Wind* -IncludeUserName  | Where UserName -match
 Get-NetTCPConnection -AppliedSetting Internet
 Get-NetTCPConnection -State Established
 
-Stop-Process -Name msedge
-Stop-Process -Name RuntimeBroker
-Stop-Process -Name Minecraft.Windows
-Stop-process -Id processId
-Stop-Process -Name Wind*
-Stop-Process -Name Windows10Universal
-Stop-Process -Name steam
-Stop-Process -Name steamwebhelper
-Stop-Process -Name TS4_x64
-Stop-Process -Name Discord
+Stop-Process -Name msedge -Force
+Stop-Process -Name RuntimeBroker -Force
+Stop-Process -Name Minecraft.Windows -Force
+Stop-process -Id processId -Force
+Stop-Process -Name Wind* -Force
+Stop-Process -Name Windows10Universal -Force
+Stop-Process -Name steam -Force
+Stop-Process -Name steamwebhelper -Force
+Stop-Process -Name TS4_x64 -Force
+Stop-Process -Name Discord -Force
 ```
 ## Power shell Messagebox to users
 ```
