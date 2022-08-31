@@ -89,6 +89,8 @@ Stop-Process -Name steam -Force
 Stop-Process -Name steamwebhelper -Force
 Stop-Process -Name TS4_x64 -Force
 Stop-Process -Name Discord -Force
+
+stop-computer -computername localhost -Force
 ```
 ## Power shell Messagebox to users
 ```
