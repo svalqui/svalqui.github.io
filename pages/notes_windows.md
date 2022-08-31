@@ -88,6 +88,7 @@ Stop-Process -Name Windows10Universal
 Stop-Process -Name steam
 Stop-Process -Name steamwebhelper
 Stop-Process -Name TS4_x64
+Stop-Process -Name Discord
 ```
 ## Power shell Messagebox to users
 ```
