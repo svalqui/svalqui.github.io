@@ -1,6 +1,9 @@
 Windows Notes
-
-
+# Login
+login format
+```
+.\Admin
+```
 # Files/ Directories related
 
 ## Copy files batch
