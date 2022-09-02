@@ -454,6 +454,12 @@ last <username>
 ### PAM AD
 Refer to /etc/ldap/ldap.conf and /etc/nsswitch.conf
 
+Auto create homedir
+/etc/pam.d/common-session:
+Add this line at the bottom:
+session required pam_mkhomedir.so umask=0022 skel=/etc/skel
+
+
 ### IPA
 Refer to /etc/sssd/sssd.conf
 
@@ -544,6 +550,17 @@ sudo systemctl enable sssd
 sudo systemctl start sssd
 # Then add your configuration
 ```
+## some test
+
+Check that you can see AD group membership
+$ getent group groupname@domain.org
+
+Check you can see user
+$ getent passwd <username@domain.org>
+
+Check user can join Ad Domin
+$ sudo net ads join -U <username>
+
 
 # network
 /etc/network/interfaces
