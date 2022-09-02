@@ -551,7 +551,7 @@ sudo systemctl start sssd
 # Then add your configuration
 ```
 ## some test
-
+```
 Check that you can see AD group membership
 $ getent group groupname@domain.org
 
@@ -560,7 +560,7 @@ $ getent passwd <username@domain.org>
 
 Check user can join Ad Domin
 $ sudo net ads join -U <username>
-
+```
 
 # network
 /etc/network/interfaces
@@ -671,7 +671,11 @@ Copy with ssh-key
 ```
 scp -i my-ssh-pub-key /home/file-to-cp.txt  root@<ip>:/home/
 ```
-
+## ssh good to know
+Show auth methods
+```
+$ ssh -o PreferredAuthentications=none localhost
+```
 # Repositories
 list
 ```
