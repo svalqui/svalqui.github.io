@@ -512,13 +512,29 @@ egrep "New session" /var/log/auth.log
 egrep "session opened for user" /var/log/auth.log
 egrep "session opened for user|session closed for user|Removed session" /var/log/auth.log
 ```
-## Clearing sssd cache
+## sssd related
+The service
+```
+service sssd stop
+service sssd start
+```
+The Logs
+```
+/var/log/sssd/*.log
+```
+### Check is working
+```
+systemctl status sssd-pam.socket
+systemctl status sssd-pam.service
+systemctl status sssd-pam-priv.socket
+```
+### Clearing sssd cache
 ```
 systemctl stop sssd
 sudo sss_cache -E  # or rm -rf /var/lib/sss/db/*
 systemctl start sssd
 ```
-## Fixing issues with sssd - reconfiguring
+### Fixing issues with sssd - reconfiguring
 https://askubuntu.com/questions/1288626/ubuntu-20-10-sssd-system-security-services-daemon-failure
 
 ```
