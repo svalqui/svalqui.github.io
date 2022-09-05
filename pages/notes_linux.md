@@ -1017,7 +1017,9 @@ https://gist.github.com/artizirk/d09ce3570021b0f65469cb450bee5e29
 # preferred pkgs
 
 ```
-DEBIAN_FRONTEND=noninteractive apt-get install -y python3-dev git sysstat net-tools nmap openssh-server keepassxc fail2ban smartmontools cifs-utils nfs-common
+DEBIAN_FRONTEND=noninteractive apt-get install -y python3-dev git sysstat \
+net-tools nmap openssh-server keepassxc fail2ban smartmontools cifs-utils \
+nfs-common icedtea-netx
 ```
 vpn Cisco
 ```
