@@ -376,6 +376,8 @@ last -w |
 
 Unique
 last -w | sort -uk1,1
+
+# grep -i <username> /var/log/auth.log
 ```
 ## Check Logs for system issues
 ```
