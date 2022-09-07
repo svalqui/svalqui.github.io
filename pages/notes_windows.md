@@ -84,7 +84,6 @@ Get-NetTCPConnection -State Established
 
 Stop-Process -Name msedge -Force
 Stop-Process -Name RuntimeBroker -Force
-Stop-Process -Name Minecraft.Windows -Force
 Stop-process -Id processId -Force
 Stop-Process -Name Wind* -Force
 Stop-Process -Name Windows10Universal -Force
@@ -92,6 +91,9 @@ Stop-Process -Name steam -Force
 Stop-Process -Name steamwebhelper -Force
 Stop-Process -Name TS4_x64 -Force
 Stop-Process -Name Discord -Force
+
+Stop-Process -Name Minecraft.Windows -Force
+Stop-Process -Name mine* -Force
 
 stop-computer -computername localhost -Force
 ```
