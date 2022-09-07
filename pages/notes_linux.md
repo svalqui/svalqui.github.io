@@ -79,8 +79,10 @@ tail -f my_log.log | grep look_for_this
 $ chown sergio .ssh/known_hosts
 # change group
 $ chown :sergio .ssh/known_hosts
-# or change both 
+# change both 
 $ chown sergio:sergio .ssh/known_hosts
+# change recursively 
+$ chown -R sergio:sergio /mnt/my-data
 ```
 ## tar 
 
