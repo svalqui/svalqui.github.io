@@ -77,7 +77,7 @@ $ openstack server list --all-projects --project <project-name-here>
 
 Quota for a project
 ```
-$ openstack quota show PROJECT_NAME
+$ openstack quota show PROJECT_NAME --max-width 120
 ```
 or
 ```
