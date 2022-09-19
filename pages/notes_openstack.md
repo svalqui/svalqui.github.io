@@ -284,6 +284,7 @@ nova volume-attach instance vol_id
 List snapshot for a given project
 ```
 glance image-list --owner PRJ-ID
+# $ openstack image list --project PRJ-NAME
 ```
 
 Create an snapshoot
