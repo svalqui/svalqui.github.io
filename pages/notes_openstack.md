@@ -281,6 +281,11 @@ nova volume-attach instance vol_id
 
 # Glance, images/snapshots
 
+List snapshot for a given project
+```
+glance image-list --owner PRJ-ID
+```
+
 Create an snapshoot
 ```
 glance image-create --name <NAME> --instance-uuid <INSTANCE_UUID>
