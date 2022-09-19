@@ -290,6 +290,7 @@ glance image-list --owner PRJ-ID
 Create an snapshoot
 ```
 glance image-create --name <NAME> --instance-uuid <INSTANCE_UUID>
+# glance image-create --name <NAME> --instance-uuid <INSTANCE_UUID> --owner <PRJ-ID>
 ```
 
 
