@@ -87,6 +87,11 @@ $ chown -R sergio:sergio /mnt/my-data
 ## tar 
 
 ### .tar.gz
+Create
+```
+$tar -cvf  /home/my-tar-file.tar /home/dir-to-tar/.
+```
+Extraxt
 ```
 tar xvzf my-file.tar.gz
 ```
