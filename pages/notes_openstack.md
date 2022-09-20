@@ -291,6 +291,8 @@ Create an snapshoot
 ```
 glance image-create --name <NAME> --instance-uuid <INSTANCE_UUID>
 # glance image-create --name <NAME> --instance-uuid <INSTANCE_UUID> --owner <PRJ-ID>
+# openstack server image create --name <svr-img-name> --property owner=<PRJ-ID> SVR-ID
+# openstack server image create --name <svr-img-name> --property owner=<PRJ-ID> --property visibility=<value> SVR-ID
 ```
 
 
