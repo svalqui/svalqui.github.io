@@ -1,3 +1,6 @@
+# Maria
+```
+
 MariaDB [(none)]> show databases;
 
 MariaDB [(none)]> USE <DB_Name>;
@@ -13,3 +16,19 @@ insert into  <table_name>(column_name1,) values ('Value_here1',);
 
 UPDATE <table_name> SET user_email = 'user1@email.com' WHERE user_name = 'User1';
 UPDATE <table_name> SET user_add = '123 St.' WHERE user_name = 'User1';
+```
+
+# Postgres
+```
+# use the postgress admin account
+# su - postgres
+
+# get into the environment
+$ psql
+
+# Connect to DB
+postgres=# \c seed_db;
+
+# List a table
+seed_db=# select * from auth_user;
+```
