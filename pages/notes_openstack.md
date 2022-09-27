@@ -345,3 +345,7 @@ Delete a DB instance
 ```
 $ openstack database instance delete <trove-id>
 ```
+Update security cidr
+```
+openstack database instance update --allowed-cidr <ip or subnet> <trove_instance_id>
+```
