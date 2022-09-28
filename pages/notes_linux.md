@@ -816,6 +816,15 @@ fail2ban-client set sshd unbanip <ip_address>
 fail2ban-client status sshd
 ```
 ## Puppet
+Puppet Client configuration
+```
+/etc/puppetlabs/puppet/puppet.conf
+[main]
+srv_domain = <puppet-server-here>
+
+[agent]
+environment = <Env-to-use>
+```
 
 Check puppet client has finished applying catalogue
 ```
@@ -833,7 +842,25 @@ Run Puppet agent
 ```
 /opt/puppetlabs/bin/puppet agent -t 
 ```
+Disable puppet agent
+```
+puppet agent -t --disable "Puppet Agent Down for Maintenance"
+```
+Run Puppet dry run
+```
+puppet agent -t --agent_disabled_lockfile=/none --no-use_srv_records --server r10k.org --environment <your-dev-here> --noop
+
+```
+Run Puppet from a r10k environment
+```
+puppet agent -t --agent_disabled_lockfile=/none --no-use_srv_records --server r10k.org --environment <your-dev-here>
+
+```
 Enable Puppet agent
+```
+/opt/puppetlabs/bin/puppet agent --enable
+```
+Start puppet agent service
 ```
 echo "START=yes" > /etc/default/puppet 
 /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true 
