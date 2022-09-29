@@ -294,8 +294,14 @@ glance image-create --name <NAME> --instance-uuid <INSTANCE_UUID>
 # openstack server image create --name <svr-img-name> --property owner=<PRJ-ID> SVR-ID
 # openstack server image create --name <svr-img-name> --property owner=<PRJ-ID> --property visibility=<value> SVR-ID
 ```
-
-
+Adding an image to a project
+```
+openstack image add project --project-domain default <img-id> <prj-id>
+```
+Accept the image in the project
+```
+openstack image set --accept <img-id> --project <prj-id>
+```
 # Designate
 Show recordsets on a zone
 ```
