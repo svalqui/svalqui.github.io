@@ -642,6 +642,31 @@ netstat -r
 
 ifconfig -a
 
+## Network performance
+
+### iperf3, between 2 hosts
+- test the delfault port is open
+```
+# nmap -Pn -p 5201 x.x.x.x
+```
+- On one host run
+```
+# iperf3 -s
+```
+- On the other run
+```
+# iperf3 -c x.x.x.x
+```
+### transfering files to cifs
+
+- Create a test file 
+```
+$ dd if=/dev/zero of=1g-test-file.tmp bs=1 count=0 seek=1G
+```
+- rsync the file and show stats
+```
+$ rsync -hP 1g-test-file.tmp  /mnt/file-test.tmp
+```
 # SSH
  
 Adding a public key to your computer so you can connect to a remote server; you need the remote server public key (Remote_Servers.pub)
