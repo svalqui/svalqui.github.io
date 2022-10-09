@@ -181,7 +181,7 @@ $ openstack floating ip show <ip>
 Show servers in a given project
 ```
 nova list --all-tenants --tenant <project-id>
-nova list --all --tenant <project-id> --fields name,status,networks,flavor:original_name
+nova list --all --tenant <project-id> --fields name,status,networks,flavor:original_name,metadata
 ```
 Show server details
 ```
