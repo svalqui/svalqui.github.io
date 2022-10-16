@@ -117,12 +117,21 @@ rsync -naAXvPh /source/* /dest/
 
 ln -s /full/path/of/existing/file.txt /home/my-link-name.txt
 
-# Open files
+## Open files
 
 Open fiels in a given directory
 ```
 # lsof +D '/usr/local/'
 ```
+
+## Files and directories are the same
+https://askubuntu.com/questions/421712/comparing-the-contents-of-two-directories
+```
+find /dir1/ -type f -exec md5sum {} + | sort -k 2 > dir1.txt
+find /dir2/ -type f -exec md5sum {} + | sort -k 2 > dir2.txt
+diff -u dir1.txt dir2.txt
+```
+
 # Disk
 How much you user uses:
 ```
