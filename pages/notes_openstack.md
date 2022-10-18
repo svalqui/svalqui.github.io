@@ -150,6 +150,9 @@ $ openstack service list
 ```
 # Nova Computer Service
 
+## Logs
+/var/log/nova/nova-compute.log
+
 ## Good to know
 
 list nodes running compute service
