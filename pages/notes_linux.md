@@ -456,6 +456,10 @@ Keep only last 2 days
 ```
 journalctl --vacuum-time=2d
 ```
+Keep Only 500Mb in the log
+```
+sudo journalctl --vacuum-size=500M
+```
 16.04 session
 ```
 sudo journalctl -t gnome-session
