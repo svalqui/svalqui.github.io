@@ -245,6 +245,14 @@ $ openstack server stop
 ```
 nova reset-state <svr-id> --active
 ```
+Evacuate the VM to a different host
+```
+nova evacuate <svr-id> <target-host-name>
+```
+live migrate 
+```
+nova live-migration <svr-id> <target-host-name>
+```
 ### Server Cloning/replicating
 
 1. Get an image of the server
