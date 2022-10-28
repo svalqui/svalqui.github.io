@@ -153,6 +153,12 @@ $ openstack service list
 ## Logs
 /var/log/nova/nova-compute.log
 
+## the service
+```
+systemctl status nova-compute.service
+systemctl stop nova-compute.service
+systemctl start nova-compute.service
+```
 ## Good to know
 
 list nodes running compute service
