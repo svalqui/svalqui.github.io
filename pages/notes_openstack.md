@@ -241,6 +241,10 @@ nova reboot <svr-id>
 $ openstack server unpause 
 $ openstack server stop 
 ```
+
+```
+nova reset-state <svr-id> --active
+```
 ### Server Cloning/replicating
 
 1. Get an image of the server
