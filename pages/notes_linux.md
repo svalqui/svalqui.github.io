@@ -726,6 +726,17 @@ Show auth methods
 ```
 $ ssh -o PreferredAuthentications=none localhost
 ```
+## ssh server configuratio
+Allow X11
+```
+# cat /etc/ssh/ssh_config 
+Host *
+    ForwardAgent yes
+    ForwardX11Trusted yes
+    GSSAPIAuthentication no
+    ServerAliveInterval 10
+```
+
 # Repositories
 list
 ```
