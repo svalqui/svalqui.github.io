@@ -805,6 +805,28 @@ tar data.tar.xz
 
 # Software
 
+## tmux
+Create a new session
+```
+tmux new -s my-sess1
+```
+To detatach, on session
+```
+press Ctrl+B, and then D
+```
+To attach to a session
+```
+tmux attach-session -t my-sess1
+```
+To open a new session on terminal
+```
+tmux new -s my-sess2
+```
+To move to another session from a session
+```
+press Ctrl+B, and then S
+```
+
 ## VirtualBox
 Install
 ```
