@@ -225,6 +225,43 @@ check mount works
 ```
 $ df -h
 ```
+## Home in another partition
+1. from your spare space create a new partition ext4 for your home directories
+```
+fdisk -l # list your disks/partitions
+gdisk /dev/sdx # Option n (new), 1 (partition 1), w (write)
+sudo mkfs.ext4 /dev/sdx1 # or sudo mkfs -t ext4 /dev/sdx1, formats the partition
+```
+2. mount the new partition
+```
+mount -t auto /dev/sbd1 /mt/sdb1
+```
+3. take note of the uuid of the new partition
+```
+blkid
+```
+4. copy your current /home to the new partition
+```
+sudo rsync -aXS /home/. /mnt/home/.
+```
+5. edit /etc/fstab to auto mount the new partition, use the uuid of the new partition
+```
+UUID=uuid-of-new-partition     /home     ext4     nodev,nosuid     0     2
+```
+6. test fstab mounts
+```
+mount -a
+```
+7.rename your current home as old, and create a new home directory, called /home, to mount the home on the new partition
+```
+cd /
+sudo mv /home /home_old
+sudo mkdir /home
+```
+8.reboot
+9.check home is working on the new partition and delete the old home directory
+
+
 # Shares
 
 ## Cifs mount
@@ -283,41 +320,6 @@ smbclient //mediaflux.yourdomain.net/your-proj -m SMB2 -W <AD-domain> -U <userna
 # kinit <username>@YOURDOMAIN.ORG
 # sudo mount -t cifs -o cruid=$USER,sec=krb5,uid=$UID,gid=$(id -g),vers=2.0 //mediaflux.yourdomain.org/your-proj /mnt/testmount
 ``` 
-# Home in another partition
-1. from your spare space create a new partition ext4 for your home directories
-```
-fdisk -l # list your disks/partitions
-gdisk /dev/sdx # Option n (new), 1 (partition 1), w (write)
-sudo mkfs.ext4 /dev/sdx1 # or sudo mkfs -t ext4 /dev/sdx1, formats the partition
-```
-2. mount the new partition
-```
-mount -t auto /dev/sbd1 /mt/sdb1
-```
-3. take note of the uuid of the new partition
-```
-blkid
-```
-4. copy your current /home to the new partition
-```
-sudo rsync -aXS /home/. /mnt/home/.
-```
-5. edit /etc/fstab to auto mount the new partition, use the uuid of the new partition
-```
-UUID=uuid-of-new-partition     /home     ext4     nodev,nosuid     0     2
-```
-6. test fstab mounts
-```
-mount -a
-```
-7.rename your current home as old, and create a new home directory, called /home, to mount the home on the new partition
-```
-cd /
-sudo mv /home /home_old
-sudo mkdir /home
-```
-8.reboot
-9.check home is working on the new partition and delete the old home directory
 
 # Processes
 ## Dealing with zombies
@@ -407,6 +409,25 @@ dmesg | tail -f /var/log/syslog
 sudo find /var/log -type f -mtime -1 -exec tail -Fn0 {} +
 https://www.hpe.com/us/en/insights/articles/the-first-5-things-to-do-when-your-linux-server-keels-over-1705.html
 ```
+
+# Multicommand
+
+## pdsh
+```
+pdsh -l root -w svr[01-10],svr[22-31],svr218 'systemctl restart dhcp'
+```
+
+## clush
+```
+clush -bL -l root -w svr[211-317]-storage 'ls /dev/nvm* | sort'
+```
+
+-b clush waits for command completion and then displays gathered output results  
+-w allows you to specify remote hosts by using ClusterShell NodeSet syntax  
+-L disable header block and order output by nodes; additionally, when used in conjunction with -b/-B, it will enable "life gathering" of results by line mode, such as the next line is displayed as soon as possible  
+-l USER, --user=USER  
+
+
 # journalctl
 ```
 The last 100
