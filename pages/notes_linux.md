@@ -788,6 +788,10 @@ show which repo comes from
 ```
 apt-cache showpkg <package>
 ``` 
+which can be upgraded
+```
+apt list --upgradable
+```
 remove a package
 ```
 sudo apt-get --purge remove gnome-terminal
