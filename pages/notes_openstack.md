@@ -186,7 +186,6 @@ $ openstack server list --all-projects --ip x.y.z
 $ openstack floating ip show <ip>
 
 ```
-
 Show servers in a given project
 ```
 nova list --all-tenants --tenant <project-id>
@@ -215,6 +214,10 @@ nova instance-action-list <server-id>
 Show detail of the action
 ```
 nova instance-action <server-id> <req-id>
+```
+Show a link to the console
+```
+nova get-vnc-console <svr-id> novnc
 ```
 
 Create
