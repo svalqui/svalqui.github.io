@@ -212,6 +212,11 @@ Show which actions has taken on the server
 ```
 nova instance-action-list <server-id>
 ```
+Show detail of the action
+```
+nova instance-action <server-id> <req-id>
+```
+
 Create
     
 ```
