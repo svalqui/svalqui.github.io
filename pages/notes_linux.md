@@ -720,6 +720,10 @@ terminate a locked/frozen session
 ```
 Enter ~ .
 ```
+debug  a connection
+```
+ssh -vvv root@my-server.org
+```
 ## ssh file copy scp
 [COMMAND] [OPTIONAL ARGUMENTS] [SOURCE] [DESTINATION]
 
@@ -747,7 +751,7 @@ Show auth methods
 ```
 $ ssh -o PreferredAuthentications=none localhost
 ```
-## ssh server configuratio
+## ssh server configuration
 Allow X11
 ```
 # cat /etc/ssh/ssh_config 
@@ -757,6 +761,28 @@ Host *
     GSSAPIAuthentication no
     ServerAliveInterval 10
 ```
+# wget
+Download a file
+```
+wget https://my-server.org/my-file.45.171.01.tar
+```
+Download and name it somethinelse
+```
+wget -O my-new-name https://my-server.org/my-file.45.171.01.tar
+```
+Download it in a different directory
+```
+wget -P /mnt/my-files/ https://my-server.org/my-file.45.171.01.tar
+```
+Download in backgroud
+```
+wget -b https://my-server.org/my-file.45.171.01.tar
+# check the status
+tail -f wget-log
+```
+
+# curl
+
 
 # Repositories
 list
