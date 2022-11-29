@@ -256,6 +256,12 @@ $ openstack server unpause
 $ openstack server stop 
 ```
 
+rescue
+```
+$ openstack server rescue <svr-id>
+$ openstack serve unrescue <svr-id>
+```
+reset the status to active
 ```
 nova reset-state <svr-id> --active
 ```
