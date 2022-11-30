@@ -273,6 +273,33 @@ live migrate
 ```
 nova live-migration <svr-id> <target-host-name>
 ```
+### Networking
+
+Changing the IP address
+```
+# show the interfaces, port-id network-id
+$ nova interface-list <svr-id>
+
+# Detach the interface
+$ nova interface-detach <svr-id> <port-d>
+
+# Attach a new interface
+$ nova interface-attach <svr-id> --net-id <network-id>
+
+# show port details ip, subnet, security group
+$ openstack port show <port-id>
+
+```
+Security groups
+```
+Show
+$ openstack security group show <sec-grp-id>
+
+Set
+$ openstack port set --security-group <sec-grp-id> <port-id>
+
+```
+
 ### Server Cloning/replicating
 
 1. Get an image of the server
