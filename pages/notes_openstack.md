@@ -331,6 +331,11 @@ Projects using the Flavor
 ```
 $ nova flavor-access-list --flavor <flavor-name>
 ```
+Adding a project to the flavor
+```
+$ openstack flavor set --project <prj-if> <flavor-id>
+```
+
 # Cinder, volumes
 List the volumes for a project
 ```
