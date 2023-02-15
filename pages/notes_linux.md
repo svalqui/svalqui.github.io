@@ -789,6 +789,11 @@ list
 ```
 grep ^[^#] /etc/apt/sources.list /etc/apt/sources.list.d/*
 ```
+Add a repo
+```
+# Sources are located in /etc/apt/sources.list.d
+deb https://my-repo.org focal main
+```
 
 # Packages 
 
