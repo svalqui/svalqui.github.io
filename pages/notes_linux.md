@@ -792,6 +792,7 @@ grep ^[^#] /etc/apt/sources.list /etc/apt/sources.list.d/*
 Add a repo
 ```
 # Sources are located in /etc/apt/sources.list.d
+# there should be a files for you repo, my-cia.list containing all the repos for your cia
 deb https://my-repo.org focal main
 ```
 
@@ -857,6 +858,11 @@ extract a deb file
 ar vx file.deb
 tar xvf control.tar.xz
 tar data.tar.xz
+```
+all packages in a repo
+```
+# ls /var/lib/apt/lists/*_Packages
+and open or grep  the corresponding repo file
 ```
 
 # Software
