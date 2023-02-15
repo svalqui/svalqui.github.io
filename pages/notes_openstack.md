@@ -422,3 +422,10 @@ Update security cidr
 ```
 openstack database instance update --allowed-cidr <ip or subnet> <trove_instance_id>
 ```
+# Keystone
+## Users
+
+## User keypair
+```
+$ openstack keypair list --user <user>
+```
