@@ -10,3 +10,7 @@ check the details of the container
 ```
 # docker inspect <container-id>
 ```
+check docker processes
+```
+# docker ps
+```
