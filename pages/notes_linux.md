@@ -845,6 +845,12 @@ which can be upgraded
 ```
 apt list --upgradable
 ```
+all packages in a repo
+```
+# ls /var/lib/apt/lists/*_Packages
+and open or grep  the corresponding repo file
+# grep ^Package: /var/lib/apt/lists/<repo_here>_Packages
+```
 remove a package
 ```
 sudo apt-get --purge remove gnome-terminal
@@ -859,11 +865,7 @@ ar vx file.deb
 tar xvf control.tar.xz
 tar data.tar.xz
 ```
-all packages in a repo
-```
-# ls /var/lib/apt/lists/*_Packages
-and open or grep  the corresponding repo file
-```
+
 
 # Software
 
