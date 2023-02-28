@@ -39,3 +39,7 @@ Activate
 source my-env/bin/activate
 my-env/bin/activate
 
+# Create a deb package from you project
+```
+python3 setup.py --command-packages=stdeb.command bdist_deb
+```
