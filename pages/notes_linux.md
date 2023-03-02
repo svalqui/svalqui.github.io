@@ -1,5 +1,5 @@
 Linux Notes
-some of this comes from https://stackoverflow.com
+some of this comes from https://stackoverflow.com or, https://askubuntu.com/ 
 
 # Sudo
 from a user, become root
@@ -862,6 +862,10 @@ sudo apt-get remove --purge <packge-name>
 show deb info
 ```
 dpkg-deb --info my.deb
+```
+show deb content
+```
+dpkg -c my.deb
 ```
 extract a deb file
 ```
