@@ -859,6 +859,10 @@ remove rc , broken packages
 ```
 sudo apt-get remove --purge <packge-name>
 ```
+show deb info
+```
+dpkg-deb --info my.deb
+```
 extract a deb file
 ```
 ar vx file.deb
