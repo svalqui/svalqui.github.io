@@ -53,4 +53,5 @@ Description: my-prj-shrt-des
 
 
 ```
+# fakeroot dpkg-buildpackage -b
 ```
