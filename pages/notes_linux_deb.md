@@ -1,3 +1,13 @@
+Prerequisites
+```
+apt install vim
+apt install devscripts
+apt-get install dh-python
+apt-get install python3-distutils-extra
+apt install python3-pip
+pip3 install pybuilder
+```
+Directory structure
 ```
 ├── my-prj
 │   ├── debian
@@ -7,7 +17,7 @@
 │   │   ├── copyright
 │   │   ├── rules
 ```
-
+Create a standard log file `dch --create`
 ```
 # cat debian/changelog 
 my-prj (1.0.0) UNRELEASED; urgency=low
@@ -16,12 +26,14 @@ my-prj (1.0.0) UNRELEASED; urgency=low
 
  -- root <root@vm.local>  Thu, 02 Mar 2023 04:42:42 +0000
 ```
-
+echo "7" > debian/compat # might not be necesary
 ```
 # cat debian/compat 
-9
+7
 ```
-
+Create debian control file
+reference
+https://www.debian.org/doc/debian-policy/ch-controlfields.html
 ```
 # cat debian/control 
 Source: my-prj
@@ -42,7 +54,7 @@ Description: my-prj-shrt-des
  long-des
 
 ```
-
+Rules for python package
 ```
 # cat debian/rules 
 #!/usr/bin/make -f
@@ -50,7 +62,7 @@ Description: my-prj-shrt-des
 	dh $@ --with python3 --buildsystem=pybuild
 
 ```
-
+Built it
 
 ```
 # fakeroot dpkg-buildpackage -b
