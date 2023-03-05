@@ -29,7 +29,7 @@ Section: devel
 Priority: optional
 Maintainer: my@email.org
 Standards-Version: 1.0.0
-Build-Depends:  python3,
+Build-Depends:  python3,       # Dependencies to build the package on the building host
  python3-distutils-extra,
  dh-python
 
@@ -37,7 +37,7 @@ Package: my-prj
 Section: devel
 Priority: optional
 Architecture: all
-# Depends: pymodule(>= 1.0), pymodule, pymodule(>= 0.5.0)
+Depends: pymodule(>= 1.0), pymodule, pymodule(>= 0.5.0) # Dependencies on the installing host, apt install ./my.deb should install, shall be accesible via pip
 Description: my-prj-shrt-des
  long-des
 
