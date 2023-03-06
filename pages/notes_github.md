@@ -119,6 +119,19 @@ Change to branch
 ```
 $ git branch
 ```
+
+Making changes to remote branch
+```
+# Checkout a remote branch
+$ git checkout remotes/origin/my-remote-branch
+
+# Make your changes
+
+# push to the remote branch
+$ git push origin HEAD:my-remote-branch
+```
+
+
 Logging a git-review ("pull request")
 - create your new working branch: $ git checkout -b name_of_branch origin/master
 - edit/ create the files you need
