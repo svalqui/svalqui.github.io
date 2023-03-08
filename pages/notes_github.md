@@ -129,6 +129,8 @@ $ git checkout remotes/origin/my-remote-branch
 
 # push to the remote branch
 $ git push origin HEAD:my-remote-branch
+or
+$ git review -r my-remote-branch
 ```
 
 
