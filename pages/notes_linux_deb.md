@@ -65,5 +65,5 @@ Rules for python package
 Built it
 
 ```
-# fakeroot dpkg-buildpackage -b
+/my-prj# fakeroot dpkg-buildpackage -b
 ```
