@@ -1,10 +1,10 @@
 Prerequisites
 ```
-apt install vim
-apt install devscripts
-apt-get install dh-python
-apt-get install python3-distutils-extra
-apt install python3-pip
+apt install -y vim
+apt install -y devscripts
+apt-get install -y dh-python
+apt-get install -y python3-distutils-extra
+apt install -y python3-pip
 pip3 install pybuilder
 ```
 Directory structure
