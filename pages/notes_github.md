@@ -113,17 +113,17 @@ $ git pull origin master
 ```
 Create a branch
 ```
-$ git checkout -b name_of_branch origin/master
+$ git checkout -b name_of_branch origin/master # That checkout of master branch, otherwise indicate the brach you want to checkout of
 ```
 Change to branch
 ```
-$ git branch
+$ git branch <branch-name>
 ```
 
 Making changes to remote branch
 ```
 # Checkout a remote branch
-$ git checkout remotes/origin/my-remote-branch
+$ git checkout remotes/origin/my-remote-branch # This could leave you in a detached HEAD state, watch out
 
 # Make your changes
 
