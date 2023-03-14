@@ -13,7 +13,10 @@ Collection of commands from https://stackoverflow.com
 ```
 sudo pip3 install <package-name> --upgrade
 ```
-
+## downgrade a module or install a particular version
+```
+pip install --force-reinstall -v "my_module==0.0.2"
+```
 # virtual environments
 ```
 $ source venv/bin/activate
