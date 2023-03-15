@@ -8,7 +8,10 @@ Collection of commands from https://stackoverflow.com
 ```
 >>> help("modules")
 ```
-
+which version
+```
+$ pip show <module>
+```
 ## upgrade a module
 ```
 sudo pip3 install <package-name> --upgrade
