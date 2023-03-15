@@ -878,7 +878,10 @@ ar vx file.deb
 tar xvf control.tar.xz
 tar data.tar.xz
 ```
-
+look is a file is instlled by a package, which package
+```
+# grep is-this-file-installed.py /var/lib/dpkg/info/*.list
+```
 
 # Software
 
