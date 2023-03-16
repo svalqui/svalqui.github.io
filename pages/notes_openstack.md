@@ -356,11 +356,14 @@ cinder attachment-show <svr_id>
 show snapshots for a vol_id
 ```
 cinder snapshot-list --all --volume-id <vol_id>
+cinder snapshot-list --all-tenants --volume-id <vol_id>
 ```
 show snapshots for prj_id
 ```
 cinder snapshot-list --tenant prj_id 
 ```
+
+
 # Glance, images/snapshots
 
 List snapshot for a given project
