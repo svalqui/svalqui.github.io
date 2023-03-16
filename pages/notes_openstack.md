@@ -345,13 +345,29 @@ Add volumen to instance
 ```
 nova volume-attach instance vol_id
 ```
-
+Show the attached servers toa vol
+```
+cinder attachment-list --all --volume-id <vol_id>
+```
+Show the vols attached to svr_id
+```
+cinder attachment-show <svr_id>
+```
+show snapshots for a vol_id
+```
+cinder snapshot-list --all --volume-id <vol_id>
+```
+show snapshots for prj_id
+```
+cinder snapshot-list --tenant prj_id 
+```
 # Glance, images/snapshots
 
 List snapshot for a given project
 ```
 glance image-list --owner PRJ-ID
 # $ openstack image list --project PRJ-NAME
+# $ openstack volume snapshot list --project PRJ-NAME
 ```
 
 Create an snapshoot
