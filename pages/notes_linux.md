@@ -801,6 +801,11 @@ Add a repo
 deb https://my-repo.org focal main
 ```
 
+Adding the key to the remote repo
+```
+# wget -O - https://my-repo/keys/my-pub.key | apt-key add -
+```
+
 # Packages 
 
 Install a package
