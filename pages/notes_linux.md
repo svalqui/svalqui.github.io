@@ -790,7 +790,7 @@ tail -f wget-log
 
 
 # Repositories
-list
+list repos
 ```
 grep ^[^#] /etc/apt/sources.list /etc/apt/sources.list.d/*
 ```
@@ -799,6 +799,17 @@ Add a repo
 # Sources are located in /etc/apt/sources.list.d
 # there should be a files for you repo, my-cia.list containing all the repos for your cia
 deb https://my-repo.org focal main
+```
+list packages on a repo 
+
+```
+- First list the repos
+# grep ^[^#] /etc/apt/sources.list /etc/apt/sources.list.d/*
+/etc/apt/sources.list.d/ubuntu-focal.list:
+- look for the correspondig file on /var/lib/apt/lists/
+- then grep the packages
+# grep ^Packa /var/lib/apt/lists/au.archive.ubuntu.com_ubuntu_dists_focal_main_binary-amd64_Packages
+
 ```
 
 Adding the key to the remote repo
