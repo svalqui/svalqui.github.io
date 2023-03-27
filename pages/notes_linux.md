@@ -56,6 +56,9 @@ file by name, use find
 find . -name "*<str-here>*"
 find /. -name 'toBeSearched.file' 2>/dev/null # send error to null
 find / -type f -name "*.txt"
+find . | grep <file-name>
+find / | grep <directory/filename>
+find / -type d -name "<directory-name>"
 ```
 
 list files mounted on nautilius - Connect to Server
