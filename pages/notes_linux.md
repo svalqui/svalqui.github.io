@@ -430,6 +430,20 @@ clush -bL -l root -w svr[211-317]-storage 'ls /dev/nvm* | sort'
 -L disable header block and order output by nodes; additionally, when used in conjunction with -b/-B, it will enable "life gathering" of results by line mode, such as the next line is displayed as soon as possible  
 -l USER, --user=USER  
 
+# Virtualization - hypervisor
+
+install qemu
+```
+sudo apt install qemu qemu-kvm libvirt-bin
+```
+
+## Tools
+```
+sudo apt install virt-manager
+```
+```
+virt-clone --auto-clone --original <vm-name>
+```
 
 # journalctl
 ```
