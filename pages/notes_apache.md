@@ -59,5 +59,11 @@ sudo a2dissite my-site.org.conf
 sudo systemctl start apache2
 sudo systemctl stop apache2
 sudo systemctl reload apache2
-
 ```
+
+# ssl certificates
+```
+SSLCertificateFile      /etc/ssl/certs/
+SSLCertificateKeyFile /etc/ssl/private/
+```
+
