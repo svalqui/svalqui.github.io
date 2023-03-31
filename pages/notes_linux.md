@@ -636,9 +636,12 @@ ping
 ```
 ping server.org.au | while read pong; do echo "$(date): $pong"; done
 ```
-## nc
+## nc netcat
+check if ports are open, reads and writes data on network connections
 ```
-nc -zv <ip> <port>
+nc -zv <ip> <port> # Check if port on ip is open
+nc -l -s <ip> <port> # Listen source ip on port
+nc -l -p <port>  # Listen on port
 ```
 ## nmap
 ````
@@ -687,17 +690,26 @@ search sub1.your.domain.org here2.your.domain.org  # subdomains to look into
 ```
 ethtool <interface> 
 $ sudo iptraf
-ip link show
-lspci | grep Ethernet
-ifconfig -a | grep Link
-netstat -i | column -t
-ip route | column -t
-netstat -r
+ip link show  # list the interfaces, link status and ip addresses
+lspci | grep Ethernet # Show show Ethernet controller, NIC
+ifconfig -a | grep Link  # Show interfaces stats
+netstat -i | column -t # Show interfaces stats on a table
+ip route | column -t # Show the routes on a table
+netstat -r  # show the kernal ip routing table
 ```
 ### show errors
 
 ifconfig -a
 
+## tcpdump 
+dumps headers and packets od netwrok trafic 
+```
+# tcpdump -vvv -i <int-name> udp port <port-num>  # -v verbosity, full protocol decode on interface, protocol and port
+# tcpdump -nnni <int-name> port 443   # -n disable DNS translations, ouout is more concise
+# tcpdump -i eth0 src <source-ip>  # packets from a source ip
+# tcpdump -i eth0 dst <des-ip>  # packet to a destination ip
+# tcpdump -c 8 -i <int-name>  # set the umber of packets capture to 8
+```
 ## Network performance
 
 ### iperf3, between 2 hosts
