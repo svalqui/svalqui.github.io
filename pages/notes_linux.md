@@ -428,14 +428,15 @@ pdsh -l root -w svr[01-10],svr[22-31],svr218 'systemctl restart dhcp'
 ## clush
 ```
 clush -bL -l root -w svr[211-317]-storage 'ls /dev/nvm* | sort'
-
 clush -bL -l root -w svr[01-17,20-45,89,150-211] 'apt install tmux -y'
+clush -bL -o "-o StrictHostKeyChecking=no" -l root -w svr[01-17,20-45,89,150-211] 'apt install tmux -y'
 ```
 
 -b clush waits for command completion and then displays gathered output results  
 -w allows you to specify remote hosts by using ClusterShell NodeSet syntax  
 -L disable header block and order output by nodes; additionally, when used in conjunction with -b/-B, it will enable "life gathering" of results by line mode, such as the next line is displayed as soon as possible  
--l USER, --user=USER  
+-l USER, --user=USER
+-o ssh options, add ssh options -o "-i ~/.ssh/myidrsa"
 
 # Virtualization - hypervisor
 
