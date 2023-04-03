@@ -97,8 +97,13 @@ $tar -cvf  /home/my-tar-file.tar /home/dir-to-tar/.
 Extraxt
 ```
 tar xvzf my-file.tar.gz
+tar -xzvf my-file.tar.gz -C /to-this-directory
 ```
-
+Show
+```
+tar -tf my-file.tar
+# or tar -tvf my-file.tar
+```
 ## rsync
 
 ```
