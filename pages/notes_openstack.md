@@ -299,6 +299,14 @@ Set
 $ openstack port set --security-group <sec-grp-id> <port-id>
 
 ```
+Adding a new interface to vm, with security rules
+```
+# Attach a new interface with the selected network(id), that will create a Port ID, Net ID entry 
+nova interface-attach <svr-id> --net-id <network-id>
+
+# Add the security group to the port
+openstack port set --security-group <sec-grp-id> <port-id>
+```
 
 ### Server Cloning/replicating
 
