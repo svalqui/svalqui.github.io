@@ -306,6 +306,13 @@ nova interface-attach <svr-id> --net-id <network-id>
 
 # Add the security group to the port
 openstack port set --security-group <sec-grp-id> <port-id>
+
+# Check routing on vm have one default route only
+ip r
+
+# delete theother route
+ip route del default via <router-ip> dev <int> proto dhcp src <host-ip>
+
 ```
 
 ### Server Cloning/replicating
