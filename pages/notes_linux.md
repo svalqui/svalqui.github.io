@@ -644,6 +644,18 @@ ping
 ```
 ping server.org.au | while read pong; do echo "$(date): $pong"; done
 ```
+show routes
+```
+ip r 
+```
+delete route
+```
+ip route del default via <router-ip> dev <int> proto dhcp src <host-ip>
+```
+show leases
+```
+cat /var/lib/dhcp/dhclient.et0.leases
+```
 ## nc netcat
 check if ports are open, reads and writes data on network connections
 ```
