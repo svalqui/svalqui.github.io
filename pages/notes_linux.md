@@ -639,6 +639,9 @@ $ sudo net ads join -U <username>
 restart network
 ```
 sudo service network-manager restart
+
+# on CentOS
+systemctl restart network.service
 ```
 ping
 ```
@@ -686,10 +689,15 @@ sudo lsof -nP -iTCP -sTCP:LISTEN
 ```
 sudo apt install net-tools
 $ netstat -tapn
+sudo netstat -plunt
 ```
 or
 ```
 sudo lsof -nP -iTCP -sTCP:ESTABLISHED
+```
+All net services running
+```
+netstat -lepunt
 ```
 ## DNS
 ```
@@ -800,6 +808,17 @@ Copy with ssh-key
 ```
 scp -i my-ssh-pub-key /home/file-to-cp.txt  root@<ip>:/home/
 ```
+
+## ssh tunnel
+```
+SSH Tunnel creation for printing:
+$ ssh -L 1631:127.0.0.1:631 root@ip -N -v -v
+# redirects remote ip port 631 to localhost port 1631, on local 1631 you will see what is on remote 631; -v verbose, Local forwards to remote
+
+$ ssh -R 6311:localhost:631 remotehost
+# Remote forwards to Local
+
+```
 ## ssh good to know
 Show auth methods
 ```
@@ -815,6 +834,39 @@ Host *
     GSSAPIAuthentication no
     ServerAliveInterval 10
 ```
+## Connecting to legacy hosts
+```
+ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 user@legacyhost
+```
+## ssh remote
+```
+install xtightvncviewer
+sudo apt-get install xtightvncviewer
+
+create a file (shorcut) for your ssh call, and give it x permissions
+touch remoteto
+chmod 777 remoteto
+
+remoteto file 
+#!/bin/bash
+ssh -n -L 5900:localhost:5900 root@$1 "x11vnc -xkb -safer -nopw -once -geometry 1280x800 -auth /var/run/lightdm/root/\:0 -display :0" & /usr/bin/xtightvncviewer localhost:5900
+
+execute 
+$ ./remoteto <ip-remote>
+```
+## SSH Tunnel creation for RDP via remmina:
+
+    Let say you PC 2.2.2.2 has access to an RDP Server(Windows) 3.3.3.3
+    You are at your laptop on 1.1.1.1 and you can ssh to your PC 2.2.2.2
+
+    Open a terminal on your Laptop and ssh to you pc
+    Tunnel the port
+```
+$ ssh -L 13389:localhost:3389 root@2.2.2.2 -N
+```
+    redirects remote ip port 3389 to localhost port 13389, on local 13389 you will see what is on remote 3389, Local forwards to remote
+    on remmina connect to 1.1.1.1:13389
+
 # wget
 Download a file
 ```
@@ -1216,7 +1268,21 @@ sudo apt-get remove --purge xserver-xorg
 sudo apt-get install xserver-xorg
 sudo dpkg-reconfigure xserver-xorg
 
- ```
+```
+Add the date to the system bar
+``` 
+ dconf write /org/gnome/desktop/interface/clock-show-date 'true'
+```
+ldap query
+```
+ldapsearch -x -h your.domain.org -D "user@your.domain.org" -W -b "ou=People,dc=domain,dc=org" -s sub "(cn=*)" cn mail sn
+```
+sssd reset cache
+```
+systemctl stop sssd
+sudo sss_cache -E  # or rm -rf /var/lib/sss/db/*
+systemctl start sssd
+```
  
 # Desktops 
 
