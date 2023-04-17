@@ -82,6 +82,11 @@ git diff-tree -p <commit-hash>
 or
 git show --pretty="" --name-only <commit-hash>
 ```
+Commits by user
+```
+git shortlog -s
+```
+
 # Gerrit
 Install Git Review
 ```
