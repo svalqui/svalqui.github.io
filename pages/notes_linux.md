@@ -967,7 +967,7 @@ which can be upgraded
 ```
 apt list --upgradable
 ```
-all packages in a repo
+show all packages in a repo
 ```
 # ls /var/lib/apt/lists/*_Packages
 and open or grep  the corresponding repo file
@@ -976,9 +976,6 @@ and open or grep  the corresponding repo file
 remove a package
 ```
 sudo apt-get --purge remove gnome-terminal
-``` 
-remove rc , broken packages
-```
 sudo apt-get remove --purge <packge-name>
 ```
 show deb info
@@ -995,11 +992,14 @@ ar vx file.deb
 tar xvf control.tar.xz
 tar data.tar.xz
 ```
-look is a file is instlled by a package, which package
+look if a file is installed by a package, which package
 ```
 # grep is-this-file-installed.py /var/lib/dpkg/info/*.list
 ```
-
+show the files installed by a package
+```
+# cat /var/lib/dpkg/info/<pkg-name>.list
+```
 # Software
 
 ## tmux
