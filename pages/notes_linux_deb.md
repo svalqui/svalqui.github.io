@@ -6,6 +6,7 @@ apt-get install -y dh-python
 apt-get install -y python3-distutils-extra
 apt install -y python3-pip
 pip3 install pybuilder
+apt-get install equivs
 ```
 Directory structure
 ```
@@ -62,6 +63,12 @@ Rules for python package
 	dh $@ --with python3 --buildsystem=pybuild
 
 ```
+Installing the dependencies
+
+```
+my-prj# sudo mk-build-deps -i
+```
+
 Built it
 
 ```
