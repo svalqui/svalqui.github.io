@@ -844,6 +844,15 @@ Host *
 ```
 ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 user@legacyhost
 ```
+
+## Automating on ssh login
+edit /etc/bashrc
+```
+if [[ -n $SSH_CONNECTION ]] ; then
+    # Do something here for all users connecting via ssh
+fi
+```
+
 ## ssh remote
 ```
 install xtightvncviewer
