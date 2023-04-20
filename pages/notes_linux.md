@@ -786,6 +786,12 @@ debug  a connection
 ```
 ssh -vvv root@my-server.org
 ```
+## ssh lock and warn root
+```
+# cat /root/.ssh/authorized_keys
+no-port-forwarding,no-agent-forwarding,no-X11-forwarding,command="echo 'Please login as your own user rather than the user \"root\".';echo;sleep 10;exit" ssh-rsa AAABBB...
+```
+
 ## ssh file copy scp
 [COMMAND] [OPTIONAL ARGUMENTS] [SOURCE] [DESTINATION]
 
@@ -866,6 +872,7 @@ $ ssh -L 13389:localhost:3389 root@2.2.2.2 -N
 ```
     redirects remote ip port 3389 to localhost port 13389, on local 13389 you will see what is on remote 3389, Local forwards to remote
     on remmina connect to 1.1.1.1:13389
+
 
 # wget
 Download a file
