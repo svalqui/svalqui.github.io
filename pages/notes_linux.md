@@ -1299,6 +1299,10 @@ systemctl stop sssd
 sudo sss_cache -E  # or rm -rf /var/lib/sss/db/*
 systemctl start sssd
 ```
+debug a bash scrpt
+```
+strace ./my_bashscript.sh
+```
  
 # Desktops 
 
