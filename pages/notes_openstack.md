@@ -174,6 +174,10 @@ openstack endpoint list
 
 ## Servers
 
+Show server details
+```
+nova show <server-id>
+```
 List Server with IP address
 ```
 $ nova list --ip 192\.0\.0\.111 --all-tenants
@@ -191,9 +195,9 @@ Show servers in a given project
 nova list --all-tenants --tenant <project-id>
 nova list --all --tenant <project-id> --fields name,status,networks,flavor:original_name,metadata
 ```
-Show server details
+Show servers in a given host
 ```
-nova show <server-id>
+openstack server list --host <host-name> --all-projects
 ```
 Show servers in an availability zone
 ```
