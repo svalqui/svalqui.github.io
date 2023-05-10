@@ -178,6 +178,10 @@ Show server details
 ```
 nova show <server-id>
 ```
+Show resources allocated to server
+```
+openstack resource provider allocation show <server-id>
+```
 List Server with IP address
 ```
 $ nova list --ip 192\.0\.0\.111 --all-tenants
@@ -267,6 +271,7 @@ $ openstack serve unrescue <svr-id>
 ```
 reset the status to active
 ```
+openstack server set --state active <svr-id>
 nova reset-state <svr-id> --active
 ```
 Evacuate the VM to a different host
@@ -275,6 +280,7 @@ nova evacuate <svr-id> <target-host-name>
 ```
 live migrate 
 ```
+openstack server migrate --os-compute-api-version 2.56 --live-migration --host <host-name> <svr-id>
 nova live-migration <svr-id> <target-host-name>
 ```
 ### Networking
