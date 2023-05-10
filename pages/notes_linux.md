@@ -161,6 +161,8 @@ Show Partitions:
 sudo lsblk
 or
 fdisk -l /dev/sda
+or
+cat /proc/partitions
 ````
 Fix disk with errors, corrupted files
 ```
