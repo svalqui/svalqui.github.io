@@ -3,6 +3,7 @@ some of this comes from https://stackoverflow.com or, https://askubuntu.com/
 
 Training
 https://github.com/chlebik/rhcsa-practice-questions
+https://github.com/topics/rhcsa-practice-questions
 
 # Sudo
 from a user, become root
