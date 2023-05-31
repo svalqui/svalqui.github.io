@@ -32,3 +32,11 @@ postgres=# \c seed_db;
 # List a table
 seed_db=# select * from auth_user;
 ```
+
+# Mysql
+```
+mysql> show databases;
+mysql> use <db-name>;
+mysql> show tables;
+mysql> describe <table-name>;
+```
