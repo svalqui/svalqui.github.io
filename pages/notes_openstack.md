@@ -430,7 +430,10 @@ openstack recordset create <zone-id> host-name.<zone-id> --type A --record <ip>
 ```
 Change a record
 ```
+# update the cname
 openstack recordset set <zone-id> existing-host-name.<zone-id> --type CNAME --record new-record-name.<zone-id>
+# update the ip address
+openstack recordset set <zone-id> existing-host-name.<zone-id> --record <new-ip>
 ```
 # Neutron - Network
 
