@@ -451,6 +451,14 @@ show host-id for a port-id
 ```
 neutron port-show <port-id>
 ```
+show all subnets
+```
+openstack subnet list
+```
+show ips used
+```
+openstack port list
+```
 
 # Trove DB as a service
 Show details of a DB instance
