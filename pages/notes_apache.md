@@ -16,6 +16,15 @@ and each needs it own configuration
 ```
 sudo vi /etc/apache2/sites-available/my-site.org.conf
 ```
+## default page
+```
+/var/www/html/index.html
+```
+To set it to use other default page, edit `/etc/apache2/mods-enabled/dir.conf` 
+```
+DirectoryIndex my-report.txt
+```
+and check the file is in `/var/www/html`
 
 # configuration 
 ## main
