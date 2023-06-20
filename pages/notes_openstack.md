@@ -189,10 +189,17 @@ $ nova list --ip 192\.0\.0\.111 --all-tenants
 $ nova list --all --ip <ip of server> --fields name,tenant_id,status,networks
 
 $ openstack server list --all-projects --ip x.y.z
+```
 
-# Devices using floating IP
+### Devices using floating IP
+```
 $ openstack floating ip show <ip>
+# from above command you get the port_id
 
+$ openstack port show  <port_id>
+# from above commend you get the device_id
+
+$ openstack server show <device-id>
 ```
 Show servers in a given project
 ```
