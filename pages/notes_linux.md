@@ -1033,6 +1033,10 @@ To detatach, on session
 ```
 press Ctrl+B, and then D
 ```
+To list sessions
+```
+tmux ls
+```
 To attach to a session
 ```
 tmux attach-session -t my-sess1
