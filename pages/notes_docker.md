@@ -1,3 +1,5 @@
+# General
+
 image:
 the bare minimun of a bare OS
 
@@ -44,3 +46,25 @@ docker tag , gives a name to an image
 ```
 docker tag <commit-id> my-imange-name
 ```
+# Running 
+```
+docker run --rm  ubuntu:latest bash
+# --rm removes the container when you finish
+```
+attaching and detaching
+```
+docker run -d --ti ubuntu bash
+#-d deattached, leave it run it in the backgroup
+#or if you running on it Ctrl-p Ctrl-q detaches it
+
+# find you detached container
+docker ps
+
+docker attach <name-of-detached-container>
+```
+connecting via another session
+```
+docker exec --ti <container-name> bash
+```
+## docker logs
+docker logs <container-name>
