@@ -1,7 +1,7 @@
 # General
 
-image:
-the bare minimun of a bare OS
+# image:
+the bare minimun of a OS
 
 Check docker is running 
 ```
@@ -67,4 +67,19 @@ connecting via another session
 docker exec --ti <container-name> bash
 ```
 ## docker logs
+```
 docker logs <container-name>
+```
+## kill a container
+```
+docker kill <container-name>
+# stops the container
+
+docker rm <container-name>
+# removes the container
+```
+# Networking
+
+
+
+
