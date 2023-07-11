@@ -79,7 +79,34 @@ docker rm <container-name>
 # removes the container
 ```
 # Networking
+exposing ports
+```
+docker run --rm  -ti -p 1234567:1234567 -p 234567:234567 ubuntu:latest bash
+# links port 1234567 on the container to the same port on the host
+# links port 234567 on the container to the same port on the host
+```
+referer to the machine hosting the container
+```
+host.docker.internal
+```
+Show the port association
+```
+docker port <container-name>
+```
+Show networks
+```
+docker network ls
+```
 
-
-
-
+Create a network
+```
+docker network create <net-name>
+```
+Create a container in the new network
+```
+docker run --rm -ti --net net-name --name tserver1 ubuntu:20.04 bash
+```
+Put a container on a network
+```
+docker network connect net-name container-name
+```
