@@ -110,3 +110,19 @@ Put a container on a network
 ```
 docker network connect net-name container-name
 ```
+# Volumes
+volume shared with the localhost
+```
+docker run --rm  -ti -v /user/myuser/example:/shared-folder ubuntu bash
+```
+create a volume to shared with other containers, only last while the containers are using it
+```
+docker run -ti -v /shared-data ubuntu bash
+# create a container to use the same volume, give the name of the 1st container using the volume or any other that has used volume-from already
+docker run -ti -v --volumes-from <container-did-1stshare-orotherusing it> ubuntu bash
+```
+# images
+Find images
+```
+docker search ubuntu
+```
