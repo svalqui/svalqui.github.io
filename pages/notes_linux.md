@@ -672,6 +672,17 @@ nc -zv <ip> <port> # Check if port on ip is open
 nc -l -s <ip> <port> # Listen source ip on port
 nc -l -p <port>  # Listen on port
 ```
+create an in/out pipe
+```
+nc -lp 45678 | nc -lp 45679
+#
+# on another session
+nc localhost 45678
+# type what you want to transfer to the other port
+# on another session
+nc localhost 45679
+# you shuld see what is typed on the other session
+```
 ## nmap
 ````
 Nmap:
