@@ -126,3 +126,21 @@ Find images
 ```
 docker search ubuntu
 ```
+# Docker Files
+Create the file
+FROM <image-name>
+RUN <Run something>
+CMD <Run something in the container>
+
+Build the container 
+docker built -t <container-name>
+
+Run the container
+docker run --rm <container-name>
+
+
+
+FROM debian:sid
+RUN apt-get -y update
+RUN apt-get install nano
+CMD ["/bin/nano", "/tmp/notes"]
