@@ -1,5 +1,11 @@
 # General
 
+good for testing/debugging
+```
+docker run -ti --em --net=host --privileged=true ubuntu bash
+# --net=host: can connect to the host
+# --privileged=true: runs as root
+```
 # image:
 the bare minimun of a OS
 
@@ -110,6 +116,17 @@ Put a container on a network
 ```
 docker network connect net-name container-name
 ```
+Allow the container to connec to the host, good for debugging not production
+```
+docker run --net=host <image-name> 
+```
+## Routing
+```
+apt-get install iptables # on your container
+sudo iptables -n -L -t nat
+```
+
+
 # Volumes
 volume shared with the localhost
 ```
@@ -155,3 +172,6 @@ VOLUME
 WORKDIR
 USER
 
+# Processes
+get the process id of the container
+docker inspect --format'{{.State.pid}}' <container-name>
