@@ -144,3 +144,14 @@ FROM debian:sid
 RUN apt-get -y update
 RUN apt-get install nano
 CMD ["/bin/nano", "/tmp/notes"]
+
+FROM <image-to-use>
+MAINTAINER name lastname email
+RUN runs the command, executes, waits to finish and save the result
+ADD adds local files
+ENV set env variables
+EXPOSE maps a port to the external host
+VOLUME
+WORKDIR
+USER
+
