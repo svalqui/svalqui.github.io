@@ -40,7 +40,7 @@ $ GIT_SSH_COMMAND="ssh -vvv" git clone ssh://user@yourdomain.org@server.org.au:<
 git remote -v
 ```
 
-## Update your working branchon Github
+## Update your working branch on Github
 ```
 git checkout issue_1
 git commit -m “fixed issue 1”
@@ -51,6 +51,18 @@ git push
 ```
 git fetch
 git reset --hard origin/master
+```
+
+## Reset a file to be as master deleting all local changes
+```
+git checkout origin/master <filename>
+```
+
+## Set remote origin
+```
+git remote -v
+git remote set-url origin https://repo.git
+git remote -v
 ```
 
 ## Check ssh connects to repo
