@@ -143,20 +143,53 @@ Find images
 ```
 docker search ubuntu
 ```
+
+# Processes
+get the process id of the container
+```
+docker inspect --format'{{.State.pid}}' <container-name>
+```
+kill a container
+```
+# get the id 
+docker ps
+# kill the container
+docker kill <only-4digits-of-id>
+```
+
 # Docker Files
-Create the file
+Create the file `Dockerfile` , looks like
+```
 FROM <image-name>
 RUN <Run something>
 CMD <Run something in the container>
-
-Build the container 
+```
+Build the container from Docker file in the current directory
+```
 docker built -t <container-name>
+```
+otherwise
+```
+docker built -t <container-name> --file /path/to/dockerfile
+```
+Once is built then you can run the container.
 
 Run the container
+```
 docker run --rm <container-name>
+```
+Run a container server, a container tha will keep running
 
+```
+# Build the server
+docker build --file server.Dockerfile --tag my.server
 
+# Run the server
+docker run -d  my.server
+```
 
+How a dockerfile look like
+```
 FROM debian:sid
 RUN apt-get -y update
 RUN apt-get install nano
@@ -171,7 +204,5 @@ EXPOSE maps a port to the external host
 VOLUME
 WORKDIR
 USER
-
-# Processes
-get the process id of the container
-docker inspect --format'{{.State.pid}}' <container-name>
+ENTRYPOINT same as CWD which directory to start from
+```
