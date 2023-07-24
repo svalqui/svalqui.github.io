@@ -53,6 +53,10 @@ docker tag , gives a name to an image
 ```
 docker tag <commit-id> my-imange-name
 ```
+clear some space
+```
+docker system prune
+```
 # Running 
 ```
 docker run --rm  ubuntu:latest bash
