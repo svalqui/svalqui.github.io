@@ -94,6 +94,19 @@ docker kill <container-name>
 # removes the container
 docker rm <container-name>
 ```
+## stats
+```
+docker stats <id or name>
+```
+## top
+```
+docker top <id or name>
+```
+
+## inspect
+```
+docker inspect <id or name>
+```
 # Networking
 exposing ports
 ```
