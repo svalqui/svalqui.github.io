@@ -76,13 +76,18 @@ docker exec --ti <container-name> bash
 ```
 docker logs <container-name>
 ```
+## stop a container
+```
+docker stop <container-id>
+```
+
 ## kill a container
 ```
-docker kill <container-name>
 # stops the container
+docker kill <container-name>
 
-docker rm <container-name>
 # removes the container
+docker rm <container-name>
 ```
 # Networking
 exposing ports
