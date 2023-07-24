@@ -1,13 +1,14 @@
 # General
 
+image:
+the bare minimun of a OS
+
 good for testing/debugging
 ```
 docker run -ti --em --net=host --privileged=true ubuntu bash
 # --net=host: can connect to the host
 # --privileged=true: runs as root
 ```
-# image:
-the bare minimun of a OS
 
 Check docker is running 
 ```
@@ -95,6 +96,7 @@ exposing ports
 docker run --rm  -ti -p 1234567:1234567 -p 234567:234567 ubuntu:latest bash
 # links port 1234567 on the container to the same port on the host
 # links port 234567 on the container to the same port on the host
+# -p outside:inside
 ```
 referer to the machine hosting the container
 ```
@@ -144,9 +146,17 @@ docker run -ti -v /shared-data ubuntu bash
 docker run -ti -v --volumes-from <container-did-1stshare-orotherusing it> ubuntu bash
 ```
 # images
+show images
+```
+docker image
+```
 Find images
 ```
 docker search ubuntu
+```
+remove an image
+```
+docker rmi <image-name>
 ```
 
 # Processes
