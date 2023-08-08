@@ -458,6 +458,24 @@ sudo apt install virt-manager
 ```
 virt-clone --auto-clone --original <vm-name>
 ```
+```
+# virsh start instance-XXXXX # To boot it up
+
+# virsh domifaddr m-vm-name # list ip addresses
+
+# virsh dumpxml my-vm-name # show all details
+
+# virsh list --all| grep instance-00114043
+
+# virsh shutdown instance-00114043
+
+# virsh console instance-00114043
+Connected to domain instance-00114043
+Escape character is ^
+
+# virsh undefine  instance-00114043
+Domain instance-00114043 has been undefined
+```
 
 # journalctl
 ```
