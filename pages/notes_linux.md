@@ -488,7 +488,10 @@ journalctl --since "1 day ago"
 Reverse order
 journalctl -r
 ```
-
+from last boot (-b -1) extended (-xe)
+```
+journalctl -b -1 -xe
+```
 Only messages related to a given user
 ```
 ~$ id <username>
