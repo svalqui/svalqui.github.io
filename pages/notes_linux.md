@@ -621,6 +621,8 @@ The service
 ```
 service sssd stop
 service sssd start
+
+service sssd stop ; rm -rf /var/log/sssd/* ; rm -rf /var/lib/sss/db/* ; service sssd start
 ```
 The Logs
 ```
