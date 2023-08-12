@@ -803,6 +803,17 @@ $ dd if=/dev/zero of=1g-test-file.tmp bs=1 count=0 seek=1G
 ```
 $ rsync -hP 1g-test-file.tmp  /mnt/file-test.tmp
 ```
+## Network receive traffic via 2 interfaces for ssh
+network rules Network receive traffic via 2 interfaces for ssh
+
+```
+# identify the interfaces: route -n
+ip route add table 1921681    default via <rtr-ip-internal> dev eth1
+ip route add table 19216817  default via <rtr-ext> dev eth0
+
+ip rule add from <subnet-cidr-internal>  lookup 1921681
+ip rule add from <subnet-cidr-external> lookup 19216817
+```
 # SSH
  
 Adding a public key to your computer so you can connect to a remote server; you need the remote server public key (Remote_Servers.pub)
