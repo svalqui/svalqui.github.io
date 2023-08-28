@@ -75,6 +75,8 @@ ssh -vvvT -p <portnumber> <username>@<repo-domain>
 See your commit history
 ```
 $  git log --pretty=format:"%h %s" --graph
+# Full commit id
+$  git log --pretty=format:"%H %s" --graph
 ```
 Search for commits containing
 ```
