@@ -770,13 +770,14 @@ netstat -r  # show the kernal ip routing table
 ifconfig -a
 
 ## tcpdump 
-dumps headers and packets od netwrok trafic 
+dumps headers and packets of network traffic 
 ```
 # tcpdump -vvv -i <int-name> udp port <port-num>  # -v verbosity, full protocol decode on interface, protocol and port
 # tcpdump -nnni <int-name> port 443   # -n disable DNS translations, ouout is more concise
 # tcpdump -i eth0 src <source-ip>  # packets from a source ip
 # tcpdump -i eth0 dst <des-ip>  # packet to a destination ip
-# tcpdump -c 8 -i <int-name>  # set the umber of packets capture to 8
+# tcpdump -c 8 -i <int-name>  # set the number of packets capture to 8
+# tcpdump -i any host <host-ip>  # any packet from a given host
 ```
 ## Network performance
 
