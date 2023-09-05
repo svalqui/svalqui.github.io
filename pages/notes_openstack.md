@@ -191,7 +191,7 @@ $ nova list --all --ip <ip of server> --fields name,tenant_id,status,networks
 $ openstack server list --all-projects --ip x.y.z
 ```
 
-### Devices using floating IP
+**Devices using floating IP**
 ```
 $ openstack floating ip show <ip>
 # from above command you get the port_id
@@ -233,6 +233,13 @@ nova instance-action <server-id> <req-id>
 Show a link to the console
 ```
 nova get-vnc-console <svr-id> novnc
+```
+Show deleted servers on a project 
+```
+openstack server list --deleted --all --project <Prj-id-or-name>
+
+# of a given ip on hte project
+openstack server list --deleted --all --ip <ip-add> --project <Prj-id-or-name>
 ```
 
 Create
