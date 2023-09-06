@@ -789,10 +789,14 @@ dumps headers and packets of network traffic
 - On one host run
 ```
 # iperf3 -s
+##or to test via a port
+# iperf3 -s -p <a-given-port> 
 ```
 - On the other run
 ```
 # iperf3 -c x.x.x.x
+## or if testing on a port
+# iperf3 -c <ip-svr-running-s> -p <a-given-port> 
 ```
 ### transfering files to cifs
 
