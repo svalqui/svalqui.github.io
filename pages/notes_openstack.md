@@ -49,6 +49,10 @@ Verify:
 
 ```$ openstack role assignment list --user USER_NAME --project PROJECT_NAME --names```
 
+Remove a user role from a project
+
+```$ openstack role remove --user USER_NAME --project PROJECT_NAME ROLE_NAME```
+
 ### Good to know
 
 Projects and roles for a user:
