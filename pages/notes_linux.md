@@ -206,6 +206,28 @@ dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/"
 ```
 sudo apt-get clean
 ```
+Check space used by journal
+```
+journalctl --disk-usage
+# Set the max use on /etc/systemd/journald.conf
+SystemMaxUse=500M
+# restart the service
+service systemd-journald restart
+# Try
+sudo journalctl --vacuum-size=100M
+sudo journalctl --vacuum-time=120d
+https://askubuntu.com/questions/1238214/big-var-log-journal
+```
+Check unused snaps
+```
+snap list --all
+# used
+sudo du -sh /var/lib/snapd/cache/
+LANG=C snap list --all | awk '/disabled/{print $1" --revision "$3}'
+# Remove unused
+LANG=C snap list --all | awk '/disabled/{print $1" --revision "$3}' | xargs -rn3 snap remove
+https://askubuntu.com/questions/1036633/how-to-remove-disabled-unused-snap-packages-with-a-single-line-of-command
+```
 ## Disk format and partitionspartition and format 
 partion and format
 ```
