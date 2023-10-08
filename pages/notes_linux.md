@@ -928,6 +928,9 @@ edit /etc/bashrc
 ```
 if [[ -n $SSH_CONNECTION ]] ; then
     # Do something here for all users connecting via ssh
+    echo "Message here to users login via ssh"
+    sleep t # send them to wait t time
+    
 fi
 ```
 
