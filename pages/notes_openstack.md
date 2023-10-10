@@ -405,6 +405,10 @@ show snapshots for prj_id
 ```
 cinder snapshot-list --tenant prj_id 
 ```
+Create a volume snapshot
+```
+openstack volume snapshot create --volume <vol-id> <snapshotname>
+```
 
 
 # Glance, images/snapshots
