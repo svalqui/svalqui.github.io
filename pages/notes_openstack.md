@@ -365,6 +365,7 @@ $ nova flavor-list
 Flavors all, Admin
 ```
 $ nova flavor-list --all
+$ openstack flavor list --all
 ```
 Flavor details
 ```
