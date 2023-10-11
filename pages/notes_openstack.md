@@ -385,11 +385,11 @@ List the volumes for a project
 ```
 openstack volume list  --project <project-name>
 ```
-Add volumen to instance
+Add volume to instance
 ```
 nova volume-attach instance vol_id
 ```
-Show the attached servers toa vol
+Show the attached servers to a vol
 ```
 cinder attachment-list --all --volume-id <vol_id>
 ```
@@ -399,6 +399,7 @@ cinder attachment-show <svr_id>
 ```
 show snapshots for a vol_id
 ```
+openstack volume snapshot list --all --volume <vol_id>
 cinder snapshot-list --all --volume-id <vol_id>
 cinder snapshot-list --all-tenants --volume-id <vol_id>
 ```
@@ -421,7 +422,7 @@ glance image-list --owner PRJ-ID
 # $ openstack volume snapshot list --project PRJ-NAME
 ```
 
-Create an snapshoot
+Create an snapshot
 ```
 glance image-create --name <NAME> --instance-uuid <INSTANCE_UUID>
 # glance image-create --name <NAME> --instance-uuid <INSTANCE_UUID> --owner <PRJ-ID>
