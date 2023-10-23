@@ -40,3 +40,10 @@ mysql> use <db-name>;
 mysql> show tables;
 mysql> describe <table-name>;
 ```
+When was lat updated
+
+Ref https://stackoverflow.com/questions/307438/how-can-i-tell-when-a-mysql-table-was-last-updated
+```
+cd /var/lib/mysql/<mydatabase>
+ls -lhtr *.ibd
+```
