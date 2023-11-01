@@ -871,13 +871,15 @@ no-port-forwarding,no-agent-forwarding,no-X11-forwarding,command="echo 'Please l
 ```
 
 ## ssh file copy scp
+
 [COMMAND] [OPTIONAL ARGUMENTS] [SOURCE] [DESTINATION]
 
 Copy a file
 ```
+# From local to remote host
 scp my-file <username>@<host-name>:/home/
 
-File from a server to local
+# From a remote server to local
 scp root@svr.org.au:/root/data svr-data
 ```
 Copy recursively
