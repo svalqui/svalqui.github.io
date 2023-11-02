@@ -417,8 +417,11 @@ openstack volume snapshot create --volume <vol-id> <snapshotname>
 
 List snapshot for a given project
 ```
+# List snapshot of VMs
+openstack image list --project PRJ-NAME --long
+#
 glance image-list --owner PRJ-ID
-# $ openstack image list --project PRJ-NAME
+
 # $ openstack volume snapshot list --project PRJ-NAME
 ```
 
