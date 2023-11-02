@@ -403,9 +403,10 @@ openstack volume snapshot list --all --volume <vol_id>
 cinder snapshot-list --all --volume-id <vol_id>
 cinder snapshot-list --all-tenants --volume-id <vol_id>
 ```
-show snapshots for prj_id
+show snapshots for prj_id, size in Gb
 ```
-cinder snapshot-list --tenant prj_id 
+openstack volume snapshot list --project <PRJ-NAME>
+# cinder snapshot-list --tenant prj_id 
 ```
 Create a volume snapshot
 ```
@@ -415,7 +416,7 @@ openstack volume snapshot create --volume <vol-id> <snapshotname>
 
 # Glance, images/snapshots
 
-List snapshot for a given project
+List snapshot for a given project, Size in Bytes
 ```
 # List snapshot of VMs
 openstack image list --project PRJ-NAME --long
