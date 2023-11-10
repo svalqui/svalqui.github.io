@@ -690,6 +690,7 @@ $ sudo net ads join -U <username>
 restart network
 ```
 sudo service network-manager restart
+sudo restart network-manager
 
 # on CentOS
 systemctl restart network.service
@@ -764,7 +765,6 @@ netstat -lepunt
 ## DNS
 ```
 systemd-resolve --status
-
 ```
 Check DNS resolvers, this is a dynamic file do not change it directly, it would recreate when restarting system. changes via resolvconf, which doesn't install by default.
 ```
@@ -774,6 +774,10 @@ domain your.domain.org
 nameserver <x.x.x.x> # dns ip
 nameserver <x.x.x.x> # dns ip sec
 search sub1.your.domain.org here2.your.domain.org  # subdomains to look into
+```
+If you need to refresh you will need to restart the Network manager, but that will restart all network
+```
+sudo restart network-manager
 ```
 
 ## network monitor
