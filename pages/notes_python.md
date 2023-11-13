@@ -20,6 +20,15 @@ sudo pip3 install <package-name> --upgrade
 ```
 pip install --force-reinstall -v "my_module==0.0.2"
 ```
+
+# Flake8
+
+best way to run it
+
+```
+python3 -m flake8 scripts setup.py
+```
+
 # virtual environments
 ```
 $ source venv/bin/activate
@@ -31,7 +40,9 @@ python3 -m venv /path/to/new/virtual/environment
 # or create venv on current directory
 python3 -m venv venv
 ```
-# pip update
+# pip
+
+## pip update
 $ python3 -m pip install --upgrade pip
 
 # virtualenv
