@@ -358,6 +358,11 @@ smbclient //mediaflux.yourdomain.net/your-proj -m SMB2 -W <AD-domain> -U <userna
 ``` 
 
 # Processes
+## Processes ordered by memeory use
+```
+ps aux --sort=-%mem
+```
+
 ## Dealing with zombies
 ```
 Find Zombies
