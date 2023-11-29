@@ -1103,6 +1103,11 @@ show the files installed by a package
 ```
 # cat /var/lib/dpkg/info/<pkg-name>.list
 ```
+Packages history, when thay have been added, removed, upgraded
+```
+# vi /var/log/apt/history.log
+```
+
 # Software
 
 ## tmux
