@@ -412,7 +412,20 @@ Create a volume snapshot
 ```
 openstack volume snapshot create --volume <vol-id> <snapshotname>
 ```
+## Tranfer volume to another project.
 
+The volumes need to be available
+
+as admin create the transfer request
+```
+$ openstack volume transfer request create <vol_id>
+# note auth_key and id (transfer id)
+```
+
+Authenticated on the target project and accept the transfer
+```
+$ openstack volume transfer request accept --auth-key <auth_key> <Tranfer_id>
+```
 
 # Glance, images/snapshots
 
