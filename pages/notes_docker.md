@@ -57,6 +57,27 @@ clear some space
 ```
 docker system prune
 ```
+## Change docker storage location
+https://evodify.com/change-docker-storage-location/
+
+Create /etc/docker/daemon.json
+```
+{
+"data-root": "/pathtonewdirectory"
+}
+```
+restart docker
+```
+sudo systemctl restart docker
+```
+re-create the the containers
+```
+# remove containers
+docker system prune -a
+# download them
+docker pull <container-name>
+```
+
 # Running 
 ```
 docker run --rm  ubuntu:latest bash
