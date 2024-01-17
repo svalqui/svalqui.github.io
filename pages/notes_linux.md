@@ -857,6 +857,24 @@ ip route add table 19216817  default via <rtr-ip-ext> dev eth0
 ip rule add from <subnet-cidr-internal>  lookup 1921681
 ip rule add from <subnet-cidr-external> lookup 19216817
 ```
+
+## iptables
+```
+List
+iptables -L
+iptables -S 
+iptables -L --line-numbers
+
+Delete
+iptables -D <sec-group> <line-number>
+
+Add
+sudo iptables -A <sec-group> -p tcp -s <cidr1>,<cidr2>,<cidr3> -m tcp --dport 22 -j ACCEPT
+
+Save changes
+iptables-save
+```
+
 # SSH
  
 Adding a public key to your computer so you can connect to a remote server; you need the remote server public key (Remote_Servers.pub)
