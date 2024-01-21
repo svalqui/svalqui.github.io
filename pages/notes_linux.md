@@ -415,6 +415,25 @@ Stop start services
 service sssd stop
 service sssd start
 ```
+# CPU
+
+list
+```
+lscpu
+```
+average use
+```
+iostat
+```
+monitor
+```
+sar -u 5
+```
+benchmark
+```
+sudo apt install sysbench
+sysbench --test=cpu run
+```
 
 # Memory
 ## Memory issues
