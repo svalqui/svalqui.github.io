@@ -425,7 +425,7 @@ average use
 ```
 iostat
 ```
-monitor
+monitor, average every 5 seconds
 ```
 sar -u 5
 ```
@@ -444,6 +444,13 @@ sysbench --test=cpu run
 ```
 free -mh
 ```
+## Memory benchmark
+```
+sysbench --test=memory run
+sysbench --test=memory --memory-block-size=1G --memory-total-size=250G run
+
+```
+
 # Logs
 ```
 ls -l /var/log/
