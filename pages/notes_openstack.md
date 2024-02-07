@@ -281,7 +281,10 @@ nova reboot <svr-id>
 $ openstack server unpause 
 $ openstack server stop 
 ```
-
+Hard reboot 
+```
+openstack server reboot --hard <svr-id>
+```
 rescue
 ```
 $ openstack server rescue <svr-id>
