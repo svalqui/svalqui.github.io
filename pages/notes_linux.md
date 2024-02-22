@@ -816,6 +816,11 @@ If you need to refresh you will need to restart the Network manager, but that wi
 ```
 sudo restart network-manager
 ```
+## Dig
+Check time pending to update ip to name, on section "Answer Section"
+```
+$ dig @<ip> <domain-name>. 
+```
 
 ## network monitor
 ```
