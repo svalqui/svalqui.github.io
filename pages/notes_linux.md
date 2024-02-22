@@ -985,6 +985,29 @@ Host *
     GSSAPIAuthentication no
     ServerAliveInterval 10
 ```
+## ssh forward your local agent to remote servers
+
+if using extra security find your local extra socket
+```
+$ gpgconf --list-dir agent-extra-socket
+/Users/<user>/.gnupg/S.gpg-agent.extra
+```
+find you remote agent, by login to the remote server
+```
+$ gpgconf --list-dirs agent-socket
+/run/user/<uid>/gnupg/S.gpg-agent
+```
+Configure ssh
+```
+# cat .ssh/config
+Host *.my-org.org.au 
+  ForwardAgent yes
+Host *.my-other-org.org.au
+  ForwardAgent yes
+  ExitOnForwardFailure yes
+  RemoteForward /run/user/<uid>/gnupg/S.gpg-agent /run/user/<uid>/gnupg/S.gpg-agent.extra # asociate the agents
+```
+
 ## Connecting to legacy hosts
 ```
 ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 user@legacyhost
