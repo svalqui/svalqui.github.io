@@ -1405,6 +1405,9 @@ $ move to the end of line
 :0<Return> or 1G  move to the first line
 :$<Return> or G  move to the last line
 
+u undo
+Crtl-r redo
+
 # Show line number
 :set number
 
