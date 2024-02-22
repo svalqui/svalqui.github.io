@@ -39,6 +39,10 @@ $ GIT_SSH_COMMAND="ssh -vvv" git clone ssh://user@yourdomain.org@server.org.au:<
 ```
 git remote -v
 ```
+## Check if your local branch is up to date with remote master
+```
+git remote show origin
+```
 
 ## Update your working branch on Github
 ```
