@@ -74,6 +74,19 @@ git remote -v
 ```
 ssh -vvvT -p <portnumber> <username>@<repo-domain>
 ```
+# Branch
+```
+# List branches
+git branch -a
+# Update your Branches
+git remote update origin -prune
+# Delete a local branch
+$ git branch -d <branch_name>
+# List local branches deleted on Github
+$ git remote prune origin --dry-run
+# Remove references to deleted branches
+$ git remote prune origin
+```
 
 # History
 See your commit history
