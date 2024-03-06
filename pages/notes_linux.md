@@ -1521,6 +1521,11 @@ Seems reasonable but on x sessions might need to define the initial menus
 ```
 sudo tasksel install ubuntu-mate-desktop
 ```
+or
+```
+sudo apt install ubuntu-mate-desktop
+```
+
 ## lxde
 
 Also looks reasonable looks good on x sessions
@@ -1549,7 +1554,11 @@ greeter-show-manual-login=true
 autologin-user=<user_name>
 autologin-user-timeout=0
 ```
-
+Change your default desktop to Mate
+```
+sudo dpkg-reconfigure lightdm
+# select ligthdm and reboot
+```
 # configuring a yubikey
 https://gist.github.com/artizirk/d09ce3570021b0f65469cb450bee5e29
 
