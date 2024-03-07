@@ -416,6 +416,12 @@ Create a volume snapshot
 ```
 openstack volume snapshot create --volume <vol-id> <snapshotname>
 ```
+Volume stack on back up
+```
+cinder reset-state <volume-id> --state error
+cinder delete <volume-id>
+```
+
 ## Tranfer volume to another project.
 
 The volumes need to be available
