@@ -1397,12 +1397,32 @@ export PATH=$PATH:/path/to/add
 # to the begining
 export PATH=/path/to/add:$PATH
 ```
-# Bash Prompt
+
+# Bash
+## Bash Prompt
 ```
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]($ENV-VAR)\[\033[00m\]\$ '
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;33m\]($ENV-VAR)\[\033[00m\]\$ '
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;33m\]$OS_PROJECT_NAME\[\033[00m\]\$ '
 ```
+## for loop
+This
+```
+for n in {1..5};
+do
+    echo $n
+    for cmd in time date;
+    do
+        echo $cmd
+    done
+done
+
+```
+is the same as this
+```
+for n in {1..5}; do echo $n; for cmd in time date; do echo $cmd; done; done
+```
+
 # Shutdown
 ## force shutdown
 ```
