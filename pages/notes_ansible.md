@@ -1,5 +1,5 @@
 
-## Ping servers
+## ping servers
 ```
 $ ansible all -m ping -i my_svrs.txt -u root
 ```
@@ -20,8 +20,29 @@ ansible-playbook -v -i hosts -c local site.yml
 ```
 callbacks_enabled = profile_tasks
 ```
+# selecting playbooks
 ## run task with a given tag
 ```
 ansible-playbook main.yml --tags "stepone"
 ansible-playbook main.yml --tags "stepone, steptwo"
 ```
+## skip playbooks with a tag
+```
+ansible-playbook example.yml --skip-tags "stepone"
+```
+## Tags on a taks
+```
+- name: Name
+  command: "{{ cmd }}"
+  with_items:
+    - "time"
+    - "date"
+  notify: Task One
+  tags:
+    - stepone
+```
+
+
+
+
+
