@@ -821,7 +821,14 @@ Check time pending to update ip to name, on section "Answer Section"
 ```
 $ dig @<ip> <domain-name>. 
 ```
-
+Check the name from an IP
+```
+dig -x <ip-add> +short
+```
+Check the IP from a Name
+```
+dig <domain-name> +short
+```
 ## network monitor
 ```
 ethtool <interface> 
