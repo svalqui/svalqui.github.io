@@ -11,6 +11,7 @@ $ ansible all -a "lsblk" -i my_svrs.txt -u root
 ```
 ansible-playbook -v -i hosts -c local site.yml
 ```
--v verbose
--i inventory-file
--c check
+-v verbose<br/>
+-i inventory-file<br/>
+-c check<br/>
+-l --limit furhter filter hosts to a pattern name<br/>
