@@ -20,3 +20,8 @@ ansible-playbook -v -i hosts -c local site.yml
 ```
 callbacks_enabled = profile_tasks
 ```
+## run task with a given tag
+```
+ansible-playbook main.yml --tags "stepone"
+ansible-playbook main.yml --tags "stepone, steptwo"
+```
