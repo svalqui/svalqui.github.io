@@ -15,3 +15,8 @@ ansible-playbook -v -i hosts -c local site.yml
 -i inventory-file<br/>
 -c check<br/>
 -l --limit furhter filter hosts to a pattern name<br/>
+
+## add time for tasks
+```
+callbacks_enabled = profile_tasks
+```
