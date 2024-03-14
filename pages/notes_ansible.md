@@ -17,6 +17,8 @@ ansible-playbook -v -i hosts -c local site.yml
 -l --limit furhter filter hosts to a pattern name<br/>
 
 ## add time for tasks
+
+on `/etc/ansible/ansible.cfg` add:
 ```
 callbacks_enabled = profile_tasks
 ```
