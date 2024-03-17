@@ -219,11 +219,7 @@ CMD <Run something in the container>
 ```
 Build the container from Docker file in the current directory
 ```
-docker built -t <container-name>
-```
-otherwise
-```
-docker built -t <container-name> --file /path/to/dockerfile
+$ sudo docker build - < my-docker-file
 ```
 Once is built then you can run the container.
 
