@@ -15,7 +15,12 @@ ansible-playbook -v -i hosts -c local site.yml
 -i inventory-file<br/>
 -c check<br/>
 -l --limit furhter filter hosts to a pattern name<br/>
+local run it locally<br/>
 
+otherwise
+```
+ansible-playbook -v -i hosts -c site.yml
+```
 ## add time for tasks
 
 on `/etc/ansible/ansible.cfg` add:
