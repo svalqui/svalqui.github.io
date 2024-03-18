@@ -18,6 +18,12 @@ list the containers
 ```
 # docker container ls
 ```
+list stopped containers
+```
+sudo docker ps -a
+sudo docker container ls -f status=exited -a
+sudo docker container list --all
+```
 check the details of the container
 ```
 # docker inspect <container-id>
@@ -255,3 +261,17 @@ WORKDIR
 USER
 ENTRYPOINT same as CWD which directory to start from
 ```
+# Containers
+
+## Remove
+```
+docker container rm [-f] CONTAINER my-container
+```
+-f force
+
+## Remove stoped containers
+```
+docker container prune
+```
+
+
