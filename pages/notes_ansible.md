@@ -19,7 +19,7 @@ local run it locally<br/>
 
 otherwise
 ```
-ansible-playbook -v -i hosts -c site.yml
+ansible-playbook -v -i hosts site.yml
 ```
 ## add time for tasks
 
