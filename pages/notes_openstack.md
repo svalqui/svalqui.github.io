@@ -237,6 +237,7 @@ nova instance-action <server-id> <req-id>
 ```
 Show a link to the console
 ```
+openstack console url show <svr-id>
 nova get-vnc-console <svr-id> novnc
 ```
 Show deleted servers on a project 
