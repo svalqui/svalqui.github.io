@@ -21,6 +21,11 @@ sudo pip3 install <package-name> --upgrade
 pip install --force-reinstall -v "my_module==0.0.2"
 ```
 
+## show which version are available
+```
+pip index versions python-novaclient
+```
+
 # Flake8
 
 best way to run it
