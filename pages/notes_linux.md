@@ -768,19 +768,32 @@ nc localhost 45679
 ```
 ## nmap
 ````
+No probes
+sudo nmap -v -sS -A -T4 -Pn <ip-add>
+
+details of specific ports
+nmap -sV -sT -sC -p 443,80,22 <ip-add>
+
 Nmap:
 sudo nmap -v -sS -A -T4 <hostname>
 
 Check if a given port is open
 sudo nmap -p <port-number> <ip-add> 
 
-No probes
-sudo nmap -v -sS -A -T4 -Pn <ip-add>
-
 Subnet check
 nmap -sP 192.168.1.0/24 --scan-delay 1s
 
 ````
+- A Enable OS/version detection, script scanning and traceroute
+- sV Probe open ports
+- sT Scan connect technic
+- sS Scan TCP Syc technic
+- sC Script default
+- T4 Timeing template
+- p port number
+- v versosity
+
+
 ## ports listening
 ```
 sudo lsof -nP -iTCP -sTCP:LISTEN
