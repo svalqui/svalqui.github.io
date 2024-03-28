@@ -1,6 +1,9 @@
 Collection of commands from https://stackoverflow.com
 
-# Modules
+# pip/Modules
+
+## pip update
+$ python3 -m pip install --upgrade pip
 
 ## Modules installed
 
@@ -45,10 +48,6 @@ python3 -m venv /path/to/new/virtual/environment
 # or create venv on current directory
 python3 -m venv venv
 ```
-# pip
-
-## pip update
-$ python3 -m pip install --upgrade pip
 
 # virtualenv
 Install
