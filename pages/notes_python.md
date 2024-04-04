@@ -49,7 +49,7 @@ python3 -m venv /path/to/new/virtual/environment
 python3 -m venv venv
 ```
 
-# virtualenv
+## virtualenv
 Install
 sudo pip3 install virtualenv
 
@@ -58,7 +58,11 @@ virtualenv -p python3 my-env
 
 Activate
 source my-env/bin/activate
-my-env/bin/activate
+
+## find venv packages
+```
+find / -d -name "dist-packages" 2>/dev/null
+```
 
 # Create a deb package from you project
 ```
