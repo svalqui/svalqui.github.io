@@ -1096,6 +1096,10 @@ tail -f wget-log
 
 # curl
 
+speed of a website
+```
+curl -s -w %{time_total}\\n -o /dev/null http://my.web.site.org
+```
 
 # Repositories
 list repos
