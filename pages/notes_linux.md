@@ -198,6 +198,11 @@ Disk use and other siak stats and data
 ```
 $ sudo smartctl -a /dev/nvme0n1p5
 ```
+## Disk storage performance benchmark
+Check that you have the space to create the file first
+```
+sysbench fileio --file-total-size=16G --file-num=1 prepare
+```
 
 ## Clear Space, root full
 ```
@@ -429,7 +434,7 @@ monitor, average every 5 seconds
 ```
 sar -u 5
 ```
-benchmark
+## speed/performance benchmark
 ```
 sudo apt install sysbench
 sysbench --test=cpu run
@@ -444,7 +449,7 @@ sysbench --test=cpu run
 ```
 free -mh
 ```
-## Memory benchmark
+## Memory speed/perfomance benchmark
 ```
 sysbench --test=memory run
 sysbench --test=memory --memory-block-size=1G --memory-total-size=250G run
