@@ -757,6 +757,7 @@ cat /var/lib/dhcp/dhclient.et0.leases
 check if ports are open, reads and writes data on network connections
 ```
 nc -zv <ip> <port> # Check if port on ip is open
+timeout 3 nc -z <ip> <port> && echo good || echo nope
 nc -l -s <ip> <port> # Listen source ip on port
 nc -l -p <port>  # Listen on port
 ```
