@@ -543,6 +543,8 @@ Domain instance-00114043 has been undefined
 
 # journalctl
 ```
+Live what is been loged
+journalctl -fan100
 The last 100
 journalctl -n 100
 The last in 1 hour
