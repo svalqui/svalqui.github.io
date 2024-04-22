@@ -113,6 +113,11 @@ docker logs <container-name>
 docker stop <container-id>
 ```
 
+stop all running containers
+```
+docker ps -q | xargs docker stop
+```
+
 ## kill a container
 ```
 # stops the container
