@@ -148,14 +148,25 @@ diff -u dir1.txt dir2.txt
 How much you user uses:
 ```
 du -hd 1 | sort -h
-
+```
 All in /
+```
 sudo du -smx /* | sort -n
 sudo du -hsx /* | sort -rh | head -n 40
 
 Top biggest
 find / -printf '%s %p\n'| sort -nr | head -10
+
+by top directories
+du -cha --max-depth=1 / | grep -E "M|G|T"
+sudo du -aBM -d 1 . | sort -nr | head -20
+-c total
+-h human
+-a all
+-BM in MBytes
+-d depth
 ```
+
 Show Disks:
 ```
 sudo fdisk -l
@@ -205,11 +216,32 @@ sysbench fileio --file-total-size=16G --file-num=1 prepare
 ```
 
 ## Clear Space, root full
+Purge old kernels
 ```
 dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y purge
 ```
+clean packages
 ```
 sudo apt-get clean
+sudo apt-get autoremove
+```
+Other things to check
+```
+# find big files
+find / -size +10M
+
+# All files open for writing
+lsof | grep -e "[[:digit:]]\+w"
+
+# check deleted+opened files
+sudo lsof +L1
+
+# Check there is inodes free
+df -i
+```
+Purge Docker
+```
+# docker system prune
 ```
 Check space used by journal
 ```
