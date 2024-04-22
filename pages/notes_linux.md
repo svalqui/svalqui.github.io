@@ -233,6 +233,11 @@ LANG=C snap list --all | awk '/disabled/{print $1" --revision "$3}'
 LANG=C snap list --all | awk '/disabled/{print $1" --revision "$3}' | xargs -rn3 snap remove
 https://askubuntu.com/questions/1036633/how-to-remove-disabled-unused-snap-packages-with-a-single-line-of-command
 ```
+Check what is using the disk
+```
+lsof | grep -e "[[:digit:]]\+w"
+```
+
 ## Disk format and partitionspartition and format 
 partion and format
 ```
