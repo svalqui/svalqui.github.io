@@ -56,6 +56,12 @@ git push
 git fetch
 git reset --hard origin/master
 ```
+or
+```
+git fetch --all
+git reset --hard origin/master
+git pull origin master
+```
 
 ## Reset a file to be as master deleting all local changes
 ```
