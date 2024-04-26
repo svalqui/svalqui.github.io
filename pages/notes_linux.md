@@ -523,6 +523,8 @@ dmesg | tail -f /var/log/syslog
 
 sudo find /var/log -type f -mtime -1 -exec tail -Fn0 {} +
 https://www.hpe.com/us/en/insights/articles/the-first-5-things-to-do-when-your-linux-server-keels-over-1705.html
+
+tail -f my_log.log | grep look_for_this
 ```
 
 # Multicommand
