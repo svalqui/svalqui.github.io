@@ -51,6 +51,11 @@ git commit -m “fixed issue 1”
 git push
 ```
 
+## Update your local branch with remote master
+```
+git pull origin master
+```
+
 ## Reset you projest as Master branch, lose all your local progress
 ```
 git fetch
