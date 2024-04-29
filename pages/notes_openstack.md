@@ -188,11 +188,14 @@ openstack resource provider allocation show <server-id>
 ```
 List Server with IP address
 ```
+$ openstack port list --fixed-ip ip-address=<ip>
+# then openstack port show
+
+$ openstack server list --all-projects --ip x.y.z
+
 $ nova list --ip 192\.0\.0\.111 --all-tenants
 
 $ nova list --all --ip <ip of server> --fields name,tenant_id,status,networks
-
-$ openstack server list --all-projects --ip x.y.z
 ```
 
 **Devices using floating IP**
