@@ -214,7 +214,12 @@ Check that you have the space to create the file first
 ```
 sysbench fileio --file-total-size=16G --file-num=1 prepare
 ```
-
+hdparm
+```
+sudo hdparm -Tt /dev/nvme0n1p5
+-t displays the speed of reading through the buffer cache to the disk without any prior caching of data.
+-T displays the speed of reading directly from the Linux buffer cache without disk access.
+```
 ## Clear Space, root full
 Purge old kernels
 ```
