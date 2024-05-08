@@ -783,6 +783,11 @@ sudo restart network-manager
 # on CentOS
 systemctl restart network.service
 ```
+bring interface up
+```
+sudo ip link set <int-name> up
+```
+
 ping
 ```
 ping server.org.au | while read pong; do echo "$(date): $pong"; done
