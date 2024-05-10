@@ -1167,6 +1167,8 @@ Add a repo
 ```
 # Sources are located in /etc/apt/sources.list.d
 # there should be a files for you repo, my-cia.list containing all the repos for your cia
+#
+#  /etc/apt/sources.list.d/my-cia.list
 deb https://my-repo.org focal main
 ```
 list packages on a repo 
