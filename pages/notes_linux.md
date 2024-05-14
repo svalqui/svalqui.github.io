@@ -973,6 +973,10 @@ iptables -L
 iptables -S 
 iptables -L --line-numbers
 
+-L List all rules
+-S print all rules
+--line-numbers
+
 Delete
 iptables -D <sec-group> <line-number>
 
