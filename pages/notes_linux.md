@@ -275,7 +275,7 @@ Check what is using the disk
 lsof | grep -e "[[:digit:]]\+w"
 ```
 
-## Disk format and partitionspartition and format 
+## Disk format and partitions
 partion and format
 ```
 fdisk -l # list your disks and partitions
@@ -287,6 +287,36 @@ or format full disk
 ```
 # mkfs.ext4 /dev/vdc
 ```
+### extend partiion
+
+1. extend the partition
+```
+fdisk /dev/vdb
+# Print the partions
+Command (m for help): p
+# take note where the partition start, First Sector
+# and delete the partition
+Command (m for help): d
+# create a new partition, match the first sector
+Command (m for help): n
+Select (default p): p
+Partition number (1-4, default 1): 
+First sector (2048-419430399, default 2048): 
+Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-419430399, default 419430399): 
+# Keep the signature
+Partition #1 contains a ext4 signature.
+Do you want to remove the signature? [Y]es/[N]o: N
+# check the start is the same as initial
+Command (m for help): p
+# write the new partition table
+Command (m for help): w
+```
+2. resize the fs
+```
+# resize2fs /dev/vdb1
+```
+3. mount the partition
+
 ## mount new disk permanently
 list the file system type
 ```
