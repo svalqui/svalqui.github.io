@@ -98,6 +98,10 @@ Create
 ```
 $tar -cvf  /home/my-tar-file.tar /home/dir-to-tar/.
 ```
+Add
+```
+$tar -rvf  /home/my-tar-file.tar /home/dir2/.
+```
 Extraxt
 ```
 tar xvzf my-file.tar.gz
