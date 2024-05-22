@@ -933,8 +933,11 @@ Check the IP from a Name
 ```
 dig <domain-name> +short
 ```
-## network monitor
+## network monitor, interface stats
 ```
+ip -s link # Show the interfaces stats
+cat /proc/net/dev  # As above
+netstat -i  # As above
 ethtool <interface> 
 $ sudo iptraf
 ip link show  # list the interfaces, link status and ip addresses
@@ -945,9 +948,10 @@ ip route | column -t # Show the routes on a table
 netstat -r  # show the kernal ip routing table
 ```
 ### show errors
-
+```
+ip -s link
 ifconfig -a
-
+```
 ## tcpdump 
 dumps headers and packets of network traffic 
 ```
