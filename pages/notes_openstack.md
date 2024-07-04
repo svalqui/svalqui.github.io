@@ -468,6 +468,16 @@ Accept the image in the project
 ```
 openstack image set --accept <img-id> --project <prj-id>
 ```
+copying an image from one project to another
+
+1. download the image locally
+```
+openstack image save --file snapshot-svr.raw <snapshot-id>
+```
+3. create an image in the target project
+```
+openstack image create --container-format bare --disk-format qcow2 --file snapshot-svr.raw --project <prj-id snapshot-svr-copy
+```
 # Designate
 Show recordsets on a zone
 ```
