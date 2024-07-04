@@ -1250,7 +1250,12 @@ check package running
 ```
 sudo service <service> status
 sudo service ssh status
-``` 
+```
+check package installed and next version available
+```
+apt policy <package-name>
+apt policy openssh-server
+```
 install a package including dependencies
 ```
 sudo apt-get install gnome-terminal
