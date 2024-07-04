@@ -474,7 +474,7 @@ copying an image from one project to another
 ```
 openstack image save --file snapshot-svr.raw <snapshot-id>
 ```
-3. create an image in the target project
+2. create an image in the target project
 ```
 openstack image create --container-format bare --disk-format qcow2 --file snapshot-svr.raw --project <prj-id snapshot-svr-copy
 ```
