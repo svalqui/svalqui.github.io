@@ -1245,6 +1245,8 @@ check packages installed
 ```
 dpkg -l
 dpkg -l | grep openssh-server
+or
+apt list --installed
 ```
 check package running
 ```
