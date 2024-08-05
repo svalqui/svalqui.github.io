@@ -1554,7 +1554,13 @@ is the same as this
 ```
 for n in {1..5}; do echo $n; for cmd in time date; do echo $cmd; done; done
 ```
+## while
+use read to read the output of a command line by line
 
+```
+# Read the pid of processes
+ps -ef | while read line; do my_pid=$(echo $line | cut -d' ' -f2); echo $my_pid; done
+```
 # Shutdown
 ## force shutdown
 ```
