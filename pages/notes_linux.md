@@ -1494,7 +1494,10 @@ sudo puppetserver ca clean --certname
 ```
 ### facter
 ```
+# facter -j | jq '.hostname'
 # facter -j | jq '.os.distro'
+# facter -j | jq '.dmi'
+
 ```
 ## zoom
 remove old version
