@@ -1362,6 +1362,7 @@ https://linuxize.com/post/getting-started-with-tmux/
     Ctrl+b o Go to the next pane
     Ctrl+b ; Toggle between the current and previous pane
     Ctrl+b x Close the current pane
+    Ctrl+b ] , enter in scroll mode, the you can use the arrows 'q' to quit scroll mode
 ```
 ## VirtualBox
 Install
