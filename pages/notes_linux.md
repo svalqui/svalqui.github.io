@@ -399,6 +399,8 @@ sudo mount -v -t cifs //srv1.org.au/sharedir/ /mnt -o user=$USER,cruid=$USER,sec
 
 Mounting authenticating on mount
 sudo mount -v -t cifs //srv1.org.au/sharedir/ /mnt -o username=my-user
+or
+mount.cifs //mediaflux.domain/proj-number /mnt -o user=youruser,domain=YOUR.DOMAIN
 ```
 
 ## NFS mount
