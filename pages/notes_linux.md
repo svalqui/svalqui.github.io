@@ -102,7 +102,7 @@ Add
 ```
 $tar -rvf  /home/my-tar-file.tar /home/dir2/.
 ```
-Extraxt
+Extract
 ```
 tar xvzf my-file.tar.gz
 tar -xzvf my-file.tar.gz -C /to-this-directory
@@ -113,9 +113,9 @@ tar -tf my-file.tar
 # or tar -tvf my-file.tar
 ```
 ## rsync
-
+copy(backup) files to /home/usr/Desktop
 ```
-rsync -aAXvPh /media/usr/Data/bkp-laptop-scienceit/home/usr/Desktop/ /home/usr/Desktop/
+rsync -aAXvPh /media/usr/Data/bkp-laptop/home/usr/Desktop/ /home/usr/Desktop/
 ```
 dry run 
 ```
