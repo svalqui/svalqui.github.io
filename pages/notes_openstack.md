@@ -393,6 +393,15 @@ List the volumes for a project
 ```
 openstack volume list  --project <project-name>
 ```
+Create a volume
+```
+From Iamage
+openstack volume create --image "Ubuntu Base" --availability-zone my_avai_zone1 --bootable --size 200 <user_email>_volume
+
+From another volume cloning
+openstack volume create --source <volume-id-to-clone>  --availability-zone my_avai_zone1 --bootable --size 200  vol-name-here
+```
+
 Add volume to instance
 ```
 nova volume-attach instance vol_id
