@@ -404,10 +404,12 @@ openstack volume create --source <volume-id-to-clone>  --availability-zone my_av
 
 Add volume to instance
 ```
+openstack server add volume <server> <volume>
 nova volume-attach instance vol_id
 ```
 Show the attached servers to a vol
 ```
+openstack volume attachment show
 cinder attachment-list --all --volume-id <vol_id>
 ```
 Show the vols attached to svr_id
