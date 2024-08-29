@@ -573,6 +573,7 @@ tail -f my_log.log | grep look_for_this
 ## pdsh
 ```
 pdsh -l root -w svr[01-10],svr[22-31],svr218 'systemctl restart dhcp'
+pdsh -R ssh -l root -w ^server_names.txt "dpkg -l | grep ssh-server" 2>/dev/null | dshbak -c
 ```
 
 ## clush
