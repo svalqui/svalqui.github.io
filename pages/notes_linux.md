@@ -1581,6 +1581,9 @@ echo b > /proc/sysrq-trigger
 yy copy yank
 p paste
 
+#replace
+:%s/ReplaceThis/WithThis/gc
+
 /string 	search forward
 ?string 	search backward 
 n 	move to next 
