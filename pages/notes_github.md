@@ -44,6 +44,15 @@ git remote -v
 git remote show origin
 ```
 
+## Check your local commits not pushed yet
+"Your branch is ahead of 'origin/master' by ?? commits."
+https://stackoverflow.com/questions/2016901/how-to-list-unpushed-git-commits-local-but-not-on-origin
+```
+git log origin/master..HEAD
+or
+git diff origin/master..HEAD
+```
+
 ## Update your working branch on Github
 ```
 git checkout issue_1
