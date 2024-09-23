@@ -229,7 +229,7 @@ $ nova console-log <server-id>
 or
 $ openstack console log show <server-id>
 ```
-Show which actions has taken on the server
+Show which actions has taken on the server, actions history
 ```
 openstack server event list <svr-id>
 nova instance-action-list <server-id>
