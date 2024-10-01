@@ -814,6 +814,7 @@ $ sudo net ads join -U <username>
 
 restart network
 ```
+sudo service NetworkManager restart
 sudo service network-manager restart
 sudo restart network-manager
 
