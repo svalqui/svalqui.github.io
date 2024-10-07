@@ -42,9 +42,13 @@ mysql> describe <table-name>;
 
 mysql> INSERT INTO Table-name (Column-name1, Column-name2, Column-name3)
 VALUES ('Val1', 'Val2', 'Val3');
-
+```
+List DB Users
 
 ```
+SELECT User FROM mysql.user;
+```
+
 When was lat updated
 
 Ref https://stackoverflow.com/questions/307438/how-can-i-tell-when-a-mysql-table-was-last-updated
