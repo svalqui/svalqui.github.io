@@ -28,6 +28,10 @@ pip install --force-reinstall -v "my_module==0.0.2"
 ```
 pip index versions python-novaclient
 ```
+## remove pip module
+```
+pip uninstall <pkg-name>
+```
 
 # Flake8
 
