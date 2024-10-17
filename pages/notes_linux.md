@@ -1731,7 +1731,7 @@ sudo dpkg-reconfigure lightdm
 # configuring a yubikey
 https://gist.github.com/artizirk/d09ce3570021b0f65469cb450bee5e29
 
-# sound
+# sound audio
 
 ## microphone loopback to headset
 https://pupuweb.com/how-enable-microphone-loopback-headset-ubuntu/
@@ -1739,13 +1739,16 @@ https://pupuweb.com/how-enable-microphone-loopback-headset-ubuntu/
 Enable microphone loopback into headset
 ```
 pactl load-module module-loopback latency_msec=1
-# it would sow the index of the load module, keep it handy as you will need it to disable the loopback
+# it would show the index of the load module, keep it handy as you will need it to disable the loopback
 ```
 Disable the loopback
 ```
 pactl unload-module [index]
 ```
-
+List the modules
+```
+pactl list modules
+```
 # preferred pkgs
 
 ```
