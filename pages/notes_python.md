@@ -1,5 +1,5 @@
 Collection of commands from https://stackoverflow.com
-# https://stackoverflow.com/questions/20101834/pip-install-from-git-repo-branch
+https://stackoverflow.com/questions/20101834/pip-install-from-git-repo-branch
 
 # pip/Modules
 
@@ -7,6 +7,9 @@ Collection of commands from https://stackoverflow.com
 
 ```
 pip install git+https://github.com/prj/prj.git@branch-name
+
+# Install to a directory
+pip install git+https://github.com/prj/prj.git@branch-name -t /target-dir
 ```
 
 ## pip update
