@@ -1,6 +1,13 @@
 Collection of commands from https://stackoverflow.com
+# https://stackoverflow.com/questions/20101834/pip-install-from-git-repo-branch
 
 # pip/Modules
+
+## pip install
+
+```
+pip install git+https://github.com/prj/prj.git@branch-name
+```
 
 ## pip update
 $ python3 -m pip install --upgrade pip
