@@ -32,6 +32,9 @@ https://gist.github.com/bgauduch/06a8c4ec2fec8fef6354afe94358c89e
 # Clone to a given directory
 /Projects$ git clone  https://github.com/project-name-here.git <target-folder>
 
+# Clona a branch
+/Projects$ git clone -b <branch-name> https://github.com/project-name-here.git <target-folder>
+
 ```
 ## issues cloning, debugging 
 ```
