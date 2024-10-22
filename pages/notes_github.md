@@ -116,8 +116,12 @@ $ git remote prune origin
 ```
 
 # History
-See your commit history
+See the commit history
 ```
+# Short header, author name, description
+$ git log --pretty=format:"%h %an %s" --graph
+
+# Only header and description
 $  git log --pretty=format:"%h %s" --graph
 # Full commit id
 $  git log --pretty=format:"%H %s" --graph
