@@ -74,7 +74,7 @@ ls -al /run/user/$UID/gvfs
 shows the last 20 lines
 tail -n 20 <filename>
 
-Keeps showing you additions to the file, as it gets updated
+Keeps showing you additions to the file, as it gets updated, in real time, shoe errors in real time
 tail -f <my-file>
 
 Keeps showing you additions to the file that match grep, as it gets updated
