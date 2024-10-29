@@ -3,6 +3,11 @@
 ```
 sudo apt install apache2
 ```
+
+# remove
+```
+sudo apt remove apache2
+```
 # Initial default site
 ```
 /var/www/html
