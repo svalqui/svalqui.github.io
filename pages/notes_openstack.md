@@ -260,10 +260,12 @@ openstack server create
 ```
 Add volume to instance
 ```
+openstack server add volume <server> <volume>
 nova volume-attach instance vol_id
 ```
-Remove volume to instance
+Remove volume of instance
 ```
+openstack server remove volume <server> <volume>
 nova volume-detach instance_id vol_id
 ```
 Show console link
@@ -276,10 +278,10 @@ openstack console log show <instance-id>
 ```
 ### Server Maintenence
 ```
-nova stop <svr-id>
-nova start <svr-id>
+openstack server stop <svr-id>
+openstack server start <svr-id>
 or 
-nova reboot <svr-id>
+openstack server reboot <svr-id>
 ```
 
 ```
