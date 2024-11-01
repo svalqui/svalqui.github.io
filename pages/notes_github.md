@@ -125,6 +125,13 @@ $ git log --pretty=format:"%h %an %s" --graph
 $  git log --pretty=format:"%h %s" --graph
 # Full commit id
 $  git log --pretty=format:"%H %s" --graph
+
+#show only the name of the files changed
+$ git log --name-only --oneline
+
+#show on reverse order
+$ git log --reverse
+
 ```
 Search for commits containing
 ```
