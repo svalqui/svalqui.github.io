@@ -118,8 +118,8 @@ $ git remote prune origin
 # History
 See the commit history
 ```
-# Short header, author name, description
-$ git log --pretty=format:"%h %an %s" --graph
+# Short header, time, author name, description, since
+$ git log --pretty=format:"%h %cs %an %s" --graph --since="2018-05-09"
 
 # Only header and description
 $  git log --pretty=format:"%h %s" --graph
