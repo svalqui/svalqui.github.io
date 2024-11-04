@@ -120,6 +120,10 @@ See the commit history
 ```
 # Short header, time, author name, description, since
 $ git log --pretty=format:"%h %cs %an %s" --graph --since="2018-05-09"
+# Short header, time, author name, description, since, include file names of changed files
+$ git log --pretty=format:"%h %cs %an %s" --graph --since="2018-05-09" --stat
+# show it on reverse order
+$ git log --pretty=format:"%h %cs %an %s" --since="2018-05-09" --stat --reverse
 
 # Only header and description
 $  git log --pretty=format:"%h %s" --graph
