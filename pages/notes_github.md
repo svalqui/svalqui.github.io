@@ -132,6 +132,9 @@ $ git log --name-only --oneline
 #show on reverse order
 $ git log --reverse
 
+#show commits since a given commit
+$ git rev-list <since_hash>..HEAD
+
 ```
 Search for commits containing
 ```
@@ -221,3 +224,5 @@ Updating a git-review
 - amend: $ git commit --amend
 - git review: $ git review
 
+# References
+https://stackoverflow.com/questions/7693249/how-to-list-commits-since-certain-commit
