@@ -134,6 +134,10 @@ $ git log --reverse
 
 #show commits since a given commit
 $ git rev-list <since_hash>..HEAD
+#show coomits since a given commit including id, author and description
+$ git rev-list --pretty=format:"%h %an %s" --graph <since_hash>..HEAD
+#show coomits in reverse aorder
+$ git rev-list --reverse --pretty=format:"%h %an %s" <since_hash>..HEAD
 
 ```
 Search for commits containing
