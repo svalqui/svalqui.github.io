@@ -37,9 +37,21 @@ Removing a directory
 $rm -r mydir
 ```
 
-## find
+## grep
+```
+# match to include System, Memory, Processor
+| grep -i -e System -e Memory -e Processor
+-e pattern
+-i ignore case
 
-file containing, use grep
+# include x lines before and after match
+| grep -A 10 -i -e product
+| grep -A 10 -B 10 -i -e product
+
+egrep "Failed|failure" /var/log/auth.log
+```
+
+find files containing, use grep
 ```
 recursevely - word
 # grep -nrs 'word-to-look-for' /<directory-path>
@@ -55,7 +67,9 @@ In which line was found
 grep -n this_word /var/log/on_this_file
 ```
 
-file by name, use find
+## find
+
+find file by name, use find
 ```
 find . -name "*<str-here>*"
 find /. -name 'toBeSearched.file' 2>/dev/null # send error to null
@@ -1614,18 +1628,6 @@ set number
 ```
 diff file1 file2
 diff -y file1 file2
-```
-
-## grep
-```
-# match to include System, Memory, Processor
-| grep -i -e System -e Memory -e Processor
--e pattern
--i ignore case
-
-# include x lines before and after match
-| grep -A 10 -i -e product
-| grep -A 10 -B 10 -i -e product
 ```
 
 # Unclasified
