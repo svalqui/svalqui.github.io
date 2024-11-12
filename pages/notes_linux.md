@@ -1583,6 +1583,13 @@ use read to read the output of a command line by line
 # Read the pid of processes
 ps -ef | while read line; do my_pid=$(echo $line | cut -d' ' -f2); echo $my_pid; done
 ```
+## Array to string
+```
+my_arr=("a" "b" "c")
+
+my_string="${my_arr[*]}"
+```
+
 # Shutdown
 ## force shutdown
 ```
