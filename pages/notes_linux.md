@@ -1740,9 +1740,15 @@ sudo dpkg-reconfigure lightdm
 # configuring a yubikey
 https://gist.github.com/artizirk/d09ce3570021b0f65469cb450bee5e29
 
-# ssl certificates verify
+# ssl certificates 
+
+## verify
 ```
 openssl x509 -in /peth/to/file.crt -text -noout
+```
+## when expires
+```
+openssl x509 -in /peth/to/file.crt -noout -enddate
 ```
 # sound audio
 
