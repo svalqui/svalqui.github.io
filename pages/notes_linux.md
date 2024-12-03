@@ -1742,7 +1742,7 @@ https://gist.github.com/artizirk/d09ce3570021b0f65469cb450bee5e29
 
 # ssl certificates verify
 ```
-openssl x509 -in /peth/to/file.crt -test -noout
+openssl x509 -in /peth/to/file.crt -text -noout
 ```
 # sound audio
 
