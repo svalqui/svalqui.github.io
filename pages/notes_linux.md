@@ -690,6 +690,10 @@ Keep only last 2 days
 ```
 journalctl --vacuum-time=2d
 ```
+In a time frame
+```
+# journalctl --since "2024-10-26 00:00:00" --until "2024-12-31 00:00:00"
+```
 Keep Only 500Mb in the log
 ```
 sudo journalctl --vacuum-size=500M
