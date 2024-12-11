@@ -413,6 +413,14 @@ Show the attached servers to a vol
 openstack volume attachment show
 cinder attachment-list --all --volume-id <vol_id>
 ```
+Detach the volume from instance
+```
+$ openstack server remove volume <svr-id> <vol-id>
+or
+openstack volume attachment delete --os-volume-api-version 3.27 <attachment_id>
+
+```
+
 Show the vols attached to svr_id
 ```
 cinder attachment-show <svr_id>
