@@ -568,4 +568,6 @@ openstack container list --all
 
 openstack object list <container-name> --long
 
+openstack object save <container-name> <obj-name/fila-name>
+
 ```
