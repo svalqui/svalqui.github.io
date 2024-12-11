@@ -563,3 +563,9 @@ $ openstack keypair list --user <user>
 ```
 
 # Swift
+```
+openstack container list --all
+
+openstack object list <container-name> --long
+
+```
