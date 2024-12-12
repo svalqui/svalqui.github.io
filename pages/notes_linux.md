@@ -1060,7 +1060,9 @@ $ ssh-add Remote_Servers.pub
 ``` 
 Adding a public key to a server so the user can ssh to the server
 ```
+From the server
 # cat /tmp/id_rsa_user_pub >> ~USER/.ssh/authorized_keys
+
 ```
 use a public key
 ```
