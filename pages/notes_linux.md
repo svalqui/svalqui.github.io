@@ -673,6 +673,10 @@ Only lightdm messages
 ```
 sudo journalctl -u lightdm
 ```
+Only gpg
+```
+sudo journalctl -u gpg-agent
+```
 By Process
 ```
 sudo journalctl -t systemd 
