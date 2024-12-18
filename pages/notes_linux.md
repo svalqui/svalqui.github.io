@@ -153,6 +153,10 @@ Open fiels in a given directory
 ```
 # lsof +D '/usr/local/'
 ```
+For how long they have been opened
+```
+lsof | grep -e "[[:digit:]]\+w"
+```
 
 ## Files and directories are the same
 https://askubuntu.com/questions/421712/comparing-the-contents-of-two-directories
