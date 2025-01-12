@@ -139,6 +139,20 @@ docker top <id or name>
 ```
 docker inspect <id or name>
 ```
+# Docker Service
+
+```
+# Stop Service
+systemctl stop docker
+
+# Start Service
+systemctl start docker
+
+# Restart Service
+systemctl restart docker
+
+```
+
 # Networking
 exposing ports
 ```
