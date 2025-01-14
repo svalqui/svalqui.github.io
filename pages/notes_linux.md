@@ -201,10 +201,6 @@ fdisk -l /dev/sda
 or
 cat /proc/partitions
 ````
-Fix disk with errors, corrupted files
-```
-fsck -yf /dev/<your-disk-partition-here>
-```
 List the scsi device
 ```
 # lsscsi
@@ -359,6 +355,16 @@ $ sudo mount -a
 check mount works
 ```
 $ df -h
+```
+## Fix disk with errors, corrupted files, clean structure
+
+for Ext4 partitions
+```
+fsck -yf /dev/<your-disk-partition-here>
+```
+for xfs partitions
+```
+xfs_repair /dev/vdb4
 ```
 ## Home in another partition
 1. from your spare space create a new partition ext4 for your home directories
