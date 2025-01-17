@@ -26,3 +26,9 @@ List Installed Apss
 from django.conf import settings
 for i in settings.INSTALLED_APPS:      print(i)
 ```
+# Hos to set a contect processor
+to add settings values to views
+
+https://stackoverflow.com/questions/433162/can-i-access-constants-in-settings-py-from-templates-in-django
+
+https://docs.djangoproject.com/en/5.1/ref/templates/api/#writing-your-own-context-processors
