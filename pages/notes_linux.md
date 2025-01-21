@@ -1656,6 +1656,15 @@ set number
 diff file1 file2
 diff -y file1 file2
 ```
+Compare files on directories
+```
+diff -qrs dir1/ dir2/
+```
+Compare and show the differences
+```
+diff -bur dir1/ dir2/
+
+```
 
 # Unclasified
 
