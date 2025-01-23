@@ -1137,6 +1137,11 @@ Check root authentication
 ```
 # sudo sshd -T | grep -E -i 'ChallengeResponseAuthentication|PasswordAuthentication|UsePAM|PermitRootLogin'
 ```
+Update a global parameter
+```
+$ sudo sshd -T -o PasswordAuthentication=no
+```
+
 ## ssh server configuration
 Allow X11
 ```
