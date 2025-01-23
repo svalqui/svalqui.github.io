@@ -1086,6 +1086,7 @@ debug  a connection
 ```
 ssh -vvv root@my-server.org
 ```
+
 ## ssh lock and warn root
 ```
 # cat /root/.ssh/authorized_keys
@@ -1131,6 +1132,10 @@ $ ssh -R 6311:localhost:631 remotehost
 Show auth methods
 ```
 $ ssh -o PreferredAuthentications=none localhost
+```
+Check root authentication
+```
+# sudo sshd -T | grep -E -i 'ChallengeResponseAuthentication|PasswordAuthentication|UsePAM|PermitRootLogin'
 ```
 ## ssh server configuration
 Allow X11
