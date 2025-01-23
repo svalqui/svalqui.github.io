@@ -311,6 +311,17 @@ live migrate
 openstack server migrate --os-compute-api-version 2.56 --live-migration --host <host-name> <svr-id>
 nova live-migration <svr-id> <target-host-name>
 ```
+Server resize
+```
+openstack server resize --flavor <flavor-id or name> <svr-id>
+```
+
+Server shelve
+```
+openstack server shelve --offload <svr-id>
+```
+
+
 ### Networking
 
 Changing the IP address
