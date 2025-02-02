@@ -893,6 +893,28 @@ nc localhost 45678
 nc localhost 45679
 # you shuld see what is typed on the other session
 ```
+## netstat
+```
+# Network stats
+netstat -s
+
+# show the progran each socket belongs to
+netstat -p
+
+# show listening sockets
+netstat -l
+
+# Interfaces stats, including error
+netstat -i
+netstat -i | column -t  # Show it on a table
+
+# Show the routing tables
+netstat -nr
+# n use numberial address form
+# r routing tables
+
+```
+
 ## nmap
 ````
 No probes
@@ -973,13 +995,11 @@ dig <domain-name> +short
 ```
 ip -s link # Show the interfaces stats
 cat /proc/net/dev  # As above
-netstat -i  # As above
 ethtool <interface> 
 $ sudo iptraf
 ip link show  # list the interfaces, link status and ip addresses
 lspci | grep Ethernet # Show show Ethernet controller, NIC
 ifconfig -a | grep Link  # Show interfaces stats
-netstat -i | column -t # Show interfaces stats on a table
 ip route | column -t # Show the routes on a table
 netstat -r  # show the kernal ip routing table
 ```
