@@ -904,6 +904,9 @@ netstat -p
 # show listening sockets
 netstat -l
 
+# show established socket, tcp + program
+netstat -tp
+
 # Interfaces stats, including error
 netstat -i
 netstat -i | column -t  # Show it on a table
@@ -912,7 +915,6 @@ netstat -i | column -t  # Show it on a table
 netstat -nr
 # n use numberial address form
 # r routing tables
-
 ```
 
 ## nmap
