@@ -1323,10 +1323,11 @@ check package running
 sudo service <service> status
 sudo service ssh status
 ```
-check package installed and next version available
+check package installed and next version available and repository
 ```
 apt policy <package-name>
 apt policy openssh-server
+apt-cache policy rabbitmq-server
 ```
 install a package including dependencies
 ```
