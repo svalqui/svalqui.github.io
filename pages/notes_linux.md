@@ -1306,6 +1306,10 @@ Install a package
 ```
 sudo dpkg -i DEB_PACKAGE
 # sudo apt --fix-broken install ./filename.deb # to install dependencies
+
+# Install a particular version shown on apt-cahe policy
+sudo apt-get install http-server=3.11.28-1
+
 ``` 
 remove a Package
 ```
