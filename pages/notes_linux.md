@@ -1309,11 +1309,19 @@ sudo dpkg -i DEB_PACKAGE
 
 # Install a particular version shown on apt-cahe policy
 sudo apt-get install http-server=3.11.28-1
-
-``` 
+```
+install a package including dependencies
+```
+sudo apt-get install gnome-terminal
+```
 remove a Package
 ```
 sudo dpkg -r PACKAGE_NAME
+```
+remove a package and its dependencies
+```
+sudo apt-get --purge remove gnome-terminal
+sudo apt-get remove --purge <packge-name>
 ```
 check packages installed
 ```
@@ -1332,10 +1340,6 @@ check package installed and next version available and repository
 apt policy <package-name>
 apt policy openssh-server
 apt-cache policy rabbitmq-server
-```
-install a package including dependencies
-```
-sudo apt-get install gnome-terminal
 ```
 search cache packages
 ```
@@ -1366,11 +1370,6 @@ show all packages in a repo
 # ls /var/lib/apt/lists/*_Packages
 and open or grep  the corresponding repo file
 # grep ^Package: /var/lib/apt/lists/<repo_here>_Packages
-```
-remove a package
-```
-sudo apt-get --purge remove gnome-terminal
-sudo apt-get remove --purge <packge-name>
 ```
 show deb info
 ```
