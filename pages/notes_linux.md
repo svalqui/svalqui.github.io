@@ -469,6 +469,10 @@ smbclient //mediaflux.yourdomain.net/your-proj -m SMB2 -W <AD-domain> -U <userna
 ```
 ps aux --sort=-%mem
 ```
+## print a process tree
+```
+ps axjf
+```
 ## stats
 ```
 top
