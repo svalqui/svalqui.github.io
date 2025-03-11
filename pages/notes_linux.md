@@ -1281,6 +1281,8 @@ grep ^[^#] /etc/apt/sources.list /etc/apt/sources.list.d/*
 ```
 Add a repo
 ```
+
+# Add a new fil e on directory  /etc/apt/sources.list.d/my-repo.list
 # Sources are located in /etc/apt/sources.list.d
 # there should be a files for you repo, my-cia.list containing all the repos for your cia
 #
