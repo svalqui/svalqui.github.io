@@ -545,6 +545,10 @@ sar -u 5
 sudo apt install sysbench
 sysbench --test=cpu run
 ```
+## stress test
+```
+ stress --cpu 128 --vm 256 --vm-bytes 7000M --timeout 15m
+```
 
 # Memory
 ## Memory issues
