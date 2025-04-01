@@ -58,11 +58,15 @@ $ deactivate
 ```
 Create
 ```
-python3 -m venv /path/to/new/virtual/environment
-# or create venv on current directory
+# create venv on current directory
 python3 -m venv venv
+# or
+python3 -m venv /path/to/new/virtual/environment
 ```
-
+Deactivate
+```
+$ deactivate
+```
 ## virtualenv
 Install
 sudo pip3 install virtualenv
