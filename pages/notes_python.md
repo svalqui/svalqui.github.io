@@ -53,7 +53,10 @@ python3 -m flake8 scripts setup.py
 
 # virtual environments
 ```
+$. .venv/bin/activate
+# or
 $ source venv/bin/activate
+# Deactivate 
 $ deactivate
 ```
 Create
@@ -62,6 +65,12 @@ Create
 python3 -m venv venv
 # or
 python3 -m venv /path/to/new/virtual/environment
+```
+Create a venv with a different version of python, you need the version already installed on your system
+```
+# https://stackoverflow.com/questions/1534210/use-different-python-version-with-virtualenv
+$ virtualenv --python="/usr/bin/python3.12" ".venv"
+
 ```
 Deactivate
 ```
