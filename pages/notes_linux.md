@@ -1501,6 +1501,10 @@ fail2ban-client status
 ```
 fail2ban-client status <JailName>
 ```
+### all banned IPs
+```
+sudo grep Ban /var/log/fail2ban.log*
+```
 ### unban ip
 ```
 fail2ban-client set <jail_name> unbanip <ip_address>
