@@ -1514,6 +1514,11 @@ fail2ban-client set sshd unbanip <ip_address>
 ```
 fail2ban-client status sshd
 ```
+### jail times and configuration
+```
+# cat /etc/fail2ban/jail.conf
+bantime      = 1h
+```
 ## Puppet
 Puppet Client configuration
 ```
