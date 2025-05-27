@@ -885,6 +885,17 @@ show leases
 ```
 cat /var/lib/dhcp/dhclient.et0.leases
 ```
+## whois
+Show icann information of an IP address
+```
+whois <ip-add>
+```
+## mtr
+my traceroute with live information
+```
+mtr <ip/or_site>
+```
+
 ## nc netcat
 check if ports are open, reads and writes data on network connections
 ```
