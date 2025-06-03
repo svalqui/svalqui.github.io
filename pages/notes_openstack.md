@@ -236,6 +236,7 @@ nova instance-action-list <server-id>
 ```
 Show detail of the action
 ```
+openstack server event show <svr-id> <req-id>
 nova instance-action <server-id> <req-id>
 ```
 Show a link to the console
