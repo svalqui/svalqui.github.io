@@ -1449,6 +1449,18 @@ To move to another session from a session
 ```
 press Ctrl+B, and then S
 ```
+sync typing, parallel typing
+```
+# Open a tmux session
+tmux
+# split the screen on 2
+Ctrl+b %   
+# ssh to your remote hosts
+# call the tmaaux command line
+Ctrl-b :
+# on the cli enable sync typing 
+setw synchronize-panes on 
+```
 https://linuxize.com/post/getting-started-with-tmux/
 ```
     Ctrl+b c Create a new window (with shell)
@@ -1461,6 +1473,12 @@ https://linuxize.com/post/getting-started-with-tmux/
     Ctrl+b ; Toggle between the current and previous pane
     Ctrl+b x Close the current pane
     Ctrl+b ] , enter in scroll mode, the you can use the arrows 'q' to quit scroll mode
+    Ctrl+b Arrowa, to move between panes
+    Ctrl+b :  Opens tmux command pront
+Command prompt commnads
+setw synchronize-panes on   , all typed on one panes will be replicated on the others, sync typing, parallel tyeping
+setw synchronize-panes off  , switches off sync typing 
+
 ```
 ## VirtualBox
 Install
