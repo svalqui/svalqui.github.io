@@ -1861,11 +1861,24 @@ https://gist.github.com/artizirk/d09ce3570021b0f65469cb450bee5e29
 ## verify
 ```
 openssl x509 -in /peth/to/file.crt -text -noout
+openssl x509 -in /etc/ssl/certs/my-cert.pem -noout -text
+```
+## Names registered
+```
+openssl x509 -in /etc/ssl/private/my-priv.pem -noout -subject
+openssl x509 -in /etc/ssl/private/my-priv.pem -noout -ext subjectAltName
+
 ```
 ## when expires
 ```
 openssl x509 -in /peth/to/file.crt -noout -enddate
+openssl x509 -in /etc/ssl/private/my-priv.pem -noout -enddate
 ```
+## check the md5 encryption
+```
+openssl x509 -in /etc/ssl/certs/my-cert.pem -noout -modulus | openssl md5
+```
+
 # sound audio
 
 ## microphone loopback to headset
