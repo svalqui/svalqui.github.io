@@ -175,6 +175,8 @@ All in /
 ```
 sudo du -smx /* | sort -n
 sudo du -hsx /* | sort -rh | head -n 40
+# All in home, just parent directories
+du -h --max-depth=1 /home | sort -rh | head -10
 
 Top biggest
 find / -printf '%s %p\n'| sort -nr | head -10
