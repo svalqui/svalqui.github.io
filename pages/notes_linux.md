@@ -901,6 +901,7 @@ mtr <ip/or_site>
 ## nc netcat
 check if ports are open, reads and writes data on network connections
 ```
+nc -v -w1 -z <ip> <port>
 nc -zv <ip> <port> # Check if port on ip is open
 timeout 3 nc -z <ip> <port> && echo good || echo nope
 nc -l -s <ip> <port> # Listen source ip on port
