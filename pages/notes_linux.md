@@ -1881,7 +1881,11 @@ openssl x509 -in /etc/ssl/private/my-priv.pem -noout -enddate
 ```
 openssl x509 -in /etc/ssl/certs/my-cert.pem -noout -modulus | openssl md5
 ```
-
+## convert crt to PEM
+https://stackoverflow.com/questions/4691699/how-to-convert-crt-to-pem
+```
+openssl x509 -in mycert.crt -out mycert.pem -outform PEM
+```
 # sound audio
 
 ## microphone loopback to headset
