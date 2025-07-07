@@ -688,22 +688,27 @@ sudo journalctl -k
 ```
 
 By Unit
-Only Networkmanager messages
+
 ```
+# Only Networkmanager messages
 sudo journalctl -u NetworkManager.service
-```
-Only lightdm messages
-```
+
+# Only lightdm messages
 sudo journalctl -u lightdm
-```
-Only gpg
-```
+
+# Only gpg
 sudo journalctl -u gpg-agent
 ```
 By Process
 ```
-sudo journalctl -t systemd 
-# sudo journalctl -t acvpnagent # Cisco Anyconect
+# systemd
+sudo journalctl -t systemd
+
+# puppet agent
+journalctl -rt puppet-agent
+
+# Cisco Anyconect
+sudo journalctl -t acvpnagent 
 ```
 Puppet related
 ```
