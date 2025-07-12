@@ -1,0 +1,2 @@
+- take the hardest issues from their team
+- do things people want
