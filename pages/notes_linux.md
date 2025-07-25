@@ -1021,7 +1021,8 @@ dig -x <ip-add> +short
 ```
 Check the IP from a Name
 ```
-dig <domain-name> +short
+dig <domain-dns-name> +short
+dig @1.1.1.1 <dns-name>  +noall +answer
 ```
 ## network monitor, interface stats
 ```
