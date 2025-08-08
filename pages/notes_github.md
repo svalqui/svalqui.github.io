@@ -166,7 +166,10 @@ Commits by user
 ```
 git shortlog -s
 ```
-
+# Troubleshooting
+```
+GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -vvv" git pull
+```
 # Gerrit
 Install Git Review
 ```
