@@ -66,7 +66,7 @@ sudo puppetserver ca list
 sudo puppetserver ca sign  --certname <hostname>
  
 # delete cert
-sudo puppetserver ca clean --certname
+sudo puppetserver ca clean --certname <hostname>
 ```
 ## facter
 ```
