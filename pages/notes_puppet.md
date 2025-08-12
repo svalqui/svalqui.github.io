@@ -73,5 +73,10 @@ sudo puppetserver ca clean --certname <hostname>
 # facter -j | jq '.hostname'
 # facter -j | jq '.os.distro'
 # facter -j | jq '.dmi'
+```
 
+## Query facts
+on the dashboard -> Query. 'API Endpoint' select facts
+```
+["and", ["=", "name", "hostname"], ["~", "certname", "<my-domain>"]]
 ```
