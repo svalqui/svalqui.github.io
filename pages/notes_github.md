@@ -24,6 +24,16 @@ git config user.email my.email@for.this.project.org
 
 https://gist.github.com/bgauduch/06a8c4ec2fec8fef6354afe94358c89e
 
+# Setup your token PAT Personal Access Token
+
+```
+# cache the token locally
+$ git config --global credential.helper cache
+
+# remove it if not longer needed
+$ git config --global --unset credential.helper
+$ git config --system --unset credential.helper
+```
 
 # Clone a repository
 ```
