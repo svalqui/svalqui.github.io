@@ -70,6 +70,19 @@ Check where docker root directory is pointing to
 ```
 # sudo docker info | grep "Docker Root Dir"
 ```
+
+Stop the docker service
+```
+sudo systemctl stop docker.service
+```
+
+Move the Docker directory
+```
+sudo mkdir /data/docker
+sudo rsync -aP /var/lib/docker/ /data/docker/
+
+```
+
 Create /etc/docker/daemon.json
 ```
 {
