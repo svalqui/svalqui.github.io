@@ -2,7 +2,7 @@
 
 ## Brakets
 ```
-{% load python_module %}  -> Loads python_module.py
+{% loaad python_module %}  -> Loads python_module.py
 
 {% block my_block %}
 {% include "dir/_scripts.html" %} -> includes other html files
