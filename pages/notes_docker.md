@@ -66,6 +66,10 @@ docker system prune
 ## Change docker storage location
 https://evodify.com/change-docker-storage-location/
 
+Check where docker root directory is pointing to
+```
+# sudo docker info | grep "Docker Root Dir"
+```
 Create /etc/docker/daemon.json
 ```
 {
