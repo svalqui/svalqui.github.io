@@ -2,8 +2,8 @@
 
 ## Brakets
 
-```
 
+{% load python_module %}  -> Loads python_module.py
 {% block my_block %}
 {% include "dir/_scripts.html" %} -> includes other html files
 {% endblock %}
@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% extends 'base.html' %} -> this file extends the contents of base.html 
-```
+
 ## Conditionals
 
 ### If
