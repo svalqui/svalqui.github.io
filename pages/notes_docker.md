@@ -160,10 +160,14 @@ docker inspect <id or name>
 
 ```
 # Stop Service
-systemctl stop docker
+sudo systemctl stop docker.service
+sudo systemctl stop docker.socket
+# systemctl stop docker
 
 # Start Service
-systemctl start docker
+sudo systemctl start docker.socket
+sudo systemctl start docker.service
+#systemctl start docker
 
 # Restart Service
 systemctl restart docker
