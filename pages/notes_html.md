@@ -2,9 +2,6 @@
 
 ## Brakets
 
-
- {% loaad python_module %}  -> Loads python_module.py
-
 ```
 
 {% block my_block %}
