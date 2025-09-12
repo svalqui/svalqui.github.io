@@ -158,6 +158,7 @@ Search for commits containing
 ```
 $ git log --all --grep='text-to-look-for'
 ```
+
 See the changes made by a single commit
 ```
 git diff <commit-hash>~ <commit-hash>
@@ -179,6 +180,22 @@ git shortlog -s
 # Troubleshooting
 ```
 GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -vvv" git pull
+```
+# differences
+
+```
+git diff branch-name
+# only file names
+git diff branch-name --name-only
+```
+between 2 branches
+```
+git diff branch1 branch2 --name-only
+```
+
+between files
+```
+git diff branch1:file.txt branch2:file.txt
 ```
 # Gerrit
 Install Git Review
