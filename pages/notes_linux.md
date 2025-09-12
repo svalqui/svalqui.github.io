@@ -945,6 +945,10 @@ netstat -i | column -t  # Show it on a table
 netstat -nr
 # n use numberial address form
 # r routing tables
+
+# IPs connected to 443
+netstat -tn 2>/dev/null | grep :443 | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head
+
 ```
 
 ## nmap
