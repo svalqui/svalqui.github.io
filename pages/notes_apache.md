@@ -67,6 +67,10 @@ sudo a2dissite my-site.org.conf
 /var/log/apache2/error.log
 /var/log/apache2/access.log
 ```
+live access
+```
+tail -f /var/log/apache2/access.log
+```
 
 # managing the service
 ```
