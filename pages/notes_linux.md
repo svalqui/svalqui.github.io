@@ -263,6 +263,9 @@ sudo lsof +L1
 
 # Check there is inodes free
 df -i
+
+# check pip cache
+/home/<usr>/.cache/pip
 ```
 Purge Docker
 ```
