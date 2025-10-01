@@ -406,6 +406,10 @@ List the volumes for a project
 ```
 openstack volume list  --project <project-name>
 ```
+List volume backup for all, is not project specific
+```
+openstack volume backup list --all-projects
+```
 Create a volume
 ```
 From Iamage
