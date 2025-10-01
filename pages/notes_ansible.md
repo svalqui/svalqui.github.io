@@ -48,8 +48,12 @@ ansible-playbook example.yml --skip-tags "stepone"
   tags:
     - stepone
 ```
+# Passing variables on the command line
+```
+ansible-playbook -v -i hosts -c local site.yml --extra-vars '{"foo": false}'
 
-
+ansible-playbook release.yml --extra-vars '{"version":"1.23.45","other_variable":"foo"}'
+```
 
 
 
