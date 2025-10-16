@@ -356,6 +356,8 @@ Add an entry to /etc/fstab
 mount
 ```
 $ sudo mount -a
+or
+cat /proc/mounts
 ```
 check mount works
 ```
