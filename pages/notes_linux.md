@@ -83,6 +83,12 @@ list files mounted on nautilius - Connect to Server
 ```
 ls -al /run/user/$UID/gvfs 
 ```
+
+## list files
+All files and directories
+```
+find /path -printf '%y %p\n'
+```
 ## tail
 ```
 shows the last 20 lines
