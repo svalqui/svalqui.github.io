@@ -1,8 +1,8 @@
 # Puppet
-## Godo to know
+## Good to know
 
-- *Profiles* — configures the technology stack.
-- *Roles* — uses multiple profiles to build a complete system configuration.
+- ***Profiles*** — configures the technology stack.
+- ***Roles*** — uses multiple profiles to build a complete system configuration.
 
 
 ## puppet agent configuration
