@@ -1,4 +1,12 @@
 # Puppet
+## Godo to know
+
+- *Profiles* — configures the technology stack.
+- *Roles* — uses multiple profiles to build a complete system configuration.
+
+
+## puppet agent configuration
+
 Puppet Client configuration
 ```
 /etc/puppetlabs/puppet/puppet.conf
