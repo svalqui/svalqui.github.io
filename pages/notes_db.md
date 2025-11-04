@@ -16,6 +16,12 @@ insert into  <table_name>(column_name1,) values ('Value_here1',);
 
 UPDATE <table_name> SET user_email = 'user1@email.com' WHERE user_name = 'User1';
 UPDATE <table_name> SET user_add = '123 St.' WHERE user_name = 'User1';
+
+Comparing schemas
+mysqldump --single-transaction --no-data db1 > db1-schema.sql
+mysqldump --single-transaction --no-data db2 > db2-schema.sql
+diff db1-schema.sql db2.schame.sql
+
 ```
 
 # Postgres
