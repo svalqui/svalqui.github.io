@@ -1,3 +1,9 @@
+Back up DB
+
+```
+#cli
+mysqldump db-name > db1-bkp.sql
+```
 # Maria
 ```
 
