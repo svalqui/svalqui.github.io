@@ -1375,6 +1375,10 @@ install a package including dependencies
 ```
 sudo apt-get install gnome-terminal
 ```
+install varios codependent deb files
+```
+apt --fix-broken install /path/file1.deb /path/file2.deb  /path/file3.deb
+```
 remove a Package
 ```
 sudo dpkg -r PACKAGE_NAME
