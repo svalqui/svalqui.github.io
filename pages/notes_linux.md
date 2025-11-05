@@ -1668,7 +1668,7 @@ echo 1 > /proc/sys/kernel/sysrq
 echo b > /proc/sysrq-trigger
 ```
 
-# Files edit, content
+# Files edit, content, replace
 ## vi
 ```
 yy copy yank
@@ -1702,6 +1702,12 @@ $ vi .vimrc
 # on the file append
 set number
 ```
+## replace on various files
+https://stackoverflow.com/questions/11392478/how-to-replace-a-string-in-multiple-files-in-linux-command-line
+```
+grep -rli 'old-word' * | xargs -i@ sed -i 's/old-word/new-word/g' @
+```
+
 ## diff
 ```
 diff file1 file2
