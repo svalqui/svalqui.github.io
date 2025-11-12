@@ -59,7 +59,9 @@ echo "START=yes" > /etc/default/puppet
 ```
 Clear pupppet agent on host
 ```
-delete /etc/puppetlabs/puppet/ssl.
+rm -r /etc/puppetlabs/puppet/ssl
+or 
+rm -r /var/lib/puppet/ssl/c
 # run puppet agent to request a new cert
 ```
 ## Puppet certs on ca server
