@@ -90,3 +90,36 @@ on the dashboard -> Query. 'API Endpoint' select facts
 ```
 ["and", ["=", "name", "hostname"], ["~", "certname", "<my-domain>"]]
 ```
+## Python snippet
+
+```
+#!/usr/bin/env python
+import pypuppetdb
+from pypuppetdb.QueryBuilder import *
+
+def get_inventory():
+    my_key = '/etc/puppetlabs/puppet/ssl/private_keys/svr1.pem'
+    my_cert = '/etc/puppetlabs/puppet/ssl/certs/svr1.pem'
+    my_ca = '/etc/puppetlabs/puppet/ssl/certs/ca.pem'
+    puppetdb = pypuppetdb.connect(
+        ssl_key = my_key,
+        ssl_cert = my_cert,
+        ssl_verify = my_ca,
+        host='puppetdb.my-domain.au',
+        port=8081
+    )
+
+    nodequery = AndOperator()
+    envquery = OrOperator()
+    envquery.add(EqualsOperator('catalog_environment', "my_env"))
+    nodequery.add(envquery)
+    nodes = puppetdb.nodes(query=nodequery)
+    for n in nodes:
+        print(n)
+
+def main():
+   get_inventory()
+
+if __name__ == '__main__':
+
+```
