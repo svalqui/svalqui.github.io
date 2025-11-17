@@ -1853,6 +1853,11 @@ https://stackoverflow.com/questions/4691699/how-to-convert-crt-to-pem
 ```
 openssl x509 -in mycert.crt -out mycert.pem -outform PEM
 ```
+## combining with private 
+on load balancers sometimes you need the combined, the cert including the private
+```
+cat my_cert.crt my_cert_private.key > my_cert.pem
+```
 # sound audio
 
 ## microphone loopback to headset
