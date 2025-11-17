@@ -5,6 +5,11 @@
 - ***Roles*** — uses multiple profiles to build a complete system configuration.
 
 
+- ***hiera*** — contains the parameters(data) values you use to configure a host.
+- ***manifest*** — contains the puppet code, uses variables to refer to the hiera values
+
+Manifest -> uses modules and variables
+
 ## puppet agent configuration
 
 Puppet Client configuration
