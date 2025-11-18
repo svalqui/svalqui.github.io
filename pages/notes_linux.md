@@ -538,6 +538,7 @@ Stop start services
 ```
 service sssd stop
 service sssd start
+systemctl [start|stop] service.service
 ```
 Remove a service
 https://superuser.com/questions/513159/how-to-remove-systemd-services
