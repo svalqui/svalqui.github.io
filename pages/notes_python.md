@@ -91,6 +91,10 @@ source my-env/bin/activate
 ```
 find / -d -name "dist-packages" 2>/dev/null
 ```
+or
+```
+python -m site
+```
 
 # Create a deb package from you project
 ```
