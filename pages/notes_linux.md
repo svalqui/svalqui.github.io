@@ -1383,6 +1383,8 @@ apt --fix-broken install /path/file1.deb /path/file2.deb  /path/file3.deb
 remove a Package
 ```
 sudo dpkg -r PACKAGE_NAME
+# and remove configuration files
+sudo dpkg -P package-name
 ```
 remove a package and its dependencies
 ```
@@ -1419,7 +1421,7 @@ show the version available of the package
 ```
 apt-cache showpkg <package-name>
 ```
-show source of package
+show source of package and it status
 ```
 dpkg -s <package>
 ```
