@@ -49,6 +49,10 @@ $rm -r mydir
 | grep -A 10 -B 10 -i -e product
 
 egrep "Failed|failure" /var/log/auth.log
+
+# lines not commented
+cat /path/my.conf | grep "^[^#;]"
+
 ```
 
 find files containing, use grep
