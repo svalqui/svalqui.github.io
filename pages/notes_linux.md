@@ -479,7 +479,11 @@ smbclient //mediaflux.yourdomain.net/your-proj -m SMB2 -W <AD-domain> -U <userna
 # id <username>
 # kinit <username>@YOURDOMAIN.ORG
 # sudo mount -t cifs -o cruid=$USER,sec=krb5,uid=$UID,gid=$(id -g),vers=2.0 //mediaflux.yourdomain.org/your-proj /mnt/testmount
-``` 
+```
+##list files mounted on nautilius - Connect to Server
+```
+ls -al /run/user/$UID/gvfs 
+```
 
 # Processes
 ## ordered by memeory use
