@@ -1505,7 +1505,9 @@ sync typing, parallel typing
 ```
 # Open a tmux session
 tmux
-# split the screen on 2
+# split the screen on 3 horizontally
+Ctrl+b "
+# split the screen on 2 vertically
 Ctrl+b %   
 # ssh to your remote hosts
 # call the tmaaux command line
