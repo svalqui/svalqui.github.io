@@ -219,14 +219,6 @@ List the scsi device
  or
  # cat /proc/scsi/scsi 
 ```
-List Physical Volumes
-```
- # pvdisplay
-```
-List Logical Volumes
-```
- # lvdisplay
-```
 List disk space
 ```
  # df -h
@@ -235,10 +227,29 @@ io statistics
 ```
 iostat -x
 ```
-Disk use and other siak stats and data
+Disk use stats and data
 ```
 $ sudo smartctl -a /dev/nvme0n1p5
 ```
+## Disk Logical Volume 
+
+List Physical Volumes
+```
+# Brief
+# pvs
+
+# Detailed
+# pvdisplay
+```
+List Logical Volumes
+```
+ # lvdisplay
+```
+Create
+```
+pvcreate /dev/sdb /dev/sdc
+```
+
 ## Disk storage performance benchmark
 Check that you have the space to create the file first
 ```
