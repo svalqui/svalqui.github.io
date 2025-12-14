@@ -136,6 +136,14 @@ Show
 tar -tf my-file.tar
 # or tar -tvf my-file.tar
 ```
+### full disk
+```
+# https://askubuntu.com/questions/524418/how-would-i-use-tar-for-full-backup-and-restore-with-system-on-ssd-and-home-on-h
+sudo su
+cd /
+tar -cvpzf backup.tar.gz --exclude=/backup.tar.gz --one-file-system / 
+```
+
 ## rsync
 copy full content of a disk to another
 ```
