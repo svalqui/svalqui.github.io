@@ -137,6 +137,12 @@ tar -tf my-file.tar
 # or tar -tvf my-file.tar
 ```
 ## rsync
+copy full content of a disk to another
+```
+# https://www.baeldung.com/linux/rsync-clone-file-system-hierarchy
+# rsync -axHAWXS --numeric-ids --info=progress2 /mnt/sourcePart/ /mnt/destPart
+```
+
 copy(backup) files to /home/usr/Desktop
 ```
 rsync -aAXvPh /media/usr/Data/bkp-laptop/home/usr/Desktop/ /home/usr/Desktop/
