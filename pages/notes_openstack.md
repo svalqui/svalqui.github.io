@@ -210,6 +210,7 @@ $ openstack server show <device-id>
 ```
 Show servers in a given project
 ```
+openstack server list --project <prj-id or prj-name>
 nova list --all-tenants --tenant <project-id>
 nova list --all --tenant <project-id> --fields name,status,networks,flavor:original_name,metadata
 ```
@@ -219,9 +220,9 @@ openstack server list --host <host-name> --all-projects
 ```
 Show servers in an availability zone
 ```
-nova list --all --availability-zone <zone-name>
-or
 openstack server list --all-projects --availability-zone <zone-name>
+or
+nova list --all --availability-zone <zone-name>
 ```
 Show Server logs, for troubleshooting (ssh, etc)
 ```
