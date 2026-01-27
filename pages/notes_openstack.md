@@ -299,6 +299,18 @@ rescue
 $ openstack server rescue <svr-id>
 $ openstack serve unrescue <svr-id>
 ```
+Server states
+```
+$ openstack server pause INSTANCE_NAME
+$ openstack server unpause INSTANCE_NAME
+
+$ openstack server suspend INSTANCE_NAME
+$ openstack server resume INSTANCE_NAME
+
+$ openstack server shelve SERVERNAME
+$ openstack server unshelve SERVERNAME
+```
+
 reset the status to active
 ```
 openstack server set --state active <svr-id>
