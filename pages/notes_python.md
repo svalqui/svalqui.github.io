@@ -32,6 +32,7 @@ sudo pip3 install <package-name> --upgrade
 ## downgrade a module or install a particular version
 ```
 pip install --force-reinstall -v "my_module==0.0.2"
+ pip install --force-reinstall -v "openstack==3.1.0"
 pip install --for-reinstall -v "ansible-core==2.18.5"
 ```
 
