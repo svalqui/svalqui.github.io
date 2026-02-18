@@ -600,6 +600,12 @@ monitor, average every 5 seconds
 ```
 sar -u 5
 ```
+## performance related
+which processes use more cpu
+```
+ps aux --sort=%cpu
+```
+
 ## speed/performance benchmark
 ```
 sudo apt install sysbench
@@ -719,8 +725,12 @@ Domain instance-00114043 has been undefined
 
 # journalctl
 ```
-Live what is been loged
+Live what is being loged
 journalctl -fan100
+the most recent first
+journalctl -r
+Critical errors
+journalctl -p 3 -xb
 The last 100
 journalctl -n 100
 The last in 1 hour
