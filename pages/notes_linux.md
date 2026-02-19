@@ -1199,6 +1199,10 @@ From the server
 # cat /tmp/id_rsa_user_pub >> ~USER/.ssh/authorized_keys
 
 ```
+Remove a mismatched key
+```
+ssh-keygen -f '/home/sergio/.ssh/known_hosts' -R 'hostname'
+```
 use a public key
 ```
 ssh -i .ssh\remote_server.pub <user>@mydomain.com.au
