@@ -1372,6 +1372,11 @@ tail -f wget-log
 
 # curl
 
+check website
+```
+ curl --head https://mysite
+```
+
 speed of a website
 ```
 curl -s -w %{time_total}\\n -o /dev/null http://my.web.site.org
