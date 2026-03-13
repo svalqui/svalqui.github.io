@@ -99,6 +99,10 @@ git pull origin master
 git checkout origin/master <filename>
 ```
 
+## commit just one file
+``
+git commit path/to/myfile.sh -m 'new feature'
+``
 ## Set remote origin
 ```
 git remote -v
