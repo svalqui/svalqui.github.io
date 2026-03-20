@@ -600,6 +600,13 @@ monitor, average every 5 seconds
 ```
 sar -u 5
 ```
+usage of a process
+```
+ps aux | grep <process-name>
+ps -p <process-id> -o %cpu,%mem
+# live
+top -p <process-id> 
+```
 ## performance related
 which processes use more cpu
 ```
