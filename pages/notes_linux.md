@@ -479,6 +479,10 @@ or via /etc/auto.local
 ```
 <local-dir>	-fstype=nfs,nfsvers=3,exec	my-nfs.org.au:/<nfs-share-vol>
 ```
+## smb
+```
+sudo mount -t cifs -o username=<user@domain> //share/Directory /mnt/smb
+```
 ## ssh mount
 ```
 sshfs#root@sharing_svr.org.au:/shared/dir /mnt/local_home fuse allow_other,default_permissions,IdentityFile=/root/.ssh/details 0 0
