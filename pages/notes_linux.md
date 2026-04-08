@@ -481,7 +481,7 @@ or via /etc/auto.local
 ```
 ## smb
 ```
-sudo mount -t cifs -o username=<user@domain> //share/Directory /mnt/smb
+sudo mount -t cifs -o username=<user@domain> //share/Directory\ used /mnt/smb
 ```
 ## ssh mount
 ```
