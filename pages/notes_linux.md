@@ -1556,6 +1556,12 @@ To move to another session from a session
 ```
 press Ctrl+B, and then S
 ```
+enable scrolling
+```
+set -g mode-mouse on
+or
+echo "set -g mouse on" >> ~/.tmux.conf
+```
 sync typing, parallel typing
 ```
 # Open a tmux session
