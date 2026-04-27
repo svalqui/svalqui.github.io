@@ -456,9 +456,9 @@ openstack volume attachment delete --os-volume-api-version 3.27 <attachment_id>
 
 ```
 
-Show the vols attached to svr_id
+Show the vols attachement details
 ```
-cinder attachment-show <svr_id>
+cinder attachment-show <vol_id>
 ```
 show snapshots for a vol_id
 ```
