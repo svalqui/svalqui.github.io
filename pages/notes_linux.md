@@ -1443,6 +1443,14 @@ install varios codependent deb files
 ```
 apt --fix-broken install /path/file1.deb /path/file2.deb  /path/file3.deb
 ```
+upgrade a package
+```
+# if installed it will try to upgrade it to the latest version
+sudo apt install <pkg-name>
+# or to only upgrade if is available
+sudo apt install --only-upgrade <pkg-name>
+
+```
 remove a Package
 ```
 sudo dpkg -r PACKAGE_NAME
