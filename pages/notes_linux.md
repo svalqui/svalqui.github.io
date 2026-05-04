@@ -738,6 +738,8 @@ Domain instance-00114043 has been undefined
 ```
 Live what is being loged
 journalctl -fan100
+Live what it logged related to a unit
+journalctl -u <unit-name> -f
 the most recent first
 journalctl -r
 Critical errors
