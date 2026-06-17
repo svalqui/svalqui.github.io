@@ -60,14 +60,18 @@ find files containing, use grep
 recursevely - word
 # grep -nrs 'word-to-look-for' /<directory-path>
 
-recursevely - expression
+# recursevely - expression
 grep -rnw '/path/to/somewhere/' -e 'pattern'
 
 grep this_word /var/log/on_this_file
 
 grep 'this_word\and_this_word' /var/log/on_this_file
 
-In which line was found
+# find special characters
+
+grep -rns server\\[ .
+
+# In which line was found
 grep -n this_word /var/log/on_this_file
 ```
 
