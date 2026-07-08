@@ -740,22 +740,21 @@ Domain instance-00114043 has been undefined
 
 # journalctl
 ```
-Live what is being loged
+# Live what is being loged
 journalctl -fan100
-Live what it logged related to a unit
-journalctl -u <unit-name> -f
-the most recent first
-journalctl -r
-Critical errors
+# kernel newer first
+journalctl -rk
+# Critical errors
 journalctl -p 3 -xb
-The last 100
+# Live what it logged related to a unit
+journalctl -u <unit-name> -f
+journalctl -r -u collectd
+# The last 100
 journalctl -n 100
-The last in 1 hour
+# The last in 1 hour
 journalctl --since "1 hour ago"
-The last day
+# The last day
 journalctl --since "1 day ago"
-Reverse order
-journalctl -r
 ```
 from last boot (-b -1) extended (-xe)
 ```
