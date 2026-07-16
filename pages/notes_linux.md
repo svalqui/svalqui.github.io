@@ -1712,11 +1712,17 @@ export PATH=/path/to/add:$PATH
 
 # Bash
 ## Bash Prompt
+~/.bashrc
 ```
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]($ENV-VAR)\[\033[00m\]\$ '
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;33m\]($ENV-VAR)\[\033[00m\]\$ '
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;33m\]$OS_PROJECT_NAME\[\033[00m\]\$ '
 ```
+Adding the time to your prompt
+```
+export PROMPT_COMMAND="echo -n \[\$(date +%H:%M:%S)\]\ "
+```
+
 ## for loop
 This
 ```
