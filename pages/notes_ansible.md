@@ -55,5 +55,22 @@ ansible-playbook -v -i hosts -c local site.yml --extra-vars '{"foo": false}'
 ansible-playbook release.yml --extra-vars '{"version":"1.23.45","other_variable":"foo"}'
 ```
 
+# show all the variables before the tasks are executed
 
+on mail.yml, before tasks
+
+```
+- hosts: all
+  gather_facts: yes
+
+
+- name: Show ansible_distribution (before any tasks)
+  ansible.builtin.debug:
+    var: ansible_distribution
+
+- name: Show variables for this host
+  ansible.builtin.debug:
+    var: hostvars[inventory_hostname]
+
+```
 
