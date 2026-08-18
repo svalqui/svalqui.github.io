@@ -279,7 +279,7 @@ sudo hdparm -Tt /dev/nvme0n1p5
 -t displays the speed of reading through the buffer cache to the disk without any prior caching of data.
 -T displays the speed of reading directly from the Linux buffer cache without disk access.
 ```
-## Clear Space, root full
+## Disk Clear Space, root full
 Purge old kernels
 ```
 dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y purge
@@ -336,7 +336,14 @@ Check what is using the disk
 ```
 lsof | grep -e "[[:digit:]]\+w"
 ```
-
+List the longest logs
+```
+ls -l -S /var/log/ | sort -k5 -n
+```
+Truncated long logs
+```
+truncate -s0 biglog.log
+```
 ## Disk format and partitions
 partion and format
 ```
