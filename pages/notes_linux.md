@@ -2032,3 +2032,29 @@ sudo apt-get install ssh-askpass-gnome
 screen -S "Minecraft server"
 java -Xmx1024M -Xms1024M -jar minecraft_server.1.17.1.jar nogui
 ```
+# CPR
+https://www.systutorials.com/bypassing-bad-fstab-failure-while-booting-linux/
+https://www.turbogeek.co.uk/solved-common-linux-boot-errors-and-how-to-fix-them/
+## Single user mode
+* At the GRUB menu, press e to edit the default entry
+* Find the linux line (not kernel — that’s legacy GRUB)
+* Add single to the end of the kernel parameters
+* Press Ctrl+x to boot
+```
+# mount root as read-write
+mount -o remount,rw /
+# Edit and fix fstab
+vi /etc/fstab
+```
+## Boot to Bash Shell
+* At the GRUB menu, press e to edit
+* Add rw init=/bin/bash to the linux line parameters
+* Press Ctrl+x to boot
+```
+# You’ll boot to a bash prompt with / mounted read-write. Edit fstab:
+vi /etc/fstab
+# When done, restore init and reboot:
+exec /sbin/init
+# Or force a reboot:
+reboot -f
+```
