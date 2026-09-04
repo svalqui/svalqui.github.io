@@ -51,6 +51,11 @@ mysql> show databases;
 mysql> use <db-name>;
 mysql> show tables;
 mysql> describe <table-name>;
+# Show table content
+mysql> select * <table-name>;
+# show some columns
+mysql> select cl1, cl2,  <table-name>;
+
 
 mysql> INSERT INTO Table-name (Column-name1, Column-name2, Column-name3)
 VALUES ('Val1', 'Val2', 'Val3');
