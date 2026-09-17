@@ -262,7 +262,7 @@ openstack server create
 ```
 Add volume to instance
 ```
-openstack server add volume <server> <volume>
+openstack server add volume <server-id> <volume-id> [--device <device>]
 nova volume-attach instance vol_id
 ```
 Remove volume of instance
