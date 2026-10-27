@@ -1,6 +1,16 @@
 == Token Scope requirement
 ![Scope-requirement](https://.png)
 
+# git push
+
+## to master protected
+
+```
+git switch -c my-change
+git push -u origin my-change
+
+```
+
 # Set your git username and email
 
 ## Globally 
