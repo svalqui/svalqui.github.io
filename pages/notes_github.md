@@ -191,6 +191,30 @@ Commits by user
 ```
 git shortlog -s
 ```
+
+# github <- gilab
+Update a repository that comes from gitlab
+
+On your github repo directory
+
+Add gitlab as remote
+```
+git remote add gitlab https://gitlab.com/username/repo.git
+```
+fetch all updates don to your gitlab repo
+```
+git fetch gitlab
+```
+Update Your Local Branches
+```
+git checkout main
+git merge gitlab/main
+```
+Push to GitHub
+```
+git push origin main
+```
+
 # Troubleshooting
 ```
 GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -vvv" git pull
